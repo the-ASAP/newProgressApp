@@ -1,0 +1,41 @@
+@import "/styles/root/mixins.scss";
+
+.project {
+  width: calc(50% - 1.25rem);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  &__content {
+    width: fit-content;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: fit-content;
+    position: relative;
+  }
+
+  &__text {
+    @extend %textBodyL;
+    display: block;
+    margin-top: 1.5625rem;
+  }
+  
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  &__tag {
+    @extend %textBodyS;
+    padding: 0.5rem 1.5rem;
+    background: $cardBackground;
+    border-radius: 100px;
+    margin: 0 0.625rem 0.625rem 0;
+  }
+}

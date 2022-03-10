@@ -1,0 +1,168 @@
+@import "/styles/root/mixins.scss";
+
+.container {
+  height: 54.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+  padding: 0 2.5rem;
+}
+
+.back {
+  z-index: -1;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 1rem;
+  left: 50%;
+  height: 54.5rem;
+  width: calc(100% - 40px);
+  max-width: 117.5rem;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6.25rem;
+
+  &__title {
+    @extend %textDisplay;
+    max-width: 50rem;
+    padding-top: 1.25rem;
+  }
+}
+
+.middle {
+  padding: 0 9.5rem 0 23.5625rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    max-width: 34.375rem;
+    padding-top: 1.25rem;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 1.23;
+    letter-spacing: -0.03em;
+    color: $fontColor;
+  }
+
+  &__frame {
+    width: 5.625rem;
+    height: 5.625rem;
+    background-color: #fff;
+    box-shadow: 0px 12px 24px rgba(124, 124, 124, 0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.outro {
+  margin-top: 3.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 9.5rem;
+
+  &__frame {
+    margin-top: 1.5625rem;
+    margin-right: 10.1875rem;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 24px rgba(124, 124, 124, 0.15);
+    border-radius: 12px;
+    position: relative;
+    padding: 0.625rem 0.8125rem 0.875rem 0.6875rem;
+
+    &_wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  &__text {
+    @extend %textBodyL;
+    max-width: 39.375rem;
+    font-size: 1.25rem;
+    text-indent: 4rem;
+  }
+
+  &__team {
+    display: flex;
+  }
+}
+
+.person {
+  width: 5.5rem;
+  height: 5.5rem;
+  position: relative;
+
+  &_plus {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  @for $i from 1 to 4 {
+    $left: 80 - (20 * $i);
+    $zIndex: 3 - $i;
+
+    &:nth-child(#{$i}) {
+      z-index: #{$zIndex};
+      left: #{$left}px;
+    }
+  }
+}
+
+.activities {
+  position: relative;
+  top: -7.8125rem;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+.activity {
+  width: 25.875rem;
+  min-height: 100%;
+  background: rgba(243, 244, 248, 0.6);
+  border: 1px solid $form;
+  backdrop-filter: blur(17px);
+  border-radius: 3rem;
+  padding: 3.4375rem 0 2.8125rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    display: block;
+    @extend %header3;
+  }
+
+  &__categories {
+    margin-top: 3.125rem;
+    margin-bottom: 3.75rem;
+  }
+
+  &__category {
+    display: block;
+    @extend %textBodyS;
+
+    & + & {
+      margin-top: 0.9375rem;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__customTab {
+    margin-right: 0.625rem;
+  }
+}

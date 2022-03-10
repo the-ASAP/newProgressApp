@@ -1,0 +1,76 @@
+@import "/styles/root/mixins.scss";
+
+.consul {
+  margin-top: 6.25rem;
+  &__mainText {
+    @extend %textDisplay;
+    display: block;
+    text-align: center;
+
+    &_mainColor {
+      color: $mainColor;
+      display: block;
+    }
+  }
+}
+
+.accordion {
+  @extend %header3;
+  font-weight: 400;
+  padding: 0 4.125rem;
+  background: $cardBackground;
+  border-radius: 1.5rem;
+  border: 1px solid $form;
+  margin-top: 3.875rem;
+
+  & + & {
+    margin-top: 2.5rem;
+  }
+
+  &__trigger {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: "";
+      width: 2px;
+      height: 1.75rem;
+      position: absolute;
+      top: calc(50% - 0.875rem);
+      right: 0;
+      background-color: $fontColor;
+      transition: transform 0.3s ease-in;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &_open {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+
+    &_close {
+
+    }
+  }
+
+  &__content {
+    padding-bottom: 3rem;
+
+    &_open {
+
+    }
+
+    &_close {
+
+    }
+  }
+}

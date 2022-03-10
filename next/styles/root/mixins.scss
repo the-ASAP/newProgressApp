@@ -1,0 +1,120 @@
+@import "/styles/root/root.scss";
+//Создание необходимых миксинов
+%flexbox {
+	display: flex;
+	align-items: center;
+	align-self: center;
+}
+
+%scrollbar::-webkit-scrollbar {
+  width: 0.5%;
+  min-width: 8px;
+}
+
+%scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+%scrollbar::-webkit-scrollbar-thumb {
+  // border-left: 1px solid $mainBack;
+  background: $mainColor;
+  border-radius: 3px;
+}
+
+%textDisplay {
+  // font-family: Aeroport;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6rem;
+  line-height: 1;
+  color: $fontColor;
+}
+
+%header1 {
+  // font-family: Aeroport;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.5rem;
+  line-height: 0.99;
+  color: $fontColor;
+}
+
+%header2 {
+  // font-family: Aeroport;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.375rem;
+  line-height: 1.37;
+  color: $fontColor;
+}
+
+%header3 {
+  // font-family: Aeroport;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.9375rem;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: $fontColor;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.23;
+  }
+}
+
+%subHeader {
+  // font-family: Aeroport;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.37;
+  color: $fontColor;
+
+  @media (max-width: 768px) {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.37;
+  }
+}
+
+%textBodyL {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: $fontColor;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+%textBodyS {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: $fontColor;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+%description {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: $fontColor;
+}

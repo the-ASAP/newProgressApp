@@ -1,0 +1,20 @@
+@import "/styles/root/mixins.scss";
+
+.main {
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: $mainColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in;
+
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: $fontColor;
+
+  &:hover {
+    transform: scale(1.17);
+  }
+}
