@@ -14,7 +14,7 @@ const Header = () => (
       </a>
     </Link>
     <menu className={styles.menu}>
-      {menu?.map(menuItem => 
+      {!!menu?.length && menu?.map(menuItem =>
         <Link href={menuItem.link} key={menuItem.title}>
           <a className={styles.menu__link}>{menuItem.title}</a>
         </Link>

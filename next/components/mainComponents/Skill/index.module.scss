@@ -1,0 +1,54 @@
+@import "/styles/root/mixins.scss";
+
+.skill {
+  width: calc(50% - 1.25rem);
+  height: 40rem;
+  border: 1px solid $form;
+  border-radius: 3rem;
+  background-color: $cardBackground;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+    margin: 2.5rem 0;
+    padding: 0 3.25rem;
+  }
+
+  &__title {
+    @extend %header3;
+    display: block;
+    max-width: 28.5rem;
+    font-size: 1.9375rem;
+  }
+
+  &__border {
+    margin: 1.875rem 0;
+    width: 2.625rem;
+    height: 1px;
+
+    &_green {
+      background-color: $mainColor;
+    }
+  }
+
+  &__text {
+    @extend %textBodyS;
+    color: $textGray;
+    display: block;
+    max-width: 29.0625rem;
+  }
+
+  &__imageContent {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &_top {
+      order: -1;
+    }
+  }
+}

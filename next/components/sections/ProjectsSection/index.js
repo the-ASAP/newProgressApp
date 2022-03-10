@@ -8,7 +8,7 @@ import style from './index.module.scss'
 const ProjectsSection = () => {
   return (
     <div className={clsx(style.projects, 'wrapper') }>
-      {projects?.map(project => <Project key={project.id} {...project}/>)}
+      {!!projects?.length && projects.map(project => <Project key={project.id} {...project}/>)}
       <AllWidthButton>Все проекты</AllWidthButton>
     </div>
   )

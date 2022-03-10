@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import GreenButton from 'components/common/GreenButton';
+import PrimatyButton from 'components/common/PrimatyButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
@@ -11,7 +11,7 @@ const PromoSection = () => {
   return (
     <>
       <div className={styles.back}>
-        <Image 
+        <Image
           layout='fill'
           src='/main.png'
           alt='main'
@@ -22,11 +22,11 @@ const PromoSection = () => {
         <div className={styles.container}>
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>
-              Проектирование и разработка 
+              Проектирование и разработка
             </h1>
-            <GreenButton>
+            <PrimatyButton>
               <ChatSVG />
-            </GreenButton>
+            </PrimatyButton>
           </div>
           <div className={styles.middle}>
             <h3 className={styles.middle__title}>
@@ -52,16 +52,16 @@ const PromoSection = () => {
             <div className={styles.outro__team}>
               {promoTeam.map(person => (
                 <div className={styles.person} key={person}>
-                  <Image 
+                  <Image
                     layout='fill'
                     src={person}
                     alt="photo"
                   />
-                </div>   
+                </div>
               ))}
-              <GreenButton customClassName={styles.person_plus}>
+              <PrimatyButton customClassName={styles.person_plus}>
                 <PlusSVG />
-              </GreenButton>    
+              </PrimatyButton>
             </div>
           </div>
 
@@ -72,19 +72,19 @@ const PromoSection = () => {
               <div>
                 <h3 className={styles.activity__title}>{activity.title}</h3>
                 <div className={styles.activity__categories}>
-                  {activity.categories.map(category => (
+                  {!!activity?.categories?.length && activity.categories.map(category => (
                     <span className={styles.activity__category} key={category}>{category}</span>
                   ))}
                 </div>
               </div>
               <div className={styles.activity__tabs}>
-                {activity.tabs.map(tab => (
+                {!!activity?.tabs?.length && activity.tabs.map(tab => (
                   <Tab key={tab} customClassName={styles.activity__customTab}>{tab}</Tab>
                 ))}
               </div>
             </div>
           ))}
-        </div>  
+        </div>
       </div>
     </>
   )

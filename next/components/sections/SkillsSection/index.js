@@ -1,4 +1,8 @@
 import React from 'react'
+import Skill from 'components/mainComponents/Skill'
+import SkillMain from 'components/mainComponents/SkillMain'
+import Image from 'next/image'
+
 import clsx from 'clsx'
 import style from './index.module.scss'
 
@@ -6,31 +10,46 @@ const SkillsSection = () => {
   return (
     <div className={clsx(style.skills, 'wrapper')}>
       <span className={style.skills__mainText}>
-        <span className={style.skills__mainText_mainColor}>Наши преимущества</span> основаные на опыте и экспертности команды 
+        <span className={style.skills__mainText_mainColor}>Наши преимущества</span> основаные на опыте и экспертности команды
       </span>
       <div className={style.skills__content}>
-        <div className={style.mainBlock}>
-          <div className={style.mainBlock__content}>
-            <span className={style.mainBlock__title}>
-              Кроссплатформенная и нативная разработка
-            </span>
-            <div className={style.mainBlock__greenBorder}></div>
-            <span className={style.mainBlock__text}>
-              Независмые приложения с высокой скоростью отклика или разработка под любую операционную систему с единой кодовой базой
-            </span>
+        <Skill
+          title={"Кроссплатформенная и нативная разработка"}
+          text={"Независмые приложения с высокой скоростью отклика или разработка под любую операционную систему с единой кодовой базой"}
+        >
+          <div className={style.skills__imageIphone}>
+            <Image
+              alt="skill"
+              layout='fill'
+              src={"/skill_1.png"}
+            />
           </div>
-        </div>
-        <div className={style.mainBlock}>
-          <div className={style.mainBlock__content}>
-            <span className={style.mainBlock__title}>
-              Широкий технологический стек
-            </span>
-            <div className={style.mainBlock__greenBorder}></div>
-            <span className={style.mainBlock__text}>
-              Пишем на 16 языках программирования, разработываем на 9 фреймворках, 5 библиотек, используем базы данных, модули. Выстраиваем архитектуру проекта
-            </span>
+        </Skill>
+        <Skill
+          title={"Широкий технологический стек"}
+          text={"Пишем на 16 языках программирования, разработываем на 9 фреймворках, 5 библиотек, используем базы данных, модули. Выстраиваем архитектуру проекта"}
+          reverseOrientation={true}
+        >
+          <div className={style.skills__imageLogo}>
+            <Image
+              alt="skill"
+              layout='fill'
+              src={"/skill_2.png"}
+            />
           </div>
-        </div>
+        </Skill>
+        <SkillMain
+          title={"Сильный UI/UX по дизайн системам"}
+          text={"Продумываем весь путь пользователя от начальных экранов знакомств. Адаптируем фирменный стиль заказчика к гайдланйнам платформ"}
+        />
+        <Skill
+          title={"Внешние и внутренние интеграции"}
+          text={"Двух, трехсторонние интеграциии ваших продуктов с сервисами по API, доработки проектов на уровне кода с возможностью техподдержки"}
+        />
+        <Skill
+          title={"Только собственные команды"}
+          text={"Считаем, что обеспечить лучший проектный результат можно развивая экосистему внутри компании, с поэтапным контролем над процессами"}
+        />
       </div>
     </div>
   )

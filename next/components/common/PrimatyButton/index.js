@@ -3,9 +3,9 @@ import clsx from 'clsx'
 
 import styles from "./index.module.scss"
 
-const GreenButton = ({customClassName, children, ...props}) => (
-  <button 
-    type="button" 
+const PrimaryButton = ({customClassName, children, ...props}) => (
+  <button
+    type="button"
     className={clsx(styles.main, customClassName)}
     {...props}
   >
@@ -13,4 +13,4 @@ const GreenButton = ({customClassName, children, ...props}) => (
   </button>
 )
 
-export default GreenButton
+export default PrimaryButton

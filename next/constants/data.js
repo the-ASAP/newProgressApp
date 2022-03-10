@@ -82,3 +82,83 @@ export const accordios = [
     text: "Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur."
   }
 ]
+
+export const footerMenu = [
+  {
+    id: "1",
+    title: "Меню",
+    categories: [
+      {
+        id: "11",
+        title: "Услуги",
+        href: "/"
+      },
+      {
+        id: "12",
+        title: "Проекты",
+        href: "/"
+      },
+      {
+        id: "13",
+        title: "Компания",
+        href: "/"
+      },
+      {
+        id: "14",
+        title: "Работа",
+        href: "/"
+      },
+      {
+        id: "15",
+        title: "Знания",
+        href: "/"
+      },
+      {
+        id: "16",
+        title: "Контакты",
+        href: "/"
+      },
+    ]
+  },
+  {
+    id: "2",
+    title: "Разработка",
+    categories: [
+      {
+        id: "21",
+        title: "Мобильные приложения",
+        href: "/",
+      },
+      {
+        id: "22",
+        title: "Web-cервисы",
+        href: "/",
+      },
+      {
+        id: "23",
+        title: "MVP стартапов",
+        href: "/",
+      },
+      {
+        id: "24",
+        title: "ERP-системы",
+        href: "/",
+      },
+      {
+        id: "25",
+        title: "Desktop приложения",
+        href: "/",
+      }
+    ]
+  },
+  {
+    id: "3",
+    title: "Аутстафф",
+    categories: []
+  },
+  {
+    id: "4",
+    title: "Аналитика и поддержка",
+    categories: []
+  }
+]

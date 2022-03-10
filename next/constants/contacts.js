@@ -1,1 +1,6 @@
 export const mail = "hello@progressapp.ru"
+export const directorMail = "hello@progressapp.ru"
+export const phone = "8 (8452) 531-888"
+export const facebook = ""
+export const instagram = ""
+export const address = "г. Саратов, ул. Московская, д. 37, 2 этаж"
