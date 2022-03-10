@@ -1,0 +1,9 @@
+db
+.vscode
+
+next/node_modules
+next/.vscode
+next/.next
+
+strapi/.cache
+strapi/node_modules
