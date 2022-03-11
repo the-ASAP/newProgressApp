@@ -162,3 +162,46 @@ export const footerMenu = [
     categories: []
   }
 ]
+
+export const experience = [
+  {
+    id: '1',
+    title: "Инженерные технологии",
+  },
+  {
+    id: '2',
+    title: "Промышленность",
+  },
+  {
+    id: '3',
+    title: "Стартапы",
+  },
+  {
+    id: '4',
+    title: "Игры",
+  },
+  {
+    id: '5',
+    title: "Образование",
+  },
+  {
+    id: '6',
+    title: "Финансы",
+  },
+  {
+    id: '7',
+    title: "Документооборот",
+  },
+  {
+    id: '8',
+    title: "Телекоммуникации",
+  },
+  {
+    id: '9',
+    title: "Недвижимость",
+  },
+  {
+    id: '10',
+    title: "E-commerce",
+  },
+]

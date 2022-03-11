@@ -38,7 +38,7 @@ const Footer = () => {
         <span className={style.license__law}>Progress app 2021. Все права защишены ©</span>
         <div className={style.license__content}>
           <button className={style.license__politics}>Политика конвиденциальности</button>
-          <Link href={""}>
+          <Link href={"/"}>
             <a><AsapSVG /></a>
           </Link>
         </div>

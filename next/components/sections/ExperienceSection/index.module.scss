@@ -1,0 +1,42 @@
+@import "/styles/root/mixins.scss";
+
+.experience {
+  background-color: $cardBackground;
+  height: 37.5rem;
+  border-radius: 3rem;
+  padding: 3.75rem 1.875rem;
+  margin-top: 3.75rem;
+
+  &__title {
+    @extend %textDisplay;
+    text-indent: 6.25rem;
+    display: block;
+    padding-left: 1.875rem;
+
+    &_green {
+      color: $mainColor;
+      display: inline;
+      padding: 0;
+    }
+  }
+
+  &__categories {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__category {
+    @extend %textBodyL;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    margin-right: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $mainColor;
+    }
+  }
+}

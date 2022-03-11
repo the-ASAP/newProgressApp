@@ -8,6 +8,7 @@ import ConsulSection from 'components/sections/ConsulSection';
 import TalentsSection from 'components/sections/TalentsSection';
 import ExperienceSection from 'components/sections/ExperienceSection';
 import Footer from 'components/mainComponents/Footer';
+import DirectorSection from 'components/sections/DirectorSection';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <ConsulSection />
       <TalentsSection />
       <ExperienceSection />
+      <DirectorSection />
       <Footer />
     </>
   );

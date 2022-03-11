@@ -22,9 +22,20 @@
   border-radius: 1.5rem;
   border: 1px solid $form;
   margin-top: 3.875rem;
+  transition: border-color 0.3s ease-in;
 
   & + & {
     margin-top: 2.5rem;
+  }
+
+  &:hover {
+    border-color: $mainColor;
+
+    span {
+      &::before, &::after {
+        background-color: $mainColor;
+      }
+    }
   }
 
   &__trigger {
@@ -44,7 +55,7 @@
       top: calc(50% - 0.875rem);
       right: 0;
       background-color: $fontColor;
-      transition: transform 0.3s ease-in;
+      transition: transform 0.3s ease-in, background-color 0.3s ease-in;
     }
 
     &::after {
@@ -53,7 +64,10 @@
 
     &_open {
       &::before {
-        transform: rotate(90deg);
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
       }
     }
 

@@ -1,0 +1,91 @@
+@import "/styles/root/mixins.scss";
+
+.talents {
+  margin-top: 7.625rem;
+  height: 37.5rem;
+  background-color: $mainColor;
+  padding-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3rem;
+  position: relative;
+
+  &__title {
+    @extend %textDisplay;
+    display: block;
+    text-align: center;
+  }
+
+  &__text {
+    @extend %textBodyL;
+    display: block;
+    margin-top: 2.8125rem;
+    max-width: 37.875rem;
+    text-align: center;
+  }
+
+  &__vacancy {
+    background-color: rgba(252, 253, 255, 0.6);
+    margin-top: 6.25rem;
+    // width: 13.8125rem;
+    // height: 3.75rem;
+    padding: 1rem 2rem;
+    border: 1px solid $cardBackground;
+    border-radius: 2rem;
+    @extend %textBodyL;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  &__talent1 {
+    position: absolute;
+    width: 7.4375rem;
+    height: 7.4375rem;
+    top: 13.75rem;
+    left: 9rem;
+  }
+
+  &__talent2 {
+    position: absolute;
+    width: 7.4375rem;
+    height: 7.4375rem;
+    top: 13.75rem;
+    right: 12.0625rem;
+  }
+
+  &__talent3 {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 21.125rem;
+    left: 23.125rem;
+  }
+
+  &__talent4 {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 25.4375rem;
+    right: 23.25rem;
+  }
+
+  &__talent5 {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    bottom: 3.25rem;
+    left: 4.875rem;
+  }
+
+  &__talent6 {
+    position: absolute;
+    width: 4.625rem;
+    height: 4.625rem;
+    bottom: 3.75rem;
+    right: 5rem;
+  }
+}
