@@ -36,8 +36,6 @@ services:
       context: './next'
     ports:
       - "3000:3000"
-    volumes:
-      - ./next:/back
     dockefile: Dockerfile.prod
 
 networks:
