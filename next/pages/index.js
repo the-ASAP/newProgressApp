@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import PromoSection from 'components/sections/PromoSection';
 import MarqueeSection from 'components/sections/MarqueeSection';
@@ -7,10 +7,16 @@ import SkillsSection from 'components/sections/SkillsSection';
 import ConsulSection from 'components/sections/ConsulSection';
 import TalentsSection from 'components/sections/TalentsSection';
 import ExperienceSection from 'components/sections/ExperienceSection';
-import Footer from 'components/mainComponents/Footer';
 import DirectorSection from 'components/sections/DirectorSection';
 
 const Index = () => {
+
+
+  useEffect( async () => {
+
+  }, [])
+
+
   return (
     <>
       <Head>
@@ -24,9 +30,16 @@ const Index = () => {
       <TalentsSection />
       <ExperienceSection />
       <DirectorSection />
-      <Footer />
     </>
   );
 };
 
 export default Index;
+
+export async function getStaticProps() {
+
+
+  return {
+    props: {}
+  }
+}

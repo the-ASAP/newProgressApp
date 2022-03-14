@@ -38,6 +38,7 @@ services:
       - "3000:3000"
     volumes:
       - ./next:/back
+    dockefile: Dockerfile.prod
 
 networks:
   strapi-postgres:

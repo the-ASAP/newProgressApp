@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { api } from 'constants/data';
 
 class API {
   constructor() {
@@ -20,12 +21,12 @@ class API {
     return service
   }
 
-  get = (path = '', params, headers) => {
+  get = (path = '', data = {}, headers) => {
     const service = this.create(headers);
     return service.request({
       method: 'GET',
       url: `${this.url}${path}`,
-      params
+      data
     });
   };
 

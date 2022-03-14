@@ -10,6 +10,10 @@ const DirectorSection = () => {
       <span className={style.director__title}>
         <span className={clsx(style.director__title, style.director__title_green)}>Всегда на связи, </span>
         готовы обсудить ваш проект уже сегодня
+        <button type="button" className={style.switch}>
+          <span className={style.switch__word}>Light</span>
+          <span className={style.switch__word}>Dark</span>
+        </button>
       </span>
       <div className={style.director__content}>
         <div className={style.director__block}>

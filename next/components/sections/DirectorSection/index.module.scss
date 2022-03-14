@@ -138,3 +138,21 @@
     @extend %textBodyS;
   }
 }
+
+.switch {
+  width: 10rem;
+  height: 5rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 44.5px;
+  border: 1px solid $fontColor;
+  padding: 0 1.25rem;
+  position: relative;
+  bottom: 1rem;
+  margin-left: 4rem;
+
+  &__word {
+    @extend %textBodyS;
+  }
+}

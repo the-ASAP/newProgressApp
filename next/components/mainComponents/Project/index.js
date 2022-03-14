@@ -10,7 +10,7 @@ const Project = ({ photo, text, tags }) => {
           <Image
             alt="project"
             layout="fill"
-            src={photo}
+            src={`http://localhost:1337${photo[0].url}`}
           />
         </div>
         <span className={style.project__text}>{text}</span>

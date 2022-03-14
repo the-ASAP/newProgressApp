@@ -1,3 +1,7 @@
+export const apiEmail = "evstratenko.sv98@gmail.com"
+export const apiPassword = "Stanislav010101"
+export const api = "http://localhost:1337"
+
 export const menu = [
   {
     title: 'Услуги',
