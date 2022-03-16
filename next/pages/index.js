@@ -8,15 +8,9 @@ import ConsulSection from 'components/sections/ConsulSection';
 import TalentsSection from 'components/sections/TalentsSection';
 import ExperienceSection from 'components/sections/ExperienceSection';
 import DirectorSection from 'components/sections/DirectorSection';
+import SERVICE_API from 'api';
 
 const Index = () => {
-
-
-  useEffect( async () => {
-
-  }, [])
-
-
   return (
     <>
       <Head>
@@ -24,7 +18,7 @@ const Index = () => {
       </Head>
       <PromoSection />
       <MarqueeSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <SkillsSection />
       <ConsulSection />
       <TalentsSection />

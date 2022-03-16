@@ -1,7 +1,7 @@
 import API from "api/restApiService"
 
 class EntitiesApi {
-  getProjects = () => API.get('/projects')
+  getProjects = () => API.get('/users')
 }
 
 export default new EntitiesApi()

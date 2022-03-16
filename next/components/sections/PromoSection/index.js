@@ -50,7 +50,7 @@ const PromoSection = () => {
               Программирование, дизайн и аналитика — дело нашей жизни. Наши клиенты — лучшие эксперты в своих отраслях. Мы - единая команда с общей целью. Мы делаем проекты, которыми гордимся. Вместе.
             </span>
             <div className={styles.outro__team}>
-              {promoTeam.map(person => (
+              {promoTeam?.map(person => (
                 <div className={styles.person} key={person}>
                   <Image
                     layout='fill'

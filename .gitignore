@@ -5,5 +5,5 @@ next/node_modules
 next/.vscode
 next/.next
 
-strapi/.cache
-strapi/node_modules
+newstrapi/.cache
+newstrapi/node_modules

@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { api } from 'constants/data';
+import { apiUrl, apiToken } from 'constants/data'
 
 class API {
   constructor() {
-    this.url = process.env.REACT_APP_API_URL || '';
+    this.url = apiUrl || '';
   }
 
   handleSuccess = (response) => response
@@ -11,9 +11,13 @@ class API {
   handleError = (error) => Promise.reject(error)
 
   create = (headers) => {
+    const token = apiToken || ''
+    const headerAuth = token && { Authorization: `Bearer ${token}` }
+    console.log(headerAuth)
     const service = axios.create({
       headers: {
         ...headers,
+        ...headerAuth,
         'Content-Type': 'application/json',
       }
     })
