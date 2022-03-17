@@ -3,5 +3,5 @@ WORKDIR /newstrapi
 COPY package.json ./
 RUN npm install
 COPY ./ ./
-RUN npm run build
 RUN export NODE_OPTIONS="--max-old-space-size=1024" npm run build
+CMD npm run start
