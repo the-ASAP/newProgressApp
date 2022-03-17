@@ -13,6 +13,7 @@ const PromoSection = () => {
   const { createModal } = useModal()
 
   useEffect(() => {
+    createModal('modalChat')
   }, [])
   return (
     <>
