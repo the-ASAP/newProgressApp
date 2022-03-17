@@ -14,7 +14,7 @@ const Footer = () => {
       <a href={`mailTo:${mail}`} className={style.footer__mail}>{mail}</a>
       <div className={style.footer__content}>
         <div className={style.footer__menu}>
-          {!!footerMenu.length && footerMenu.map(menuItem =>
+          {footerMenu?.map(menuItem =>
             <button
               type="button"
               className={style.footer__menuItem}

@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import PrimatyButton from 'components/common/PrimatyButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
+import { useModal } from 'hooks/useModal';
+import ReactDOM from 'react-dom'
 
 import styles from './index.module.scss';
 
 const PromoSection = () => {
+  const { createModal } = useModal()
+
+  useEffect(() => {
+  }, [])
   return (
     <>
       <div className={styles.back}>

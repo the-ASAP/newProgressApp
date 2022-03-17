@@ -33,6 +33,7 @@
   &__menuItem {
     @extend %header3;
     display: block;
+    position: relative;
 
     & + & {
       margin-top: 1.25rem;
@@ -42,9 +43,30 @@
   &__menuSubitem {
     @extend %subHeader;
     display: block;
+    position: relative;
+    width: fit-content;
 
     & + & {
       margin-top: 1.875rem;
+    }
+  }
+
+  &__menuItem, &__menuSubitem {
+    &::after {
+      content: "";
+      width: 0px;
+      height: 2px;
+      background-color: $fontColor;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease-in;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
     }
   }
 
