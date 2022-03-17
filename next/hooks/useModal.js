@@ -9,10 +9,11 @@ export const useModal = () => {
     const { component } = modalsState.find(modal => modal.title === modalTitle)
 
     if (component) {
-      console.log(component, document.getElementById("modal-root"))
+      const modalRoot = document.getElementById("modal-root")
+      console.log(123)
       ReactDOM.createPortal(
         <div id="123">123</div>,
-        document.getElementById("modal-root")
+        document.body
       )
     }
   }
