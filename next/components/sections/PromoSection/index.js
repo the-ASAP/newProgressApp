@@ -8,15 +8,19 @@ import { useModal } from 'hooks/useModal';
 import ReactDOM from 'react-dom'
 
 import styles from './index.module.scss';
+import ModalChat from 'components/common/ModalChat';
+import { useClient } from 'hooks/useClient';
 
 const PromoSection = () => {
-  const { createModal } = useModal()
+  const client = useClient()
+  // const { createModal } = useModal()
 
-  useEffect(() => {
-    createModal('modalChat')
-  }, [])
+  // useEffect(() => {
+  //   createModal('modalChat')
+  // }, [])
   return (
     <>
+      {client && <ModalChat />}
       <div className={styles.back}>
         <Image
           layout='fill'
