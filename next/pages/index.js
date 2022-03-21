@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import PromoSection from 'components/sections/PromoSection';
 import MarqueeSection from 'components/sections/MarqueeSection';
