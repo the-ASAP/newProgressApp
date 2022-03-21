@@ -1,29 +1,49 @@
-import React, { useContext } from "react"
-import ReactDOM from 'react-dom'
-import { ModalContext } from "context/modalContext"
+import { useReducer, createContext, useContext } from "react"
+import { OPEN_MODAL, HIDE_MODAL } from "constants/types"
+import ModalRoot from "components/common/ModalRoot"
 
-export const useModal = () => {
-  const modalsState = useContext(ModalContext)
+const ModalContext = createContext({
+  Modal: () => null,
+  modalProps: {},
+  showModal: () => undefined,
+  hideModal: () => undefined,
+})
 
-  const createModal = (modalTitle) => {
-    const { component } = modalsState.find(modal => modal.title === modalTitle)
+const { Provider } = ModalContext
+const ModalConsumer = ModalContext.Consumer
 
-    if (component) {
-      const modalRoot = document.getElementById("modal-root")
-      console.log(123)
-      ReactDOM.createPortal(
-        <div id="123">123</div>,
-        document.body
-      )
-    }
+const modalReducer = (state, { type, Modal, modalProps }) => {
+  switch (type) {
+    case OPEN_MODAL:
+      return {...state, Modal, modalProps }
+    case HIDE_MODAL:
+      return { ...state, Modal: null, modalProps: {} }
+    default:
+      throw new Error('Unspecified reducer action')
   }
-
-  const closeModal = () => {
-    ReactDOM.createPortal(
-      <></>,
-      document.getElementById("modal-root")
-    )
-  }
-
-  return { createModal, closeModal }
 }
+
+const ModalProvider = ({children}) => {
+  const initialState = {
+  Modal: null,
+  modalProps: {},
+  showModal: (Modal, modalProps = {}) => {
+    dispatch({ type: OPEN_MODAL, Modal, modalProps })
+  },
+  hideModal: () => {
+    dispatch({ type: HIDE_MODAL })
+  },
+}
+  const [state, dispatch] = useReducer(modalReducer, initialState)
+
+  return (
+    <Provider value={state}>
+      {children}
+      <ModalRoot />
+    </Provider>
+  )
+}
+
+const useModal = () => useContext(ModalContext)
+
+export { ModalConsumer, ModalProvider, useModal}

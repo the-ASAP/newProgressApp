@@ -1,13 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import style from './index.module.scss';
 
 const ModalChat = () => {
-  return ReactDOM.createPortal(
+  return (
     <div className={style.modalChat}>
 
-    </div>,
-    document.getElementById('modal-root')
+    </div>
   );
 }
 

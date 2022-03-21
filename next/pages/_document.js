@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ModalContext } from 'context/modalContext';
+import { ModalProvider } from 'hooks/useModal';
 
 export default class MyDocument extends Document {
   render() {
@@ -11,11 +11,8 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         </Head>
         <body>
-          <ModalContext.Provider>
-            <Main />
-          </ModalContext.Provider>
+          <Main />
           <NextScript />
-          <div id="modal-root"></div>
         </body>
       </Html>
     );

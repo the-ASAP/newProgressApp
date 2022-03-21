@@ -4,23 +4,20 @@ import PrimatyButton from 'components/common/PrimatyButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
-import { useModal } from 'hooks/useModal';
-import ReactDOM from 'react-dom'
 
 import styles from './index.module.scss';
+import { useModal } from 'hooks/useModal';
 import ModalChat from 'components/common/ModalChat';
-import { useClient } from 'hooks/useClient';
 
 const PromoSection = () => {
-  const client = useClient()
-  // const { createModal } = useModal()
+  const { Modal, showModal, hideModal } = useModal()
 
-  // useEffect(() => {
-  //   createModal('modalChat')
-  // }, [])
+  const showChat = () => {
+    // showModal(ModalChat)
+  }
+
   return (
     <>
-      {client && <ModalChat />}
       <div className={styles.back}>
         <Image
           layout='fill'
@@ -35,7 +32,7 @@ const PromoSection = () => {
             <h1 className={styles.intro__title}>
               Проектирование и разработка
             </h1>
-            <PrimatyButton>
+            <PrimatyButton onClick={showChat}>
               <ChatSVG />
             </PrimatyButton>
           </div>
