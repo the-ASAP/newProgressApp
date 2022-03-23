@@ -1,11 +1,14 @@
 import React from 'react';
+import ModalBackdrop from 'components/common/ModalBackdrop';
 import style from './index.module.scss';
 
-const ModalChat = () => {
+const ModalChat = ({hideModal}) => {
   return (
-    <div className={style.modalChat}>
+    <ModalBackdrop hideModal={hideModal}>
+      <div className={style.chat}>
 
-    </div>
+      </div>
+    </ModalBackdrop>
   );
 }
 

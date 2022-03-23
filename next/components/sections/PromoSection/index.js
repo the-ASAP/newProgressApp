@@ -7,13 +7,13 @@ import { promoTeam, activity } from 'constants/data';
 
 import styles from './index.module.scss';
 import { useModal } from 'hooks/useModal';
-import ModalChat from 'components/common/ModalChat';
+import ModalForm from 'components/common/ModalForm';
 
 const PromoSection = () => {
-  const { Modal, showModal, hideModal } = useModal()
+  const { showModal, hideModal } = useModal()
 
   const showChat = () => {
-    // showModal(ModalChat)
+    showModal(ModalForm, {showModal, hideModal})
   }
 
   return (

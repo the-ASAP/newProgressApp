@@ -1,0 +1,18 @@
+@import "/styles/root/mixins.scss";
+
+.form {
+  width: 31.25rem;
+  height: 43rem;
+  backdrop-filter: blur(42px);
+  border-radius: 48px;
+  background: #FFFFFF;
+  border: 1px solid rgba(86, 86, 86, 0.15);
+  position: relative;
+  padding: 2.5rem;
+
+  &__title {
+    @extend %header3;
+    text-align: center;
+    display: block;
+  }
+}

@@ -1,12 +1,12 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import styles from "./index.module.scss"
+import style from "./index.module.scss"
 
 const PrimaryButton = ({customClassName, children, ...props}) => (
   <button
     type="button"
-    className={clsx(styles.main, customClassName)}
+    className={clsx(style.main, customClassName)}
     {...props}
   >
     {children}

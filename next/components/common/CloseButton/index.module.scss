@@ -1,0 +1,35 @@
+@import "/styles/root/mixins.scss";
+
+.closeButton {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid $cardBackground;
+  background: rgba(252, 253, 255, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+
+  &::before, &::after {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 0.875rem);
+    background-color: $fontColor;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modalForm {
+  position: absolute;
+  top: 0;
+  right: -6.25rem;
+}
