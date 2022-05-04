@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .skillMain {
   width: 100%;
@@ -7,15 +7,10 @@
   border-radius: 3rem;
   background-color: $mainColor;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3.25rem;
+  padding: 3.125rem 3.125rem 3.75rem 3.125rem;
   margin: 2.5rem 0;
 
   &__content {
-    width: 100%;
-    margin: 2.5rem 0;
   }
 
   &__title {
@@ -43,9 +38,10 @@
   }
 
   &__image {
-    width: 14.0625rem;
-    height: 20rem;
+    width: 46.6875rem;
+    height: 23.875rem;
     position: relative;
+    align-self: flex-end;
 
     &_top {
       order: -1;
