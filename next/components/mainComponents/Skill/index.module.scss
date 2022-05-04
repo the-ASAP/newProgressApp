@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .skill {
   width: calc(50% - 1.25rem);
@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  // overflow: hidden;
 
   &__content {
     width: 100%;

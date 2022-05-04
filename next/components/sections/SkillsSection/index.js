@@ -47,7 +47,12 @@ const SkillsSection = () => {
           text={
             'Двух, трехсторонние интеграциии ваших продуктов с сервисами по API, доработки проектов на уровне кода с возможностью техподдержки'
           }
-        />
+        >
+          <div className={style.skills__spiderweb}>
+            <Image alt="skill" layout="fill" src={'/skill_3.png'} />
+          </div>
+        </Skill>
+
         <Skill
           title={'Только собственные команды'}
           text={
