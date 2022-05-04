@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .experience {
   background-color: $cardBackground;
@@ -34,9 +34,6 @@
     margin-right: 0.9375rem;
     margin-bottom: 0.9375rem;
     transition: background-color 0.3s ease-in;
-
-    &:hover {
-      background-color: $mainColor;
-    }
+    cursor: default;
   }
 }
