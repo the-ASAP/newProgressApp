@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .tab {
   height: 2.5rem;
@@ -7,9 +7,5 @@
   padding: 0.5rem 1.5rem;
   @extend %textBodyS;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
-
-  &:hover {
-    background-color: $fontColor;
-    color: $mainColor;
-  }
+  cursor: default;
 }
