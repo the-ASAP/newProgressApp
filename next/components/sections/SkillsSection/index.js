@@ -2,6 +2,7 @@ import React from 'react';
 import Skill from 'components/mainComponents/Skill';
 import SkillMain from 'components/mainComponents/SkillMain';
 import Image from 'next/image';
+import { skillTeam } from 'constants/data';
 
 import clsx from 'clsx';
 import style from './index.module.scss';
@@ -54,11 +55,20 @@ const SkillsSection = () => {
         </Skill>
 
         <Skill
+          reverseOrientation
           title={'Только собственные команды'}
           text={
             'Считаем, что обеспечить лучший проектный результат можно развивая экосистему внутри компании, с поэтапным контролем над процессами'
           }
-        />
+        >
+          <div className={style.skills__team}>
+            {skillTeam?.map((person) => (
+              <div className={style.person} key={person}>
+                <Image layout="fill" src={person} alt="photo" />
+              </div>
+            ))}
+          </div>
+        </Skill>
       </div>
     </div>
   );
