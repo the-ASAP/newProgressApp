@@ -178,12 +178,49 @@ export const footerMenu = [
   {
     id: '3',
     title: 'Аутстафф',
-    categories: []
+    categories: [
+      {
+        id: '26',
+        title: 'Front end',
+        href: '/'
+      },
+      {
+        id: '27',
+        title: 'Back end',
+        href: '/'
+      },
+      {
+        id: '28',
+        title: 'UI/UX Дизайнер',
+        href: '/'
+      }
+    ]
   },
   {
     id: '4',
     title: 'Аналитика и поддержка',
-    categories: []
+    categories: [
+      {
+        id: '29',
+        title: 'Аналитика и документация',
+        href: '/'
+      },
+      {
+        id: '30',
+        title: 'Внедрения и интеграции',
+        href: '/'
+      },
+      {
+        id: '31',
+        title: 'IT-консалтинг',
+        href: '/'
+      },
+      {
+        id: '32',
+        title: 'Техническая поддержка',
+        href: '/'
+      }
+    ]
   }
 ];
 
