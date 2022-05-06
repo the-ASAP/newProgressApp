@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .switch {
   width: 10rem;
@@ -11,8 +11,16 @@
   padding: 0 1.25rem;
   position: relative;
 
+  &__dark {
+    border: 1px solid $textLightGray;
+  }
+
   &__word {
     @extend %textBodyS;
+
+    &__dark {
+      color: $textLightGray;
+    }
   }
 
   &__circle {

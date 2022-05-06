@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .director {
   position: relative;
@@ -10,20 +10,18 @@
   background-position: center;
   background-size: cover;
 
-  &:after {
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1;
+  &__dark {
+    background-image: url('/director__back__dark.jpg');
   }
 
   &__title {
     @extend %textDisplay;
     display: block;
     text-indent: 9.375rem;
+
+    &__dark {
+      color: $textLight;
+    }
 
     &_green {
       color: $mainColor;
@@ -42,6 +40,10 @@
     @extend %textBodyL;
     display: block;
     margin-top: 1.25rem;
+
+    &__dark {
+      color: $textLightGray;
+    }
   }
 
   &__position {
@@ -49,6 +51,11 @@
     display: block;
     margin-top: 0.3125rem;
     opacity: 0.3;
+
+    &__dark {
+      color: $textLightGray;
+      opacity: 0.7;
+    }
   }
 
   &__directorMail {
@@ -75,12 +82,16 @@
     position: relative;
     transition: color 0.3s ease-in;
 
+    &__dark {
+      color: $textLight;
+    }
+
     &:hover {
       color: $mainColor;
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -96,10 +107,13 @@
     margin-top: 2.0625rem;
     transition: color 0.3s ease-in;
 
+    &__dark {
+      color: $textLightGray;
+    }
+
     &:hover {
       color: $mainColor;
     }
-
   }
 
   &__socials {
@@ -112,13 +126,16 @@
     position: relative;
     transition: color 0.3s ease-in;
 
+    &__dark {
+      color: $textLightGray;
+    }
+
     &:hover {
       color: $mainColor;
     }
 
-
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -136,6 +153,10 @@
     margin-top: 1.75rem;
     display: block;
     @extend %textBodyS;
+
+    &__dark {
+      color: $textLightGray;
+    }
   }
 }
 
