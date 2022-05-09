@@ -1,10 +1,12 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
-.modalChat {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 500px;
-  background-color: red;
+.chat {
+  width: 638px;
+  height: calc(100vh - 120px);
+  padding: 40px;
+  margin: 0px auto;
+  border-radius: 48px;
+  border: 1px solid #eef1f6;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(235, 235, 235, 0) 100%);
+  backdrop-filter: blur(42px);
 }

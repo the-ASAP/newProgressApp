@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .backdrop {
   width: 100%;
@@ -11,4 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__green {
+    background-color: $hoverMainColor;
+  }
 }

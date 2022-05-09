@@ -1,17 +1,16 @@
 import React from 'react';
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-import style from "./index.module.scss"
+import style from './index.module.scss';
 
-const CloseButton = ({customClassName, ...props}) => {
+const CloseButton = ({ customClassName, ...props }) => {
   return (
     <button
       type="button"
       className={clsx(style.closeButton, style[customClassName])}
       {...props}
-    >
-    </button>
+    ></button>
   );
-}
+};
 
 export default CloseButton;

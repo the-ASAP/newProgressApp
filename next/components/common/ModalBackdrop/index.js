@@ -1,16 +1,21 @@
 import React from 'react';
+import clsx from 'clsx';
 import style from './index.module.scss';
 
-const ModalBackdrop = ({ children, hideModal }) => {
+const ModalBackdrop = ({ children, hideModal, customClassName }) => {
   const hideAllModal = (e) => {
-    if(e.target.id === 'ModalBackdrop') hideModal()
-  }
+    if (e.target.id === 'ModalBackdrop') hideModal();
+  };
 
   return (
-    <div className={style.backdrop} onClick={hideAllModal} id="ModalBackdrop">
+    <div
+      className={clsx(style.backdrop, style[customClassName])}
+      onClick={hideAllModal}
+      id="ModalBackdrop"
+    >
       {children}
     </div>
   );
-}
+};
 
 export default ModalBackdrop;

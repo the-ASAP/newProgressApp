@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .closeButton {
   width: 4rem;
@@ -9,8 +9,9 @@
   backdrop-filter: blur(4px);
   z-index: 10;
 
-  &::before, &::after {
-    content: "";
+  &::before,
+  &::after {
+    content: '';
     width: 1.75rem;
     height: 2px;
     position: absolute;
@@ -28,7 +29,13 @@
   }
 }
 
-.modalForm {
+.closeFormBtn {
+  position: absolute;
+  top: 0;
+  right: -6.25rem;
+}
+
+.closeChatBtn {
   position: absolute;
   top: 0;
   right: -6.25rem;

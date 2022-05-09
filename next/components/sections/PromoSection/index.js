@@ -9,7 +9,8 @@ import { promoTeam, activity } from 'constants/data';
 
 import styles from './index.module.scss';
 import { useModal } from 'hooks/useModal';
-import ModalForm from 'components/common/ModalForm';
+// import ModalForm from 'components/common/ModalForm';
+import ModalChat from 'components/common/ModalChat';
 import { useScroll } from 'hooks/useScroll';
 
 const PromoSection = () => {
@@ -17,7 +18,7 @@ const PromoSection = () => {
   const { scrollY } = useScroll();
 
   const showChat = () => {
-    showModal(ModalForm, { showModal, hideModal });
+    showModal(ModalChat, { showModal, hideModal });
   };
 
   return (
