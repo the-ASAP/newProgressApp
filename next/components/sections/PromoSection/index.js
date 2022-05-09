@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import clsx from 'clsx';
+
 import PrimatyButton from 'components/common/PrimatyButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
@@ -8,9 +10,11 @@ import { promoTeam, activity } from 'constants/data';
 import styles from './index.module.scss';
 import { useModal } from 'hooks/useModal';
 import ModalForm from 'components/common/ModalForm';
+import { useScroll } from 'hooks/useScroll';
 
 const PromoSection = () => {
   const { showModal, hideModal } = useModal();
+  const { scrollY } = useScroll();
 
   const showChat = () => {
     showModal(ModalForm, { showModal, hideModal });
@@ -25,7 +29,10 @@ const PromoSection = () => {
         <div className={styles.container}>
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>Проектирование и разработка</h1>
-            <PrimatyButton onClick={showChat}>
+            <PrimatyButton
+              onClick={showChat}
+              customClassName={clsx(styles.showChatBtnTop, scrollY > 35 && styles.showChatBtn)}
+            >
               <ChatSVG />
             </PrimatyButton>
           </div>

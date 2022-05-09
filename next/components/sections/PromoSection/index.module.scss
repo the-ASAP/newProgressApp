@@ -166,3 +166,38 @@
     margin-right: 0.625rem;
   }
 }
+
+.showChatBtnTop {
+  position: fixed;
+  right: 6rem;
+  top: 7rem;
+}
+
+.showChatBtn {
+  z-index: 10;
+  transform: translateY(30rem);
+  position: fixed;
+  right: 6rem;
+
+  &:hover {
+    transform: translateY(30rem) scale(1.17);
+    position: fixed;
+    right: 6rem;
+  }
+}
+
+// .showChatBtn {
+//   z-index: 10;
+//   position: fixed;
+//   right: 5rem;
+//   animation: move 1s ease-in-out forwards;
+// }
+
+// @keyframes move {
+//   from {
+//     top: 5rem;
+//   }
+//   to {
+//     top: 70%;
+//   }
+// }
