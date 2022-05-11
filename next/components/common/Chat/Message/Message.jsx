@@ -3,7 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import style from './message.module.scss';
-import triangleImg from 'public//triangle.svg';
+import triangleImg from 'public/triangle.svg';
 
 const Message = ({ isCustomer, messageText, avatar }) => {
   return (

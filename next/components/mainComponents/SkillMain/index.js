@@ -5,14 +5,14 @@ import style from './index.module.scss';
 
 const SkillMain = ({ title, text, imageSrc }) => {
   return (
-    <div className={style.skill__main}>
-      <div className={style.skill__main__content}>
-        <span className={style.skill__main__title}>{title}</span>
-        <div className={clsx(style.skill__main__border, style.skill__main__border_black)}></div>
-        <span className={style.skill__main__text}>{text}</span>
+    <div className={style.skillMain}>
+      <div className={style.skillMain__content}>
+        <span className={style.skillMain__title}>{title}</span>
+        <div className={clsx(style.skillMain__border, style.skillMain__border_black)}></div>
+        <span className={style.skillMain__text}>{text}</span>
       </div>
       {imageSrc && (
-        <div className={style.skill__main__image}>
+        <div className={style.skillMain__image}>
           <Image alt="skillMain" layout="fill" src={imageSrc} />
         </div>
       )}
