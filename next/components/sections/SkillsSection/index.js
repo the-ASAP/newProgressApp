@@ -50,7 +50,13 @@ const SkillsSection = () => {
           }
         >
           <div className={style.skills__spiderweb}>
-            <Image alt="skill" layout="fill" src={'/skill_3.png'} />
+            <Image
+              alt="skill"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center bottom"
+              src={'/skill_3.png'}
+            />
           </div>
         </Skill>
 

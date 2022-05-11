@@ -266,3 +266,23 @@ export const experience = [
     title: 'E-commerce'
   }
 ];
+
+export const messages = [
+  {
+    isCustomer: false,
+    messageText: `Здравствуйте, какой вопрос вас интересует?`,
+    avatar: '/msg_avatar.png'
+  },
+  {
+    isCustomer: true,
+    messageText: 'Нужен корпоративный сайт, с каталогом товаров сколько будет стоить?',
+    avatar: '/no_avatar.png'
+  },
+  {
+    isCustomer: false,
+    messageText: `Напишите свой номер телефона, мы перезвоним вам в ближайшее время 
+    Обращаю ваше внимание, что отправляя номер вы соглашаетесь 
+    с политикой конфиденциальности`,
+    avatar: '/msg_avatar.png'
+  }
+];
