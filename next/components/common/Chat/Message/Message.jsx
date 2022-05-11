@@ -3,6 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import style from './message.module.scss';
+import triangleImg from 'public//triangle.svg';
 
 const Message = ({ isCustomer, messageText, avatar }) => {
   return (
@@ -19,7 +20,7 @@ const Message = ({ isCustomer, messageText, avatar }) => {
             isCustomer ? style.triangle__right : style.triangle__left
           )}
         >
-          <Image src={'/triangle.svg'} layout="fill" objectPosition="bottom" objectFit="contain" />
+          <Image src={triangleImg} layout="fill" objectPosition="bottom" objectFit="contain" />
         </div>
       </div>
     </div>

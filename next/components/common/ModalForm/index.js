@@ -8,7 +8,7 @@ const ModalForm = ({ hideModal }) => {
   return (
     <ModalBackdrop hideModal={hideModal}>
       <div className={style.form}>
-        <CloseButton onClick={hideModal} customClassName={'closeFormBtn'} />
+        <CloseButton onClick={hideModal} customClassName={'close__form__btn'} />
         <span className={style.form__title}>Заявка на вакансию</span>
       </div>
     </ModalBackdrop>

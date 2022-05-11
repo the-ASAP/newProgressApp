@@ -7,7 +7,7 @@ const CloseButton = ({ customClassName, ...props }) => {
   return (
     <button
       type="button"
-      className={clsx(style.closeButton, style[customClassName])}
+      className={clsx(style.close__button, style[customClassName])}
       {...props}
     ></button>
   );

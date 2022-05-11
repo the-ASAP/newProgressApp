@@ -1,6 +1,6 @@
 @import '/styles/root/mixins.scss';
 
-.closeButton {
+.close__button {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -29,13 +29,13 @@
   }
 }
 
-.closeFormBtn {
+.close__form__btn {
   position: absolute;
   top: 0;
   right: -6.25rem;
 }
 
-.closeChatBtn {
+.close__chat__btn {
   position: absolute;
   top: 0;
   right: -6.25rem;

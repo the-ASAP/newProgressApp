@@ -33,7 +33,7 @@ const PromoSection = () => {
             <h1 className={styles.intro__title}>Проектирование и разработка</h1>
             <PrimatyButton
               onClick={showChat}
-              customClassName={clsx(styles.showChatBtnTop, scrollY > 35 && styles.showChatBtn)}
+              customClassName={clsx(styles.button__show__top, scrollY > 35 && styles.button__show)}
             >
               <ChatSVG />
             </PrimatyButton>

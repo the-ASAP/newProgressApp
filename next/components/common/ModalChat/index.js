@@ -11,7 +11,7 @@ const ModalChat = ({ hideModal }) => {
   return (
     <ModalBackdrop hideModal={hideModal} customClassName={'backdrop__green'}>
       <div className={style.chat}>
-        <CloseButton onClick={hideModal} customClassName={'closeChatBtn'} />
+        <CloseButton onClick={hideModal} customClassName={'close__chat__btn'} />
 
         <div className={style.messages}>
           <Message
