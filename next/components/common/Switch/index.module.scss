@@ -6,13 +6,13 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 44.5px;
-  border: 1px solid $fontColor;
+  border-radius: 2.7813rem;
+  border: 0.0625rem solid $fontColor;
   padding: 0 1.25rem;
   position: relative;
 
   &__dark {
-    border: 1px solid $textLightGray;
+    border: 0.0625rem solid $textLightGray;
   }
 
   &__word {

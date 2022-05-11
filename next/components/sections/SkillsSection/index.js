@@ -1,10 +1,13 @@
 import React from 'react';
+import clsx from 'clsx';
+import Image from 'next/image';
+
+import skillImg1 from 'public/skill_1.png';
+import skillImg2 from 'public/skill_2.png';
+import skillImg3 from 'public/skill_3.png';
 import Skill from 'components/mainComponents/Skill';
 import SkillMain from 'components/mainComponents/SkillMain';
-import Image from 'next/image';
 import { skillTeam } from 'constants/data';
-
-import clsx from 'clsx';
 import style from './index.module.scss';
 
 const SkillsSection = () => {
@@ -22,7 +25,7 @@ const SkillsSection = () => {
           }
         >
           <div className={style.skills__imageIphone}>
-            <Image alt="skill" layout="fill" src={'/skill_1.png'} />
+            <Image alt="skill" layout="fill" src={skillImg1} />
           </div>
         </Skill>
         <Skill
@@ -33,7 +36,7 @@ const SkillsSection = () => {
           reverseOrientation={true}
         >
           <div className={style.skills__imageLogo}>
-            <Image alt="skill" layout="fill" src={'/skill_2.png'} />
+            <Image alt="skill" layout="fill" src={skillImg2} />
           </div>
         </Skill>
         <SkillMain
@@ -55,7 +58,7 @@ const SkillsSection = () => {
               layout="fill"
               objectFit="contain"
               objectPosition="center bottom"
-              src={'/skill_3.png'}
+              src={skillImg3}
             />
           </div>
         </Skill>

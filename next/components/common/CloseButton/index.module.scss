@@ -4,16 +4,16 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  border: 1px solid $cardBackground;
+  border: 0.0625rem solid $cardBackground;
   background: rgba(252, 253, 255, 0.6);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(0.25rem);
   z-index: 10;
 
   &::before,
   &::after {
     content: '';
     width: 1.75rem;
-    height: 2px;
+    height: 0.125rem;
     position: absolute;
     top: 50%;
     left: calc(50% - 0.875rem);

@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
+import styles from './index.module.scss';
 import PrimatyButton from 'components/common/PrimatyButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
-
-import styles from './index.module.scss';
-import { useModal } from 'hooks/useModal';
+import mainImg from 'public/main.png';
+import svelteImg from 'public/svelte.png';
 // import ModalForm from 'components/common/ModalForm';
 import ModalChat from 'components/common/ModalChat';
 import { useScroll } from 'hooks/useScroll';
+import { useModal } from 'hooks/useModal';
 
 const PromoSection = () => {
   const { showModal, hideModal } = useModal();
@@ -24,7 +25,7 @@ const PromoSection = () => {
   return (
     <>
       <div className={styles.back}>
-        <Image layout="fill" src="/main.png" alt="main" priority="true" />
+        <Image layout="fill" src={mainImg} alt="main" priority="true" />
       </div>
       <div className="wrapper">
         <div className={styles.container}>
@@ -48,7 +49,7 @@ const PromoSection = () => {
           <div className={styles.outro}>
             <div className={styles.outro__frame}>
               <div className={styles.outro__frame_wrap}>
-                <Image layout="fill" src="/svelte.png" alt="framework" />
+                <Image layout="fill" src={svelteImg} alt="framework" />
               </div>
             </div>
             <span className={styles.outro__text}>

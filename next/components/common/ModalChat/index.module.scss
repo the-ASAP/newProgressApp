@@ -1,12 +1,12 @@
 @import '/styles/root/mixins.scss';
 
 .chat {
-  width: 638px;
-  height: calc(100vh - 120px);
-  padding: 40px;
-  margin: 0px auto;
-  border-radius: 48px;
-  border: 1px solid #eef1f6;
+  width: 39.875rem;
+  height: calc(100vh - 7.5rem);
+  padding: 2.5rem;
+  margin: 0rem auto;
+  border-radius: 3rem;
+  border: 0.0625rem solid #eef1f6;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(235, 235, 235, 0) 100%);
-  backdrop-filter: blur(42px);
+  backdrop-filter: blur(2.625rem);
 }

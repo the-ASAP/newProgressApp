@@ -1,7 +1,8 @@
 import React from 'react';
-import ModalBackdrop from 'components/common/ModalBackdrop';
+
 import style from './index.module.scss';
-import CloseButton from '../CloseButton';
+import ModalBackdrop from 'components/common/ModalBackdrop';
+import CloseButton from 'components/common/CloseButton';
 
 const ModalForm = ({ hideModal }) => {
   return (

@@ -4,7 +4,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    border: 1px solid $form;
+    border: 0.0625rem solid $form;
   }
 
   &__input {
@@ -12,8 +12,8 @@
   }
 
   &__button {
-    flex: 0 0 66px;
-    height: 66px;
+    flex: 0 0 4.125rem;
+    height: 4.125rem;
     background-color: red;
   }
 }

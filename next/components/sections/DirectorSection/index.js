@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
+
 import style from './index.module.scss';
 import Image from 'next/image';
+import directorImg from 'public/director.png';
 import { address, directorMail, facebook, instagram, mail, phone } from 'constants/contacts';
 import Switch from 'components/common/Switch';
 
@@ -25,7 +27,7 @@ const DirectorSection = () => {
       <div className={style.director__content}>
         <div className={style.director__block}>
           <div className={style.director__image}>
-            <Image alt="director" layout="fill" src="/director.png" />
+            <Image alt="director" layout="fill" src={directorImg} />
           </div>
           <span className={clsx(style.director__name, darkMode && style.director__name__dark)}>
             Даниил Васильев
