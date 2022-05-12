@@ -1,15 +1,16 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .skill {
   width: calc(50% - 1.25rem);
   height: 40rem;
-  border: 1px solid $form;
+  border: 0.0625rem solid $form;
   border-radius: 3rem;
   background-color: $cardBackground;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  // overflow: hidden;
 
   &__content {
     width: 100%;
@@ -27,7 +28,7 @@
   &__border {
     margin: 1.875rem 0;
     width: 2.625rem;
-    height: 1px;
+    height: 0.0625rem;
 
     &_green {
       background-color: $mainColor;

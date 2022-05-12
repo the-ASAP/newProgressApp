@@ -1,0 +1,19 @@
+@import '/styles/root/mixins.scss';
+
+.form {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    border: 0.0625rem solid $form;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+  }
+
+  &__button {
+    flex: 0 0 4.125rem;
+    height: 4.125rem;
+    background-color: red;
+  }
+}

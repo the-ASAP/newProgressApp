@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .skills {
   margin-top: 7.5rem;
@@ -30,5 +30,34 @@
     width: 100%;
     height: 17.8125rem;
     position: relative;
+  }
+
+  &__spiderweb {
+    width: 32.75rem;
+    height: 18.625rem;
+    position: relative;
+  }
+
+  &__team {
+    display: flex;
+    position: relative;
+    left: -30px;
+  }
+}
+
+.person {
+  width: 10.375rem;
+  height: 10.375rem;
+  position: relative;
+  margin-top: 1.875rem;
+
+  @for $i from 1 to 4 {
+    $left: 80 - (20 * $i);
+    $zIndex: 5 - $i;
+
+    &:nth-child(#{$i}) {
+      z-index: #{$zIndex};
+      left: #{$left}px;
+    }
   }
 }

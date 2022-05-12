@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .footer {
   width: 100%;
@@ -9,7 +9,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 48px 48px 0 0;
+  border-radius: 3rem 3rem 0 0;
 
   &__mail {
     @extend %header2;
@@ -22,7 +22,7 @@
   }
 
   &__menu {
-    width: calc(50% - 1px);
+    width: calc(50% - 0.0625rem);
   }
 
   &__submenu {
@@ -51,14 +51,15 @@
     }
   }
 
-  &__menuItem, &__menuSubitem {
+  &__menuItem,
+  &__menuSubitem {
     &::after {
-      content: "";
-      width: 0px;
-      height: 2px;
+      content: '';
+      width: 0rem;
+      height: 0.125rem;
       background-color: $fontColor;
       position: absolute;
-      bottom: -5px;
+      bottom: -0.3125rem;
       left: 0;
       transition: width 0.3s ease-in;
     }
@@ -71,7 +72,7 @@
   }
 
   &__border {
-    width: 1px;
+    width: 0.0625rem;
     height: 21.375rem;
     background-color: $fontColor;
   }
@@ -81,7 +82,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 7.5625rem;
-
 
   &__law {
     display: block;

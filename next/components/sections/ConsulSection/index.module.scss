@@ -1,4 +1,4 @@
-@import "/styles/root/mixins.scss";
+@import '/styles/root/mixins.scss';
 
 .consul {
   margin-top: 6.25rem;
@@ -20,7 +20,7 @@
   padding: 0 4.125rem;
   background: $cardBackground;
   border-radius: 1.5rem;
-  border: 1px solid $form;
+  border: 0.0625rem solid $form;
   margin-top: 3.875rem;
   transition: border-color 0.3s ease-in;
 
@@ -32,7 +32,8 @@
     border-color: $mainColor;
 
     span {
-      &::before, &::after {
+      &::before,
+      &::after {
         background-color: $mainColor;
       }
     }
@@ -47,9 +48,10 @@
     position: relative;
     cursor: pointer;
 
-    &::before, &::after {
-      content: "";
-      width: 2px;
+    &::before,
+    &::after {
+      content: '';
+      width: 0.125rem;
       height: 1.75rem;
       position: absolute;
       top: calc(50% - 0.875rem);
@@ -72,7 +74,6 @@
     }
 
     &_close {
-
     }
   }
 
@@ -80,11 +81,9 @@
     padding-bottom: 3rem;
 
     &_open {
-
     }
 
     &_close {
-
     }
   }
 }

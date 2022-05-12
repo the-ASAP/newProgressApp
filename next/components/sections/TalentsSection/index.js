@@ -1,40 +1,53 @@
 import React from 'react';
 import clsx from 'clsx';
-import style from './index.module.scss';
 import Image from 'next/image';
+
+import talentImg1 from 'public/talent_1.png';
+import talentImg2 from 'public/talent_2.png';
+import talentImg3 from 'public/talent_3.png';
+import talentImg4 from 'public/talent_4.png';
+import talentImg5 from 'public/talent_5.png';
+import talentImg6 from 'public/talent_6.png';
+import style from './index.module.scss';
+import circleImg from 'public/circle.png';
 
 const TalentsSection = () => {
   return (
-    <div className={clsx(style.talents, "wrapper")}>
-      <span className={style.talents__title}>
-        Ищем таланты в команду
-      </span>
-      <span className={style.talents__text}>
-          Всегда находимся в поиске крутых специалистов. Все актуальные вакансии в нашем HH. Если нет подходящих, то пиши на почту
-      </span>
-      <button type="button" className={style.talents__vacancy}>
-        Все вакансии
-      </button>
-      <div className={style.talents__talent1}>
-        <Image alt="talent" layout="fill" src="/talent_1.png" />
+    <div className={clsx(style.container, 'wrapper')}>
+      <div className={style.back}>
+        <Image layout="fill" src={circleImg} alt="main" priority="true" />
       </div>
-      <div className={style.talents__talent2}>
-        <Image alt="talent" layout="fill" src="/talent_2.png" />
-      </div>
-      <div className={style.talents__talent3}>
-        <Image alt="talent" layout="fill" src="/talent_3.png" />
-      </div>
-      <div className={style.talents__talent4}>
-        <Image alt="talent" layout="fill" src="/talent_4.png" />
-      </div>
-      <div className={style.talents__talent5}>
-        <Image alt="talent" layout="fill" src="/talent_5.png" />
-      </div>
-      <div className={style.talents__talent6}>
-        <Image alt="talent" layout="fill" src="/talent_6.png" />
+
+      <div className={style.talents}>
+        <span className={style.talents__title}>Ищем таланты в команду</span>
+        <span className={style.talents__text}>
+          Всегда находимся в поиске крутых специалистов. Все актуальные вакансии в нашем HH. Если
+          нет подходящих, то пиши на почту
+        </span>
+        <button type="button" className={style.talents__vacancy}>
+          Все вакансии
+        </button>
+        <div className={style.talents__talent1}>
+          <Image alt="talent" layout="fill" src={talentImg1} />
+        </div>
+        <div className={style.talents__talent2}>
+          <Image alt="talent" layout="fill" src={talentImg2} />
+        </div>
+        <div className={style.talents__talent3}>
+          <Image alt="talent" layout="fill" src={talentImg3} />
+        </div>
+        <div className={style.talents__talent4}>
+          <Image alt="talent" layout="fill" src={talentImg4} />
+        </div>
+        <div className={style.talents__talent5}>
+          <Image alt="talent" layout="fill" src={talentImg5} />
+        </div>
+        <div className={style.talents__talent6}>
+          <Image alt="talent" layout="fill" src={talentImg6} />
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default TalentsSection;
