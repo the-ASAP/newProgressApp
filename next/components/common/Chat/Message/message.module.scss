@@ -36,8 +36,8 @@
 
 .triangle {
   position: absolute;
-  width: 2.375rem;
-  height: 2.375rem;
+  width: 31px;
+  height: 31px;
   bottom: 0;
 
   &__left {
@@ -45,6 +45,6 @@
   }
 
   &__right {
-    right: -0.9375rem;
+    right: -0.875rem;
   }
 }
