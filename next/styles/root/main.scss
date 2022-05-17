@@ -14,11 +14,12 @@ html {
 
 //Базовые стили body
 body {
-//   background-color: $mainBack;
+  //   background-color: $mainBack;
   font-family: $mainFont;
   color: $fontColor;
   cursor: default;
   @extend %scrollbar;
+  position: relative;
 }
 
 section {
@@ -26,15 +27,12 @@ section {
 }
 //Создание базовых стилей для основных тегов
 h1 {
-
 }
 
 h2 {
-
 }
 
 h3 {
-
 }
 
 a {
@@ -43,7 +41,7 @@ a {
 }
 
 svg {
-//   min-height: 1rem;
+  //   min-height: 1rem;
 }
 
 img {
@@ -82,7 +80,7 @@ input {
 
 button {
   cursor: pointer;
-//   color: $grayMain;
+  //   color: $grayMain;
   font-family: $mainFont;
 }
 

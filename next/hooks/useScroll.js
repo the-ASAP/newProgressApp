@@ -13,7 +13,9 @@ export function useScroll() {
     setBodyOffset(
       typeof window === 'undefined' || !window.document ? 0 : document.body.getBoundingClientRect()
     );
-    setScrollY(-bodyOffset.top);
+    // setScrollY(-bodyOffset.top);
+    setScrollY(window.pageYOffset);
+
     setScrollX(bodyOffset.left);
     setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up');
     setLastScrollTop(-bodyOffset.top);

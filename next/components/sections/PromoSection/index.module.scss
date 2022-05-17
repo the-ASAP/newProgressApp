@@ -102,8 +102,8 @@
   position: relative;
 
   &_plus {
-    width: 56px;
-    height: 56px;
+    width: 5.5rem;
+    height: 5.5rem;
   }
 
   @for $i from 1 to 4 {
@@ -167,37 +167,22 @@
   }
 }
 
-.button__show__top {
+.button__top {
+  z-index: 10;
   position: fixed;
   right: 6rem;
   top: 7rem;
 }
 
-.button__show {
+.button__bottom {
   z-index: 10;
-  transform: translateY(30rem);
+  transform: translateY(calc(100vh - 17rem));
   position: fixed;
   right: 6rem;
 
   &:hover {
-    transform: translateY(30rem) scale(1.17);
+    transform: translateY(calc(100vh - 17rem)) scale(1.17);
     position: fixed;
     right: 6rem;
   }
 }
-
-// .showChatBtn {
-//   z-index: 10;
-//   position: fixed;
-//   right: 5rem;
-//   animation: move 1s ease-in-out forwards;
-// }
-
-// @keyframes move {
-//   from {
-//     top: 5rem;
-//   }
-//   to {
-//     top: 70%;
-//   }
-// }
