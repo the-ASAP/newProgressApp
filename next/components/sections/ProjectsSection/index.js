@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Project from 'components/mainComponents/Project';
-import AllWidthButton from 'components/common/AllWidthButton';
+import AllWidthButton from 'components/common/Buttons/AllWidthButton';
 import { projects } from 'constants/data';
 import style from './index.module.scss';
 

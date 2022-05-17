@@ -1,21 +1,20 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import FormErrorContainer from './formErrorContainer';
+import { FormErrorContainer } from './FormErrorContainer';
 
-const FormContainer = (props) => {
+export const FormContainer = (props) => {
   const { serverErrors, className, children, ...other } = props;
+
   return (
     <Formik {...other}>
       {(formik) => {
         const { setErrors } = formik;
         return (
           <FormErrorContainer serverErrors={serverErrors && serverErrors} setErrors={setErrors}>
-            <Form className={className}>{children}</Form>
+            <Form className={className}>{children(formik)}</Form>
           </FormErrorContainer>
         );
       }}
     </Formik>
   );
 };
-
-export default FormContainer;

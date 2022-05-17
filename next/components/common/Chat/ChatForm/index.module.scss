@@ -5,15 +5,20 @@
     display: flex;
     align-items: center;
     border: 0.0625rem solid $form;
+    height: 4.75rem;
+    border-radius: 3.125rem;
+    background-color: rgba(252, 253, 255, 0.6);
+    padding: 0px 8px;
   }
 
   &__input {
     flex: 1 1 auto;
+    color: #000;
   }
+}
 
-  &__button {
-    flex: 0 0 4.125rem;
-    height: 4.125rem;
-    background-color: red;
-  }
+.form__button {
+  flex: 0 0 3.75rem;
+  height: 3.75rem;
+  background-color: rgba(48, 217, 110, 1);
 }

@@ -1,38 +1,38 @@
 import FormikTextField from 'components/common/Form/Inputs';
-import PrimaryButton from 'components/common/PrimatyButton';
-import { Form, Formik } from 'formik';
+import PrimaryButton from 'components/common/Buttons/PrimaryButton';
 import React from 'react';
-import clsx from 'clsx';
 
+import { ArrowRight } from 'constants/svg';
+import { FormContainer } from 'components/common/Form/FormContainer';
 import style from './index.module.scss';
-import FormContainer from 'components/common/Form/formContainer';
 
 const ChatForm = () => {
-  const handleSubmit = (values) => {
+  const initialValues = {
+    message: ''
+  };
+
+  const onSubmit = (values) => {
+    if (!values.message) return;
     console.log(values);
   };
 
   return (
     <>
-      {/* <Formik initialValues={{ message: '' }} onSubmit={handleSubmit}>
-        <Form>
+      <FormContainer initialValues={initialValues} onSubmit={onSubmit}>
+        {({ isValid }) => (
           <div className={style.form__wrapper}>
-            <FormikTextField customClassName={'form__input'} name="message" />
-            <PrimaryButton customClassName={'form__button'} type="submit">
-              send
+            <FormikTextField
+              customClassName={style.form__input}
+              name="message"
+              placeholder="Напишите ответ"
+            />
+
+            <PrimaryButton customClassName={style.form__button} type="submit" disabled={!isValid}>
+              <ArrowRight />
             </PrimaryButton>
           </div>
-        </Form>
-      </Formik> */}
-
-      {/* <FormContainer>
-        <div className={style.form__wrapper}>
-          <FormikTextField customClassName={'form__input'} name="message" />
-          <PrimaryButton customClassName={'form__button'} type="submit">
-            send
-          </PrimaryButton>
-        </div>
-      </FormContainer> */}
+        )}
+      </FormContainer>
     </>
   );
 };

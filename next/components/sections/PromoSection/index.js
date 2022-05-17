@@ -2,8 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import styles from './index.module.scss';
-import PrimatyButton from 'components/common/PrimatyButton';
+import PrimaryButton from 'components/common/Buttons/PrimaryButton';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
@@ -13,6 +12,7 @@ import svelteImg from 'public/svelte.png';
 import ModalChat from 'components/common/ModalChat';
 import { useScroll } from 'hooks/useScroll';
 import { useModal } from 'hooks/useModal';
+import styles from './index.module.scss';
 
 const PromoSection = () => {
   const { showModal, hideModal } = useModal();
@@ -31,12 +31,12 @@ const PromoSection = () => {
         <div className={styles.container}>
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>Проектирование и разработка</h1>
-            <PrimatyButton
+            <PrimaryButton
               onClick={showChat}
               customClassName={clsx(styles.button__show__top, scrollY > 35 && styles.button__show)}
             >
               <ChatSVG />
-            </PrimatyButton>
+            </PrimaryButton>
           </div>
           <div className={styles.middle}>
             <h3 className={styles.middle__title}>
@@ -63,9 +63,9 @@ const PromoSection = () => {
                   <Image layout="fill" src={person} alt="photo" />
                 </div>
               ))}
-              <PrimatyButton customClassName={styles.person_plus}>
+              <PrimaryButton customClassName={styles.person_plus}>
                 <PlusSVG />
-              </PrimatyButton>
+              </PrimaryButton>
             </div>
           </div>
         </div>
