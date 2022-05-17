@@ -81,6 +81,18 @@ export const projects = [
     photo: '/project2.png',
     text: 'CRM-система и сайт Live boosts по продаже услуг в онлайн-играх',
     tags: ['Игры', 'Стартапы']
+  },
+  {
+    id: 3,
+    photo: '/project1.png',
+    text: 'Браузерная игра и web-сервис Место Встречи для обучения студентов',
+    tags: ['Игры', 'Образование']
+  },
+  {
+    id: 4,
+    photo: '/project2.png',
+    text: 'CRM-система и сайт Live boosts по продаже услуг в онлайн-играх',
+    tags: ['Игры', 'Стартапы']
   }
 ];
 

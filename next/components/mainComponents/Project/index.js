@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import clsx from 'clsx';
 import style from './index.module.scss';
 
-const Project = ({ photo, text, tags }) => {
+const Project = ({ photo, text, tags, isSmall }) => {
   return (
-    <div className={style.project}>
+    <div className={clsx(style.project, isSmall && style.project__small)}>
       <div className={style.project__content}>
-        <div className={style.project__image}>
+        <div className={clsx(style.project__image, isSmall && style.project__image__small)}>
           <Image alt="project" layout="fill" src={photo} />
         </div>
         <span className={style.project__text}>{text}</span>

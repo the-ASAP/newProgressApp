@@ -5,10 +5,15 @@ import AllWidthButton from 'components/common/Buttons/AllWidthButton';
 import { projects } from 'constants/data';
 import style from './index.module.scss';
 
+const imgMini = [1, 2, 5, 6];
+
 const ProjectsSection = () => {
   return (
     <div className={clsx(style.projects, 'wrapper')}>
-      {!!projects?.length && projects.map((project) => <Project key={project.id} {...project} />)}
+      {!!projects?.length &&
+        projects.map((project, index) => (
+          <Project key={project.id} {...project} isSmall={imgMini.includes(index)} />
+        ))}
       <AllWidthButton>Все проекты</AllWidthButton>
     </div>
   );
