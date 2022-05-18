@@ -2,8 +2,10 @@
 
 .container {
   border-radius: 3rem;
-  margin-top: 5.5rem;
+  margin: 5.5rem auto 0rem auto;
   position: relative;
+  max-width: 117.5rem;
+  background-color: rgba(238, 241, 246, 1);
 
   &__back {
     width: 100%;

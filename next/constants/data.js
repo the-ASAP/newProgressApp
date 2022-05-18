@@ -72,25 +72,25 @@ export const activity = [
 export const projects = [
   {
     id: 1,
-    photo: '/project1.png',
+    photo: '/project1.jpg',
     text: 'Браузерная игра и web-сервис Место Встречи для обучения студентов',
     tags: ['Игры', 'Образование']
   },
   {
     id: 2,
-    photo: '/project2.png',
+    photo: '/project2.jpg',
     text: 'CRM-система и сайт Live boosts по продаже услуг в онлайн-играх',
     tags: ['Игры', 'Стартапы']
   },
   {
     id: 3,
-    photo: '/project1.png',
+    photo: '/project3.jpg',
     text: 'Браузерная игра и web-сервис Место Встречи для обучения студентов',
     tags: ['Игры', 'Образование']
   },
   {
     id: 4,
-    photo: '/project2.png',
+    photo: '/project4.jpg',
     text: 'CRM-система и сайт Live boosts по продаже услуг в онлайн-играх',
     tags: ['Игры', 'Стартапы']
   }
