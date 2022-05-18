@@ -9,10 +9,11 @@ import TalentsSection from 'components/sections/TalentsSection';
 import ExperienceSection from 'components/sections/ExperienceSection';
 import DirectorSection from 'components/sections/DirectorSection';
 import SERVICE_API from 'api';
+import styles from 'styles/pages/main.module.scss';
 
 const Index = () => {
   return (
-    <>
+    <div className={styles.main_container}>
       <Head>
         <title>ProgressApp</title>
       </Head>
@@ -24,7 +25,7 @@ const Index = () => {
       <TalentsSection />
       <ExperienceSection />
       <DirectorSection />
-    </>
+    </div>
   );
 };
 
