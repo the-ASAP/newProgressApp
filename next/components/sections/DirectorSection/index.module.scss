@@ -1,10 +1,14 @@
 @import '/styles/root/mixins.scss';
 
 .container {
-  border-radius: 3rem;
   margin: 5.5rem auto 0rem auto;
+  max-width: 120rem;
+  padding: 0px 1.25rem;
+}
+
+.inner {
+  border-radius: 3rem;
   position: relative;
-  max-width: 117.5rem;
   background-color: rgba(238, 241, 246, 1);
 
   &__back {

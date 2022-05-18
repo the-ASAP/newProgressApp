@@ -1,16 +1,21 @@
 @import '/styles/root/mixins.scss';
 
-.footer {
-  &__logo {
-    margin-bottom: 3.375rem;
-  }
+.container {
+  max-width: 120rem;
+  padding: 0px 1.25rem;
+  margin: 1.875rem auto 0rem auto;
+}
 
+.footer {
   width: 100%;
   max-width: 117.5rem;
   background-color: $mainColor;
-  margin: 1.875rem auto 0rem auto;
   padding: 2.9375rem 0px 2.25rem 0rem;
   border-radius: 3rem;
+
+  &__logo {
+    margin-bottom: 3.375rem;
+  }
 
   &__mail {
     @extend %header2;
