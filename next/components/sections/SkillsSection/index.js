@@ -25,7 +25,7 @@ const SkillsSection = () => {
           }
         >
           <div className={style.skills__imageIphone}>
-            <Image alt="skill" layout="fill" src={skillImg1} />
+            <Image alt="skill" layout="fill" src={skillImg1} objectFit="cover" />
           </div>
         </Skill>
         <Skill
@@ -36,7 +36,7 @@ const SkillsSection = () => {
           reverseOrientation={true}
         >
           <div className={style.skills__imageLogo}>
-            <Image alt="skill" layout="fill" src={skillImg2} />
+            <Image alt="skill" layout="fill" src={skillImg2} objectFit="cover" />
           </div>
         </Skill>
         <SkillMain

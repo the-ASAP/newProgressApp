@@ -10,12 +10,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // overflow: hidden;
+  overflow: hidden;
 
   &__content {
     width: 100%;
-    margin: 2.5rem 0;
-    padding: 0 3.25rem;
+    padding: 2.5rem 3.25rem;
   }
 
   &__title {
@@ -50,6 +49,23 @@
 
     &_top {
       order: -1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skill {
+    width: 100%;
+    border-radius: 1.5rem;
+    height: 33.75rem;
+    margin-bottom: 1.25rem;
+
+    &__content {
+      padding: 2.5rem 1.875rem;
+    }
+
+    &__title {
+      font-size: 24px;
     }
   }
 }

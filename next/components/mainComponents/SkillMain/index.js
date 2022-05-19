@@ -13,7 +13,7 @@ const SkillMain = ({ title, text, imageSrc }) => {
       </div>
       {imageSrc && (
         <div className={style.skillMain__image}>
-          <Image alt="skillMain" layout="fill" src={imageSrc} />
+          <Image alt="skillMain" layout="fill" src={imageSrc} objectFit="contain" />
         </div>
       )}
     </div>

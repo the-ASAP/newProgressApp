@@ -8,7 +8,7 @@ const Project = ({ photo, text, tags, isSmall }) => {
     <div className={clsx(style.project, isSmall && style.project__small)}>
       <div className={style.project__content}>
         <div className={clsx(style.project__image, isSmall && style.project__image__small)}>
-          <Image alt="project" layout="fill" src={photo} />
+          <Image alt="project" layout="fill" objectFit="cover" src={photo} />
         </div>
         <span className={style.project__text}>{text}</span>
         <div className={style.project__tags}>

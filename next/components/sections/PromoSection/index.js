@@ -39,12 +39,12 @@ const PromoSection = () => {
         <div className="wrapper">
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>Проектирование и разработка</h1>
-            <PrimaryButton
+            {/* <PrimaryButton
               onClick={showChat}
               customClassName={clsx(styles.button__top, scrollY > 35 && styles.button__bottom)}
             >
               <ChatSVG />
-            </PrimaryButton>
+            </PrimaryButton> */}
           </div>
           <div className={styles.middle}>
             <h3 className={styles.middle__title}>

@@ -8,9 +8,9 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <ModalProvider>
-        <Header />
+        {/* <Header /> */}
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </ModalProvider>
     </>
   );

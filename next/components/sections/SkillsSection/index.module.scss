@@ -61,3 +61,50 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .skills {
+    margin-top: 5rem;
+
+    &__mainText {
+      text-indent: 0rem;
+      font-size: 1.9375rem;
+      font-weight: 700;
+      line-height: 2.375rem;
+
+      &_mainColor {
+        display: block;
+      }
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__team {
+      bottom: -1.875rem;
+    }
+  }
+
+  .person {
+    width: 6.875rem;
+    height: 6.875rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    &__spiderweb {
+      height: 12.375rem;
+    }
+
+    &__imageLogo {
+      height: 12.5rem;
+    }
+  }
+
+  .person {
+    width: 5.425rem;
+    height: 5.425rem;
+  }
+}

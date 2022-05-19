@@ -18,7 +18,7 @@ const DirectorSection = () => {
   return (
     <div className={style.container}>
       <div className={style.inner}>
-        <div className={clsx(style.container__back, darkMode && style.container__back__dark)}>
+        <div className={clsx(style.inner__back, darkMode && style.inner__back__dark)}>
           <Image layout="fill" src={directorBackImg} />
         </div>
         <div className={'wrapper'}>

@@ -18,3 +18,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .marquee {
+    &__text {
+      font-size: 3.375rem;
+    }
+
+    &__button {
+      margin: 0 1.8125rem;
+    }
+  }
+}

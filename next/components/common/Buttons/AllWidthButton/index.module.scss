@@ -12,3 +12,10 @@
     background-color: $mainColor;
   }
 }
+
+@media (max-width: 768px) {
+  .allWidthButton {
+    height: 64px;
+    font-size: 1.125rem;
+  }
+}
