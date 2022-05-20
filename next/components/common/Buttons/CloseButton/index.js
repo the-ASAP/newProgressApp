@@ -3,13 +3,11 @@ import clsx from 'clsx';
 
 import style from './index.module.scss';
 
-const CloseButton = ({ customClassName, ...props }) => {
+const CloseButton = ({ children, customClassName, ...props }) => {
   return (
-    <button
-      type="button"
-      className={clsx(style.close__button, style[customClassName])}
-      {...props}
-    ></button>
+    <button type="button" className={clsx(style.close__button, customClassName)} {...props}>
+      {children}
+    </button>
   );
 };
 
