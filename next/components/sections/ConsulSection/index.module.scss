@@ -14,6 +14,10 @@
   }
 }
 
+.consul__accordions {
+  margin-top: 3.75rem;
+}
+
 .accordion {
   @extend %header3;
   font-weight: 400;
@@ -21,7 +25,6 @@
   background: $cardBackground;
   border-radius: 1.5rem;
   border: 0.0625rem solid $form;
-  margin-top: 3.875rem;
   transition: border-color 0.3s ease-in;
 
   & + & {
@@ -84,6 +87,40 @@
     }
 
     &_close {
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .consul {
+    margin-top: 3.75rem;
+
+    &__mainText {
+      font-size: 1.9375rem;
+    }
+  }
+
+  .consul__accordions {
+    margin-top: 1.875rem;
+  }
+
+  .accordion {
+    border-radius: 0.75rem;
+    font-size: 18px;
+    padding: 0 3.125rem 0 1.25rem;
+    & + & {
+      margin-top: 1.25rem;
+    }
+
+    &__trigger {
+      height: 6.25rem;
+      white-space: normal;
+
+      &::before,
+      &::after {
+        height: 1.25rem;
+        top: calc(50% - 0.625rem);
+      }
     }
   }
 }

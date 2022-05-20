@@ -19,7 +19,7 @@ const DirectorSection = () => {
     <div className={style.container}>
       <div className={style.inner}>
         <div className={clsx(style.inner__back, darkMode && style.inner__back__dark)}>
-          <Image layout="fill" src={directorBackImg} />
+          <Image layout="fill" src={directorBackImg} objectFit="contain" objectPosition="bottom" />
         </div>
         <div className={'wrapper'}>
           <div className={style.director}>
@@ -28,11 +28,13 @@ const DirectorSection = () => {
                 Всегда на связи,{' '}
               </span>
               готовы обсудить ваш проект уже сегодня
-              <Switch
-                customClassName={'directorSection'}
-                onSelectMode={selectMode}
-                darkMode={darkMode}
-              />
+              <span className={style.director__switch_wrap}>
+                <Switch
+                  customClassName={'directorSection'}
+                  onSelectMode={selectMode}
+                  darkMode={darkMode}
+                />
+              </span>
             </span>
             <div className={style.director__content}>
               <div className={style.director__block}>
@@ -96,7 +98,13 @@ const DirectorSection = () => {
                   {address}
                 </span>
               </div>
-              <div className={style.director__chat}></div>
+              <div className={style.director__chat}>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa corporis
+                  sunt, perspiciatis dolore dignissimos aperiam distinctio eum mollitia rerum
+                  veritatis, quo at, cum adipisci doloremque nemo facere magni corrupti.
+                </p>
+              </div>
             </div>
           </div>
         </div>

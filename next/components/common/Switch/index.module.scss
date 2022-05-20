@@ -45,3 +45,24 @@
   bottom: 1rem;
   margin-left: 4rem;
 }
+
+@media (max-width: 768px) {
+  .switch {
+    width: 7.5rem;
+    height: 3.75rem;
+
+    &__word {
+      font-size: 0.875rem;
+    }
+
+    &__circle {
+      width: 3rem;
+      height: 3rem;
+      top: calc(50% - 1.5rem);
+
+      &_right {
+        left: calc(100% - 3rem - 6px);
+      }
+    }
+  }
+}
