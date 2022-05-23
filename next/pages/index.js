@@ -9,6 +9,7 @@ import TalentsSection from 'components/sections/TalentsSection';
 import ExperienceSection from 'components/sections/ExperienceSection';
 import DirectorSection from 'components/sections/DirectorSection';
 import SERVICE_API from 'api';
+import Layout from 'components/layout';
 
 const Index = () => {
   return (
@@ -29,6 +30,10 @@ const Index = () => {
 };
 
 export default Index;
+
+Index.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
+};
 
 export async function getStaticProps() {
   return {

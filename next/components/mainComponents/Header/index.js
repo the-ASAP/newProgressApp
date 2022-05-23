@@ -4,7 +4,7 @@ import { LogoSVG } from 'constants/svg';
 import { menu } from 'constants/data';
 import { mail } from 'constants/contacts';
 import MobileMenu from 'components/common/MobileMenu';
-import PrimaryButton from 'components/common/Buttons/PrimaryButton';
+import { PrimaryButton } from 'components/common/Buttons';
 
 import styles from './index.module.scss';
 

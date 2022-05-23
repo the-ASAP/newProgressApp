@@ -1,6 +1,6 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import PrimaryButton from 'components/common/Buttons/PrimaryButton';
+import { PrimaryButton } from 'components/common/Buttons';
 import style from './index.module.scss';
 
 const MarqueeSection = ({ children, ...props }) => {

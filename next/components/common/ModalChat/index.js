@@ -3,7 +3,7 @@ import React from 'react';
 import { messages } from 'constants/data';
 import style from './index.module.scss';
 import ModalBackdrop from 'components/common/ModalBackdrop';
-import CloseButton from '../Buttons/CloseButton';
+import { CloseButton } from '../Buttons';
 import Message from '../Chat/Message/Message';
 import ChatForm from '../Chat/ChatForm/ChatForm';
 

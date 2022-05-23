@@ -3,7 +3,7 @@ import Collapsible from 'react-collapsible';
 import imageMainLogo from 'public/main_logo.png';
 import clsx from 'clsx';
 import Image from 'next/image';
-import CloseButton from '../Buttons/CloseButton';
+import { CloseButton } from '../Buttons';
 import { menuList } from 'constants/data';
 import { facebook, instagram, mail, phone } from 'constants/contacts';
 import styles from './index.module.scss';

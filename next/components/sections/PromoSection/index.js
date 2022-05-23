@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import PrimaryButton from 'components/common/Buttons/PrimaryButton';
+import { PrimaryButton } from 'components/common/Buttons';
 import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';

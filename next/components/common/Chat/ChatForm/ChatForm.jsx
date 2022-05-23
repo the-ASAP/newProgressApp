@@ -1,5 +1,5 @@
 import FormikTextField from 'components/common/Form/Inputs';
-import PrimaryButton from 'components/common/Buttons/PrimaryButton';
+import { PrimaryButton } from 'components/common/Buttons';
 import React from 'react';
 
 import { ArrowRight } from 'constants/svg';
