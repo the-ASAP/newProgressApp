@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
       <ModalProvider>
         <Header />
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
       </ModalProvider>
     </>
   );

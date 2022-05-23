@@ -106,3 +106,116 @@
     text-decoration-line: underline;
   }
 }
+
+.accordion {
+  &__trigger {
+    position: relative;
+    height: 3.4375rem;
+    padding-right: 3.125rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(39, 47, 45, 1);
+    transition: border 0.3s ease-in;
+
+    &_open {
+      border-bottom: 1px solid transparent;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 2px;
+      height: 8px;
+      position: absolute;
+      top: calc(50% - 3px);
+      right: 2.5rem;
+      background-color: $fontColor;
+      transition: transform 0.3s ease-in;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &_open {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__subitem {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 1rem;
+      color: rgba(39, 47, 45, 1);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .accordion {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .footer {
+    border-radius: 0;
+    padding: 1.875rem 0 1.25rem;
+    min-height: 53.125rem;
+
+    &__mail {
+      font-size: 1.9375rem;
+      font-weight: 700;
+      margin-bottom: 3.75rem;
+    }
+
+    &__logo {
+      margin-bottom: 2.5rem;
+    }
+
+    &__content {
+      display: none;
+    }
+  }
+
+  .license {
+    margin-top: 2.875rem;
+    flex-direction: column;
+
+    &__law {
+      margin-bottom: 1.875rem;
+      span {
+        display: block;
+      }
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+    }
+
+    &__politics {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    &__mail {
+      font-size: 1.5rem;
+    }
+  }
+}

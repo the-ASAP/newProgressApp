@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { mail } from 'constants/contacts';
 import { menuList } from 'constants/data';
 import { AsapSVG, LogoDarkSVG } from 'constants/svg';
+import Collapsible from 'react-collapsible';
+import clsx from 'clsx';
 
 import style from './index.module.scss';
 
@@ -48,10 +50,40 @@ const Footer = () => {
             </div>
           </div>
 
+          <div className={style.menu__accordions}>
+            {!!menuList.length &&
+              menuList?.map((item) => (
+                <Collapsible
+                  trigger={item.title}
+                  key={item.id}
+                  className={style.accordion}
+                  openedClassName={style.accordion}
+                  triggerClassName={style.accordion__trigger}
+                  triggerOpenedClassName={clsx(
+                    style.accordion__trigger,
+                    style.accordion__trigger_open
+                  )}
+                  contentInnerClassName={style.accordion__content}
+                >
+                  <ul>
+                    {!!item?.categories?.length &&
+                      item?.categories.map((subItem) => (
+                        <li className={style.accordion__subitem} key={item.id}>
+                          <a href="#">{subItem.title}</a>
+                        </li>
+                      ))}
+                  </ul>
+                </Collapsible>
+              ))}
+          </div>
+
           <div className={style.license}>
-            <span className={style.license__law}>Progress app 2021. Все права защишены ©</span>
+            <span className={style.license__law}>
+              {' '}
+              <span>Progress app 2021. </span>Все права защищены ©
+            </span>
             <div className={style.license__content}>
-              <button className={style.license__politics}>Политика конвиденциальности</button>
+              <a className={style.license__politics}>Политика конфиденциальности</a>
               <Link href={'/'}>
                 <a>
                   <AsapSVG />
