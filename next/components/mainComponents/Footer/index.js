@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { mail } from 'constants/contacts';
-import { footerMenu } from 'constants/data';
+import { menuList } from 'constants/data';
 import { AsapSVG, LogoDarkSVG } from 'constants/svg';
 
 import style from './index.module.scss';
 
 const Footer = () => {
-  const [menuSubcategories, setMenuSubcategories] = useState(footerMenu[0]?.categories);
+  const [menuSubcategories, setMenuSubcategories] = useState(menuList[0]?.categories);
 
   return (
     <div className={style.container}>
@@ -26,7 +26,7 @@ const Footer = () => {
 
           <div className={style.footer__content}>
             <div className={style.footer__menu}>
-              {footerMenu?.map((menuItem) => (
+              {menuList?.map((menuItem) => (
                 <button
                   type="button"
                   className={style.footer__menuItem}

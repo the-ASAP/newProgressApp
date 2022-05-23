@@ -119,7 +119,7 @@ export const accordios = [
   }
 ];
 
-export const footerMenu = [
+export const menuList = [
   {
     id: '1',
     title: 'Меню',

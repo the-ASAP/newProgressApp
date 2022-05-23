@@ -40,3 +40,16 @@
   top: 0;
   right: -6.25rem;
 }
+
+@media (max-width: 768px) {
+  .close__button {
+    width: 3rem;
+    height: 3rem;
+
+    &::before,
+    &::after {
+      width: 1.3125rem;
+      left: calc(50% - 10px);
+    }
+  }
+}

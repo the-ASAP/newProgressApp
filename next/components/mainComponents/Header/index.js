@@ -13,6 +13,12 @@ const Header = () => {
 
   const toggleMobileMenu = (isVisible) => {
     setMobileMenuVisible(isVisible);
+
+    if (isVisible) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'inherit';
+    }
   };
 
   return (

@@ -1,8 +1,11 @@
 import React from 'react';
+import Collapsible from 'react-collapsible';
 import imageMainLogo from 'public/main_logo.png';
 import clsx from 'clsx';
 import Image from 'next/image';
 import CloseButton from '../Buttons/CloseButton';
+import { menuList } from 'constants/data';
+import { facebook, instagram, mail, phone } from 'constants/contacts';
 import styles from './index.module.scss';
 
 const MobileMenu = ({ toggleMobileMenu, visible }) => {
@@ -13,6 +16,54 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
           <Image alt="logo" layout="fill" src={imageMainLogo} />
         </div>
         <CloseButton onClick={() => toggleMobileMenu(false)} />
+      </div>
+
+      <div className={styles.menu__accordions}>
+        {!!menuList.length &&
+          menuList?.map((item) => (
+            <Collapsible
+              trigger={item.title}
+              key={item.id}
+              className={styles.accordion}
+              openedClassName={styles.accordion}
+              triggerClassName={styles.accordion__trigger}
+              triggerOpenedClassName={clsx(
+                styles.accordion__trigger,
+                styles.accordion__trigger_open
+              )}
+              contentInnerClassName={styles.accordion__content}
+            >
+              <ul>
+                {!!item?.categories?.length &&
+                  item?.categories.map((subItem) => (
+                    <li className={styles.accordion__subitem} key={item.id}>
+                      <a href="#">{subItem.title}</a>
+                    </li>
+                  ))}
+              </ul>
+            </Collapsible>
+          ))}
+      </div>
+
+      <div className={styles.contacts}>
+        <div className={styles.contacts__mail}>
+          <a href={`mailTo:${mail}`}>{mail}</a>
+        </div>
+        <div className={styles.contacts__phone}>
+          <a href={`tel:${phone}`}>{phone}</a>
+        </div>
+        <div className={styles.contacts__socials}>
+          <a className={styles.contacts__social} href={facebook}>
+            Facebook
+          </a>
+          <a className={styles.contacts__social} href={instagram}>
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.brif}>
+        <a href="#">Заполнить бриф</a>
       </div>
     </div>
   );

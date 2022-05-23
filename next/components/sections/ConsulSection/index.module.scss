@@ -50,6 +50,7 @@
     white-space: nowrap;
     position: relative;
     cursor: pointer;
+    padding-right: 1.875rem;
 
     &::before,
     &::after {
@@ -58,7 +59,7 @@
       height: 1.75rem;
       position: absolute;
       top: calc(50% - 0.875rem);
-      right: 0;
+      right: 10px;
       background-color: $fontColor;
       transition: transform 0.3s ease-in, background-color 0.3s ease-in;
     }

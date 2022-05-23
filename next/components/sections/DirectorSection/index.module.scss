@@ -258,6 +258,12 @@
 
   .inner {
     border-radius: 0;
+
+    &__back {
+      &::after {
+        border-radius: 0;
+      }
+    }
   }
 
   .director {
