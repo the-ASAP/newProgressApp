@@ -1,13 +1,8 @@
+import Brief from 'components/mainComponents/Brief';
 import React from 'react';
 
-const Brief = () => {
-  return (
-    <div>
-      brief Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, ullam dolores fuga
-      maxime rerum pariatur totam tempora magnam animi. Nostrum veniam veritatis provident! Veniam
-      nihil voluptatem non ab nesciunt dolorem.
-    </div>
-  );
+const BriefPage = () => {
+  return <Brief />;
 };
 
-export default Brief;
+export default BriefPage;

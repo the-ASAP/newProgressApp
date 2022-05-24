@@ -103,3 +103,15 @@ button {
     }
   }
 }
+
+@font-face {
+  font-family: 'Aeroport';
+  src: url('./../../fonts/Aeroport.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Aeroport';
+  src: url('./../../fonts/Aeroport-Bold.woff2') format('woff2');
+  font-weight: 600;
+}
