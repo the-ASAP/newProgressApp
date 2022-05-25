@@ -121,114 +121,114 @@ export const accordios = [
 
 export const menuList = [
   {
-    id: '1',
+    id: 1,
     title: 'Меню',
     categories: [
       {
-        id: '11',
+        id: 11,
         title: 'Услуги',
         href: '/'
       },
       {
-        id: '12',
+        id: 12,
         title: 'Проекты',
         href: '/'
       },
       {
-        id: '13',
+        id: 13,
         title: 'Компания',
         href: '/'
       },
       {
-        id: '14',
+        id: 14,
         title: 'Работа',
         href: '/'
       },
       {
-        id: '15',
+        id: 15,
         title: 'Знания',
         href: '/'
       },
       {
-        id: '16',
+        id: 16,
         title: 'Контакты',
         href: '/'
       }
     ]
   },
   {
-    id: '2',
+    id: 2,
     title: 'Разработка',
     categories: [
       {
-        id: '21',
+        id: 21,
         title: 'Мобильные приложения',
         href: '/'
       },
       {
-        id: '22',
+        id: 22,
         title: 'Web-cервисы',
         href: '/'
       },
       {
-        id: '23',
+        id: 23,
         title: 'MVP стартапов',
         href: '/'
       },
       {
-        id: '24',
+        id: 24,
         title: 'ERP-системы',
         href: '/'
       },
       {
-        id: '25',
+        id: 25,
         title: 'Desktop приложения',
         href: '/'
       }
     ]
   },
   {
-    id: '3',
+    id: 3,
     title: 'Аутстафф',
     categories: [
       {
-        id: '26',
+        id: 26,
         title: 'Front end',
         href: '/'
       },
       {
-        id: '27',
+        id: 27,
         title: 'Back end',
         href: '/'
       },
       {
-        id: '28',
+        id: 28,
         title: 'UI/UX Дизайнер',
         href: '/'
       }
     ]
   },
   {
-    id: '4',
+    id: 4,
     title: 'Аналитика и поддержка',
     categories: [
       {
-        id: '29',
+        id: 29,
         title: 'Аналитика и документация',
         href: '/'
       },
       {
-        id: '30',
+        id: 30,
         title: 'Внедрения и интеграции',
         href: '/'
       },
       {
-        id: '31',
+        id: 31,
         title: 'IT-консалтинг',
         href: '/'
       },
       {
-        id: '32',
+        id: 32,
         title: 'Техническая поддержка',
         href: '/'
       }
@@ -309,4 +309,32 @@ export const servicesCollection = [
   { id: 7, value: 'it-consulting', label: 'IT-консалтинг' },
   { id: 8, value: 'implementation', label: 'Внедрение и интеграция' },
   { id: 9, value: 'analytics', label: 'Аналитика и документация' }
+];
+
+export const deadlineCollection = [
+  { id: 1, value: 'three_months', label: '1-3 месяца' },
+  { id: 2, value: 'six_months', label: 'до 6 месяцев' },
+  { id: 3, value: 'year', label: 'до 1 года' }
+];
+
+export const budgetCollection = [
+  { id: 1, value: '500_thousand', label: 'до 500 тыс.руб' },
+  { id: 2, value: '1_million', label: 'до 1 млн руб' },
+  { id: 3, value: '3_million', label: 'до 3 млн руб' },
+  { id: 3, value: 'more_3_million', label: 'свыше 3 млн руб' }
+];
+
+export const functionalDesc = [
+  {
+    id: 1,
+    title: 'Пример ключевых бизнес задач',
+    desc: `Повышение клиентской лояльности, увеличение объема продаж, информирование клиентов, повышение эффективности менеджеров, оптимизация процессов логистики, автоматизация документооборота, производства, ручного труда, процесса обучения сотрудников.
+`
+  },
+  {
+    id: 2,
+    title: 'Пример базового функционала',
+    desc: `Повышение клиентской лояльности, увеличение объема продаж, информирование клиентов, повышение эффективности менеджеров, оптимизация процессов логистики, автоматизация документооборота, производства, ручного труда, процесса обучения сотрудников.
+`
+  }
 ];

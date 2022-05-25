@@ -72,6 +72,58 @@
   }
 }
 
+.functional {
+  display: flex;
+
+  &__accordions {
+    margin-left: 2.5rem;
+  }
+}
+
+.accordion {
+  &__trigger {
+    position: relative;
+    height: 4rem;
+    padding-right: 3.125rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid $fontColor;
+    transition: border 0.3s ease-in;
+
+    &_open {
+      border-bottom: 1px solid transparent;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 2px;
+      height: 1.125rem;
+      position: absolute;
+      top: calc(50% - 3px);
+      right: 2.5rem;
+      background-color: $fontColor;
+      transition: transform 0.3s ease-in;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &_open {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__content {
+    padding: 1.25rem 1.25rem 1.25rem 0rem;
+    border-bottom: 1px solid $fontColor;
+  }
+}
+
 .error {
   display: flex;
   align-items: center;
@@ -82,6 +134,35 @@
 
 .btn__submit {
   border: 1px solid black;
-  padding: 20px 30px;
-  margin: 30px;
+  padding: 1.25rem 1.875rem;
+  margin: 1.875rem;
 }
+
+.contacts {
+  border-bottom: none;
+
+  &__input__wrapper {
+    max-width: 32.8125rem;
+    margin-bottom: 0.9375rem;
+  }
+
+  &__input {
+    border: 1px solid $fontColor;
+    border-radius: 0.625rem;
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  &__input__file {
+    opacity: 0;
+    position: relative;
+  }
+}
+
+// .file__fake {
+//   width: 100%;
+//   height: 3.125rem;
+//   border-radius: 15px;
+//   background-color: aqua;
+// }

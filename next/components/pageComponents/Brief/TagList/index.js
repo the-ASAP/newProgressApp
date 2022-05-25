@@ -2,26 +2,29 @@ import { FieldArray } from 'formik';
 import React from 'react';
 import style from './index.module.scss';
 
-const TagList = ({ tags, values }) => {
+const TagList = ({ tags, values, name, onlyOne }) => {
   return (
     <>
       <FieldArray
-        name="services"
+        name={name}
         render={(arrayHelpers) => (
           <div className={style.tag__list}>
             {tags.map((tag) => (
               <label key={tag.id} className={style.tag}>
                 <input
                   className={style.tag__input}
-                  name="services"
+                  name={name}
                   type="checkbox"
                   value={tag}
-                  checked={values.services.includes(tag.value)}
+                  checked={values[name].includes(tag.value)}
                   onChange={(e) => {
-                    if (e.target.checked) {
+                    if (onlyOne && e.target.checked) {
+                      arrayHelpers.remove(0);
                       arrayHelpers.push(tag.value);
-                    } else {
-                      const idx = values.services.indexOf(tag.value);
+                    } else if (!onlyOne && e.target.checked) {
+                      arrayHelpers.push(tag.value);
+                    } else if (!onlyOne && !e.target.checked) {
+                      const idx = values[name].indexOf(tag.value);
                       arrayHelpers.remove(idx);
                     }
                   }}
