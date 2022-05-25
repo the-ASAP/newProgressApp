@@ -1,4 +1,4 @@
-import FormikTextField from 'components/common/Form/Inputs';
+import FormikTextField from 'components/common/Form/Input';
 import { PrimaryButton } from 'components/common/Buttons';
 import React from 'react';
 

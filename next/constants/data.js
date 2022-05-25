@@ -298,3 +298,15 @@ export const messages = [
     avatar: '/msg_avatar.png'
   }
 ];
+
+export const servicesCollection = [
+  { id: 1, value: 'mobile_app', label: 'Мобильное приложение' },
+  { id: 2, value: 'desktop_app', label: 'Desktop приложение' },
+  { id: 3, value: 'outstaff', label: 'Аутстаффинг' },
+  { id: 4, value: 'web_service', label: 'Web-сервис' },
+  { id: 5, value: 'mvp', label: 'MVP стартапа' },
+  { id: 6, value: 'erp-system', label: 'ERP-система' },
+  { id: 7, value: 'it-consulting', label: 'IT-консалтинг' },
+  { id: 8, value: 'implementation', label: 'Внедрение и интеграция' },
+  { id: 9, value: 'analytics', label: 'Аналитика и документация' }
+];

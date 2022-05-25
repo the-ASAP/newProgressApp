@@ -1,0 +1,29 @@
+@import '/styles/root/mixins.scss';
+
+.tag__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  min-height: 2.8125rem;
+  margin: 0rem 0.625rem 1.25rem 0rem;
+  padding: 0.625rem 0;
+  border-radius: 30px;
+
+  &__view {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    border: 2px solid $fontColor;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  }
+
+  &__input:checked + .tag__view {
+    color: $hoverMainColor;
+    background-color: $fontColor;
+  }
+}

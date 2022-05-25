@@ -1,0 +1,87 @@
+@import '/styles/root/mixins.scss';
+
+.container {
+  background-color: $hoverMainColor;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'Aeroport';
+}
+
+.wrapper {
+  max-width: 73.5625rem;
+  padding: 4.75rem 0.9375rem 0rem 0.9375rem;
+  margin: 0px auto;
+}
+
+.heading {
+  &__title {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-weight: 400;
+    margin-bottom: 3.125rem;
+  }
+
+  &__desc {
+    display: flex;
+  }
+  &__desc__left {
+    max-width: 29.0625rem;
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+    margin-right: 13.3125rem;
+  }
+
+  &__desc__right {
+    max-width: 26.875rem;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+
+.section {
+  width: 100%;
+  padding: 3.75rem 0rem 2.5rem 0rem;
+  border-bottom: 1px solid $fontColor;
+
+  &__title {
+    font-size: 1.9375rem;
+    font-weight: 600;
+    margin-bottom: 1.875rem;
+  }
+}
+
+.service__tags {
+  display: flex;
+  align-items: center;
+}
+
+.form__input {
+  &__textarea {
+    border: 1px solid $fontColor;
+    border-radius: 2.625rem;
+    padding: 1.875rem;
+    width: 32.8125rem;
+    height: 15rem;
+    resize: none;
+    color: $fontColor;
+
+    &::placeholder {
+      color: rgba(99, 105, 105, 1);
+    }
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  color: red;
+  height: 1.25rem;
+  padding-left: 0.625rem;
+}
+
+.btn__submit {
+  border: 1px solid black;
+  padding: 20px 30px;
+  margin: 30px;
+}
