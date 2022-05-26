@@ -40,8 +40,8 @@ export const LogoDarkSVG = () => (
 
 export const ChatSVG = () => (
   <svg
-    width="2.4375rem"
-    height="2.375rem"
+    width="2rem"
+    height="2rem"
     viewBox="0 0 39 38"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

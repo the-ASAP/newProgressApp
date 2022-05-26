@@ -4,7 +4,6 @@ import { FormErrorContainer } from './FormErrorContainer';
 
 export const FormContainer = (props) => {
   const { serverErrors, className, children, ...other } = props;
-  console.log('serverErrors', serverErrors);
   return (
     <Formik {...other}>
       {(formik) => {

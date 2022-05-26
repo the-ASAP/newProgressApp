@@ -22,7 +22,11 @@ const Brief = () => {
     title: '',
     functional: '',
     deadline: ['three_months'],
-    budget: ['500_thousand']
+    budget: ['500_thousand'],
+    userName: '',
+    phone: '',
+    email: '',
+    file: ''
   };
 
   const onSubmit = (values) => {
