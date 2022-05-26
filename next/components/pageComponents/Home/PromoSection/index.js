@@ -12,11 +12,9 @@ import reactImg from 'public/react.png';
 import ModalChat from 'components/common/ModalChat';
 import { useScroll } from 'hooks/useScroll';
 import { useModal } from 'hooks/useModal';
-import useWindowDimensions from 'hooks/useWindowDimensions';
 import styles from './index.module.scss';
 
 const PromoSection = () => {
-  const windowWidth = useWindowDimensions();
   const { showModal, hideModal } = useModal();
   const { scrollY } = useScroll();
 
@@ -41,18 +39,17 @@ const PromoSection = () => {
         <div className="wrapper">
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>Проектирование и разработка</h1>
-            {windowWidth > 768 ? (
-              <PrimaryButton
-                onClick={showChat}
-                customClassName={clsx(styles.button__top, scrollY > 35 && styles.button__bottom)}
-              >
-                <ChatSVG />
-              </PrimaryButton>
-            ) : (
-              <PrimaryButton onClick={showChat} customClassName={styles.button__mobile}>
-                <ChatSVG />
-              </PrimaryButton>
-            )}
+
+            <PrimaryButton
+              onClick={showChat}
+              customClassName={clsx(styles.button__top, scrollY > 35 && styles.button__bottom)}
+            >
+              <ChatSVG />
+            </PrimaryButton>
+
+            <PrimaryButton onClick={showChat} customClassName={styles.button__mobile}>
+              <ChatSVG />
+            </PrimaryButton>
           </div>
           <div className={styles.middle}>
             <h3 className={styles.middle__title}>

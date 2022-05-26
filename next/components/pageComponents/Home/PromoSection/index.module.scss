@@ -192,7 +192,18 @@
   }
 }
 
+@media (min-width: 768px) {
+  .button__mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .button__top,
+  .button__bottom {
+    display: none;
+  }
+
   .container {
     max-height: auto;
     padding: 0;

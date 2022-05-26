@@ -10,3 +10,22 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(235, 235, 235, 0) 100%);
   backdrop-filter: blur(2.625rem);
 }
+
+.close__chat__btn {
+  position: absolute;
+  top: 0;
+  right: -15rem;
+}
+
+@media (max-width: 768px) {
+  .chat {
+    height: calc(100vh - 2.5rem);
+    width: calc(100vw - 2.5rem);
+    border-radius: 2.625rem;
+  }
+
+  .close__chat__btn {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}

@@ -8,6 +8,7 @@ import { address, directorMail, facebook, instagram, mail, phone } from 'constan
 import Switch from 'components/common/Switch';
 
 import directorBackImg from 'public/director__back2.png';
+import ChatMobile from 'components/common/Chat/ChatMobile';
 const DirectorSection = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -99,11 +100,8 @@ const DirectorSection = () => {
                 </span>
               </div>
               <div className={style.director__chat}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa corporis
-                  sunt, perspiciatis dolore dignissimos aperiam distinctio eum mollitia rerum
-                  veritatis, quo at, cum adipisci doloremque nemo facere magni corrupti.
-                </p>
+                <div className={style.director__chat__cover}></div>
+                <ChatMobile director={true} />
               </div>
             </div>
           </div>
