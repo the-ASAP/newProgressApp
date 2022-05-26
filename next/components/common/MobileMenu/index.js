@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Collapsible from 'react-collapsible';
 import imageMainLogo from 'public/main_logo.png';
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 import { CloseButton } from '../Buttons';
 import { menuList } from 'constants/data';
 import { facebook, instagram, mail, phone } from 'constants/contacts';
@@ -63,7 +64,9 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
       </div>
 
       <div className={styles.brif}>
-        <a href="#">Заполнить бриф</a>
+        <Link href="/brief">
+          <a>Заполнить бриф</a>
+        </Link>
       </div>
     </div>
   );

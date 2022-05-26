@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { LogoSVG } from 'constants/svg';
 import { menu } from 'constants/data';
@@ -15,9 +15,9 @@ const Header = () => {
     setMobileMenuVisible(isVisible);
 
     if (isVisible) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style.overflow = 'inherit';
+      document.body.style.overflowY = 'inherit';
     }
   };
 

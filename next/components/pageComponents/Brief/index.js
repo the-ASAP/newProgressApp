@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextAreaField from 'components/common/Form/TextArea';
 import {
@@ -28,6 +28,10 @@ const Brief = () => {
     email: '',
     file: ''
   };
+
+  useEffect(() => {
+    document.body.style.overflowY = 'inherit';
+  }, []);
 
   const onSubmit = (values) => {
     console.log(values);
