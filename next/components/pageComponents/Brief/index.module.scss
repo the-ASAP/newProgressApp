@@ -10,7 +10,7 @@
 
 .wrapper {
   max-width: 73.5625rem;
-  padding: 4.75rem 0.9375rem 0rem 0.9375rem;
+  padding: 4.75rem 0.9375rem 2.75rem 0.9375rem;
   margin: 0px auto;
 }
 
@@ -59,7 +59,7 @@
 .form__input {
   &__textarea {
     border: 1px solid $fontColor;
-    border-radius: 2.625rem;
+    border-radius: 1.5rem;
     padding: 1.875rem;
     width: 32.8125rem;
     height: 15rem;
@@ -83,7 +83,7 @@
 .accordion {
   &__trigger {
     position: relative;
-    height: 4rem;
+    min-height: 4rem;
     padding-right: 3.125rem;
     display: flex;
     align-items: center;
@@ -101,7 +101,7 @@
       width: 2px;
       height: 1.125rem;
       position: absolute;
-      top: calc(50% - 3px);
+      top: calc(50% - 6px);
       right: 2.5rem;
       background-color: $fontColor;
       transition: transform 0.3s ease-in;
@@ -119,7 +119,7 @@
   }
 
   &__content {
-    padding: 1.25rem 1.25rem 1.25rem 0rem;
+    padding: 1.25rem 1.25rem 1.875rem 0rem;
     border-bottom: 1px solid $fontColor;
   }
 }
@@ -132,23 +132,19 @@
   padding-left: 0.625rem;
 }
 
-.btn__submit {
-  border: 1px solid black;
-  padding: 1.25rem 1.875rem;
-  margin: 1.875rem;
-}
-
 .contacts {
   border-bottom: none;
 
   &__input__wrapper {
     max-width: 32.8125rem;
     margin-bottom: 0.9375rem;
+    position: relative;
   }
 
   &__input {
     border: 1px solid $fontColor;
     border-radius: 0.625rem;
+    color: $fontColor;
     &::placeholder {
       font-size: 1rem;
     }
@@ -156,13 +152,142 @@
 
   &__input__file {
     opacity: 0;
-    position: relative;
+  }
+
+  &__fake {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.125rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0.625rem;
+    border: 1px solid $fontColor;
+    padding-left: 1rem;
+    color: rgba(99, 105, 105, 1);
+
+    p {
+      margin-left: 0.625rem;
+    }
   }
 }
 
-// .file__fake {
-//   width: 100%;
-//   height: 3.125rem;
-//   border-radius: 15px;
-//   background-color: aqua;
-// }
+.btn__submit {
+  border: 1px solid black;
+  padding: 0.75rem 1.875rem;
+  margin: 3.125rem 0 0 0;
+  background-color: $fontColor;
+  color: $hoverMainColor;
+  font-size: 1.5rem;
+  border-radius: 3.125rem;
+  border: 2px solid $fontColor;
+  height: auto;
+  width: 19.0625rem;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+  &:hover {
+    transform: none;
+    background-color: $hoverMainColor;
+    color: $fontColor;
+  }
+}
+
+.politics {
+  max-width: 35rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1.8125rem 1.5rem 1.625rem 1.5rem;
+  }
+  .heading {
+    &__title {
+      font-size: 3.375rem;
+    }
+
+    &__desc {
+      flex-direction: column;
+    }
+
+    &__desc__left {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-right: 0;
+      margin-bottom: 1.875rem;
+      line-height: 1.5rem;
+    }
+
+    &__desc__right {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  .section {
+    padding: 1.875rem 0rem 3.75rem 0rem;
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.8125rem;
+    }
+  }
+
+  .form__input {
+    &__textarea {
+      padding: 1.25rem;
+      width: 100%;
+    }
+  }
+
+  .functional {
+    flex-direction: column;
+
+    &__accordions {
+      margin-left: 0;
+    }
+  }
+
+  .accordion {
+    &__trigger {
+      font-size: 1.125rem;
+      font-weight: 600;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 1px;
+        height: 0.75rem;
+        top: calc(50% - 0.3125rem);
+        right: 1.875rem;
+      }
+    }
+
+    &__content {
+      font-size: 0.875rem;
+      padding: 0.625rem 0 1.875rem 0;
+    }
+  }
+
+  .contacts {
+    padding-bottom: 1.9375rem;
+  }
+
+  .functional__section {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn__submit {
+    width: 100%;
+
+    &:hover {
+      background-color: $fontColor;
+      color: $hoverMainColor;
+    }
+  }
+}

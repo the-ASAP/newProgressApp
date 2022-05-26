@@ -28,3 +28,13 @@
     background-color: $fontColor;
   }
 }
+
+@media (max-width: 768px) {
+  .tag {
+    margin: 0rem 0.625rem 0.625rem 0rem;
+
+    &__view {
+      font-size: 0.875rem;
+    }
+  }
+}

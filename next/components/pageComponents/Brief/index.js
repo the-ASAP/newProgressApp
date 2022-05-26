@@ -11,9 +11,10 @@ import { BriefValidationSchema } from 'utils/validations';
 import clsx from 'clsx';
 import TagList from './TagList';
 import Collapsible from 'react-collapsible';
-
-import style from './index.module.scss';
 import FormikTextField from 'components/common/Form/Input';
+import { FileSvg } from 'constants/svg';
+import { PrimaryButton } from 'components/common/Buttons';
+import style from './index.module.scss';
 
 const Brief = () => {
   const initialValues = {
@@ -70,7 +71,7 @@ const Brief = () => {
                   <span className={style.error}>{errors?.title && errors.title}</span>
                 </div>
 
-                <div className={style.section}>
+                <div className={clsx(style.section, style.functional__section)}>
                   <h3 className={style.section__title}>
                     Краткое описание задач и функционала проекта
                   </h3>
@@ -153,20 +154,25 @@ const Brief = () => {
                   </div>
 
                   <div className={style.contacts__input__wrapper}>
-                    <div>
-                      <FormikTextField
-                        customClassName={style.contacts__input__file}
-                        type="file"
-                        name="file"
-                        label="Прикрепите файлы"
-                      />
-                      <span>Загрузить</span>
-                    </div>
+                    <FormikTextField
+                      customClassName={style.contacts__input__file}
+                      type="file"
+                      name="file"
+                      id="file"
+                      label="Прикрепите файлы"
+                    />
+                    <label className={style.contacts__fake} htmlFor="file">
+                      <FileSvg /> <p>Загрузить</p>
+                    </label>
                   </div>
 
-                  <button className={style.btn__submit} type="submit">
-                    отправить
-                  </button>
+                  <PrimaryButton customClassName={style.btn__submit} type="submit">
+                    Oтправить
+                  </PrimaryButton>
+                </div>
+                <div className={style.politics}>
+                  Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                  соглашаетесь с политикой конфиденциальности.
                 </div>
               </div>
             );
