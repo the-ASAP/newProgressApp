@@ -68,7 +68,7 @@ const Footer = () => {
                   <ul>
                     {!!item?.categories?.length &&
                       item?.categories.map((subItem) => (
-                        <li className={style.accordion__subitem} key={item.id}>
+                        <li className={style.accordion__subitem} key={subItem.id}>
                           <a href="#">{subItem.title}</a>
                         </li>
                       ))}

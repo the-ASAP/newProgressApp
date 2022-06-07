@@ -192,17 +192,17 @@ export const menuList = [
     title: 'Аутстафф',
     categories: [
       {
-        id: 26,
+        id: 31,
         title: 'Front end',
         href: '/'
       },
       {
-        id: 27,
+        id: 32,
         title: 'Back end',
         href: '/'
       },
       {
-        id: 28,
+        id: 33,
         title: 'UI/UX Дизайнер',
         href: '/'
       }
@@ -213,22 +213,22 @@ export const menuList = [
     title: 'Аналитика и поддержка',
     categories: [
       {
-        id: 29,
+        id: 41,
         title: 'Аналитика и документация',
         href: '/'
       },
       {
-        id: 30,
+        id: 42,
         title: 'Внедрения и интеграции',
         href: '/'
       },
       {
-        id: 31,
+        id: 43,
         title: 'IT-консалтинг',
         href: '/'
       },
       {
-        id: 32,
+        id: 44,
         title: 'Техническая поддержка',
         href: '/'
       }
@@ -279,22 +279,25 @@ export const experience = [
   }
 ];
 
-export const messages = [
+export const fakeMessages = [
   {
     isCustomer: false,
     messageText: `Здравствуйте, какой вопрос вас интересует?`,
     avatar: '/msg_avatar.png'
   },
   {
-    isCustomer: true,
-    messageText: 'Нужен корпоративный сайт, с каталогом товаров сколько будет стоить?',
-    avatar: '/no_avatar.png'
+    isCustomer: false,
+    messageText: `Напишите свой номер телефона, мы перезвоним вам в ближайшее время. 
+    Обращаю ваше внимание, что отправляя номер вы соглашаетесь`,
+    link: {
+      text: `с политикой конфиденциальности`,
+      url: 'http://localhost:3000/politic'
+    },
+    avatar: '/msg_avatar.png'
   },
   {
     isCustomer: false,
-    messageText: `Напишите свой номер телефона, мы перезвоним вам в ближайшее время 
-    Обращаю ваше внимание, что отправляя номер вы соглашаетесь 
-    с политикой конфиденциальности`,
+    messageText: `Спасибо! До встречи.`,
     avatar: '/msg_avatar.png'
   }
 ];
@@ -321,7 +324,7 @@ export const budgetCollection = [
   { id: 1, value: '500_thousand', label: 'до 500 тыс.руб' },
   { id: 2, value: '1_million', label: 'до 1 млн руб' },
   { id: 3, value: '3_million', label: 'до 3 млн руб' },
-  { id: 3, value: 'more_3_million', label: 'свыше 3 млн руб' }
+  { id: 4, value: 'more_3_million', label: 'свыше 3 млн руб' }
 ];
 
 export const functionalDesc = [

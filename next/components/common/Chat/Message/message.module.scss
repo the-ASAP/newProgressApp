@@ -6,6 +6,11 @@
     display: flex;
     margin-bottom: 2.5rem;
   }
+
+  &__link {
+    color: $fontColor;
+    border-bottom: 1px solid $mainColor;
+  }
 }
 
 .avatar {

@@ -6,14 +6,16 @@ import { ArrowRight } from 'constants/svg';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import style from './index.module.scss';
 
-const ChatForm = () => {
+const ChatForm = ({ handleSubmit, disabled }) => {
   const initialValues = {
     message: ''
   };
 
-  const onSubmit = (values) => {
+  const onSubmit = (values, { resetForm }) => {
     if (!values.message) return;
-    console.log(values);
+
+    handleSubmit(values.message);
+    resetForm();
   };
 
   return (
@@ -27,7 +29,11 @@ const ChatForm = () => {
               placeholder="Напишите ответ"
             />
 
-            <PrimaryButton customClassName={style.form__button} type="submit" disabled={!isValid}>
+            <PrimaryButton
+              customClassName={style.form__button}
+              type="submit"
+              disabled={!isValid && disabled}
+            >
               <ArrowRight />
             </PrimaryButton>
           </div>

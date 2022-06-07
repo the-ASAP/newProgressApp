@@ -37,7 +37,7 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
               <ul>
                 {!!item?.categories?.length &&
                   item?.categories.map((subItem) => (
-                    <li className={styles.accordion__subitem} key={item.id}>
+                    <li className={styles.accordion__subitem} key={subItem.id}>
                       <a href="#">{subItem.title}</a>
                     </li>
                   ))}

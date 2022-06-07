@@ -9,7 +9,7 @@ import { promoTeam, activity } from 'constants/data';
 import mainImg from 'public/main.png';
 import svelteImg from 'public/svelte.png';
 import reactImg from 'public/react.png';
-import ModalChat from 'components/common/ModalChat';
+import ModalChat from 'components/common/Chat/ModalChat';
 import { useScroll } from 'hooks/useScroll';
 import { useModal } from 'hooks/useModal';
 import styles from './index.module.scss';

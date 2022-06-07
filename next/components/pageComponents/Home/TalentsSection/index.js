@@ -8,8 +8,8 @@ import talentImg3 from 'public/talent_3.png';
 import talentImg4 from 'public/talent_4.png';
 import talentImg5 from 'public/talent_5.png';
 import talentImg6 from 'public/talent_6.png';
-import style from './index.module.scss';
 import circleImg from 'public/circle.png';
+import style from './index.module.scss';
 
 const TalentsSection = () => {
   return (
