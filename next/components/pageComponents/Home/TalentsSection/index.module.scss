@@ -12,10 +12,17 @@
 .back {
   position: absolute;
   width: 67.25rem;
-  height: 62.5rem;
-  bottom: 4.375rem;
+  height: 67.25rem;
+  bottom: 1.875rem;
   left: 50%;
   transform: translateX(-50%) rotate(-45deg);
+
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .talents {
@@ -163,14 +170,14 @@
       width: 3.75rem;
       height: 3.75rem;
       top: 25.1875rem;
-      right: 79px;
+      right: 4.9375rem;
     }
 
     &__talent5 {
       width: 3.75rem;
       height: 3.75rem;
       top: 25.1875rem;
-      left: 79px;
+      left: 4.9375rem;
     }
   }
 }

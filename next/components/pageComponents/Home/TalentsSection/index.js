@@ -15,7 +15,9 @@ const TalentsSection = () => {
   return (
     <div className={clsx(style.container, 'wrapper')}>
       <div className={style.back}>
-        <Image layout="fill" src={circleImg} alt="main" priority="true" />
+        <span className={style.back__image}>
+          <Image src={circleImg} alt="main" width={1000} height={1000} />
+        </span>
       </div>
 
       <div className={style.talents}>

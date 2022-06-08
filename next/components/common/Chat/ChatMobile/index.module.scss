@@ -4,31 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
   z-index: 3;
 }
 
 .manager {
   display: flex;
   flex-direction: column;
-
-  &__box {
-    display: flex;
-    align-items: center;
-  }
-
-  &__img {
-    position: relative;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-
-  &__info {
-    margin-left: 0.625rem;
-  }
-
-  &__info__rang {
-    color: rgba(39, 47, 45, 0.3);
-  }
 }
 
 .message__wrapper {
@@ -66,6 +48,9 @@
   margin-right: 0.625rem;
   margin-bottom: 0.625rem;
 }
+.tag.active {
+  background-color: #fff;
+}
 
 .form {
   margin-top: 1.875rem;
@@ -73,9 +58,6 @@
 
 .manager__dir {
   flex-direction: row;
-}
-.manager__info__dir {
-  display: none;
 }
 
 .message__wrapper__dir {
@@ -94,5 +76,9 @@
 }
 
 .tag__dir {
-  background-color: #eef1f6;
+  background-color: #fcfdff;
+}
+
+.tag__dir.active {
+  background-color: #4aee87;
 }

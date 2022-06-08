@@ -1,0 +1,24 @@
+.manager {
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    position: relative;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+
+  &__info {
+    margin-left: 0.625rem;
+  }
+
+  &__info__rang {
+    color: rgba(39, 47, 45, 0.3);
+  }
+}
+
+.manager__info__dir {
+  display: none;
+}
