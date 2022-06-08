@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import avatar from 'public/msg_avatar.png';
 import { TriangleSVG } from 'constants/svg';
 import ChatForm from '../ChatForm/ChatForm';
 import { chatQuestions } from 'constants/data';
@@ -10,60 +8,112 @@ import ManagerInfo from '../ManagerInfo';
 import style from './index.module.scss';
 
 const ChatMobile = ({ director }) => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [currentTag, setCurrentTag] = useState(null);
+  const [answers, setAnswers] = useState([]);
 
   const selectTag = (tag) => {
     setCurrentTag(tag);
   };
 
+  const doNextStep = (answer) => {
+    const curQuestion = chatQuestions[step].question;
+
+    setAnswers([...answers, { curQuestion: [answer] }]);
+  };
+
   return (
     <div className={style.chat_mobile__container}>
       <div className={style.stepper}>
-        {step === 1 && (
-          <>
-            <div className={clsx(style.manager, director && style.manager__dir)}>
-              <ManagerInfo director={director} />
-              <div
-                className={clsx(style.message__wrapper, director && style.message__wrapper__dir)}
-              >
-                <div className={clsx(style.message, director && style.message__dir)}>
-                  {chatQuestions[0].question}
-                </div>
+        <div className={style.step__one}>
+          {step === 0 && (
+            <>
+              <div className={clsx(style.manager, director && style.manager__dir)}>
+                <ManagerInfo director={director} />
                 <div
-                  className={clsx(
-                    style.message__triangle,
-                    director && style.message__triangle__dir
-                  )}
+                  className={clsx(style.message__wrapper, director && style.message__wrapper__dir)}
                 >
-                  <TriangleSVG />
-                </div>
-              </div>
-            </div>
-
-            <div className={style.tags}>
-              {chatQuestions[0].tags.map((tag, ind) => {
-                return (
-                  <button
-                    onClick={() => selectTag(tag.title)}
-                    key={ind}
+                  <div className={clsx(style.message, director && style.message__dir)}>
+                    {chatQuestions[0].question}
+                  </div>
+                  <div
                     className={clsx(
-                      style.tag,
-                      director && style.tag__dir,
-                      currentTag === tag.title && style.active
+                      style.message__triangle,
+                      director && style.message__triangle__dir
                     )}
                   >
-                    {tag.title}
-                  </button>
-                );
-              })}
-            </div>
-          </>
-        )}
+                    <TriangleSVG />
+                  </div>
+                </div>
+              </div>
+
+              <div className={style.tags}>
+                {chatQuestions[0].tags.map((tag, ind) => {
+                  return (
+                    <button
+                      onClick={() => selectTag(tag.title)}
+                      key={ind}
+                      className={clsx(
+                        style.tag,
+                        director && style.tag__dir,
+                        currentTag === tag.title && style.active
+                      )}
+                    >
+                      {tag.title}
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className={style.step__two}>
+          {step === 1 && (
+            <>
+              <div className={clsx(style.manager, director && style.manager__dir)}>
+                <ManagerInfo director={director} />
+                <div
+                  className={clsx(style.message__wrapper, director && style.message__wrapper__dir)}
+                >
+                  <div className={clsx(style.message, director && style.message__dir)}>
+                    {chatQuestions[1].question}
+                  </div>
+                  <div
+                    className={clsx(
+                      style.message__triangle,
+                      director && style.message__triangle__dir
+                    )}
+                  >
+                    <TriangleSVG />
+                  </div>
+                </div>
+              </div>
+
+              <div className={style.tags}>
+                {chatQuestions[1].tags.map((tag, ind) => {
+                  return (
+                    <button
+                      onClick={() => selectTag(tag.title)}
+                      key={ind}
+                      className={clsx(
+                        style.tag,
+                        director && style.tag__dir,
+                        currentTag === tag.title && style.active
+                      )}
+                    >
+                      {tag.title}
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <div className={style.form}>
-        <ChatForm />
+        <ChatForm value={currentTag} handleSubmit={doNextStep} />
       </div>
     </div>
   );

@@ -6,9 +6,9 @@ import { ArrowRight } from 'constants/svg';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import style from './index.module.scss';
 
-const ChatForm = ({ handleSubmit, disabled }) => {
+const ChatForm = ({ handleSubmit, disabled, value }) => {
   const initialValues = {
-    message: ''
+    message: value || ''
   };
 
   const onSubmit = (values, formik) => {
@@ -20,7 +20,7 @@ const ChatForm = ({ handleSubmit, disabled }) => {
 
   return (
     <>
-      <FormContainer initialValues={initialValues} onSubmit={onSubmit}>
+      <FormContainer initialValues={initialValues} onSubmit={onSubmit} enableReinitialize={true}>
         {({ isValid }) => (
           <div className={style.form__wrapper}>
             <FormikTextField
