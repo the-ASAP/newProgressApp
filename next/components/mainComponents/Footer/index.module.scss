@@ -19,6 +19,7 @@
 
   &__mail {
     @extend %header2;
+    font-family: Aeroport;
   }
 
   &__content {
@@ -38,6 +39,7 @@
 
   &__menuItem {
     @extend %header3;
+    font-family: Aeroport;
     display: block;
     position: relative;
 
@@ -48,6 +50,7 @@
 
   &__menuSubitem {
     @extend %subHeader;
+    font-family: Aeroport;
     display: block;
     position: relative;
     width: fit-content;

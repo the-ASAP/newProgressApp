@@ -80,7 +80,7 @@ const Footer = () => {
           <div className={style.license}>
             <span className={style.license__law}>
               {' '}
-              <span>Progress app 2021. </span>Все права защищены ©
+              <span>Progress app 2022. </span>Все права защищены ©
             </span>
             <div className={style.license__content}>
               <a className={style.license__politics}>Политика конфиденциальности</a>

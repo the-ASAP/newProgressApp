@@ -1,9 +1,9 @@
-@import "/styles/root/root.scss";
+@import '/styles/root/root.scss';
 //Создание необходимых миксинов
 %flexbox {
-	display: flex;
-	align-items: center;
-	align-self: center;
+  display: flex;
+  align-items: center;
+  align-self: center;
 }
 
 %scrollbar::-webkit-scrollbar {
@@ -22,8 +22,8 @@
 }
 
 %textDisplay {
-  // font-family: Aeroport;
-  font-family: Inter;
+  font-family: Aeroport;
+  // font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 6rem;
@@ -52,8 +52,8 @@
 }
 
 %header3 {
-  // font-family: Aeroport;
-  font-family: Inter;
+  font-family: Aeroport;
+  // font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 1.9375rem;

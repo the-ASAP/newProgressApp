@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Message from '../Message/Message';
 import { fakeMessages } from 'constants/data';
-import avatar from 'public/msg_avatar.png';
 import style from './index.module.scss';
 import ChatForm from '../ChatForm/ChatForm';
-import Image from 'next/image';
 
 const ChatDesktop = () => {
   const [answers, setAnswers] = useState([]);
-  const [isFakeTyping, setIFakeTyping] = useState(false);
   const [currentFakeIndex, setCurrentFakeIndex] = useState(0);
   const [allMessages, setAllMessages] = useState([]);
 
@@ -33,12 +30,9 @@ const ChatDesktop = () => {
   }, [answers]);
 
   useEffect(() => {
-    setIFakeTyping(true);
-
     const timer = setTimeout(() => {
-      setIFakeTyping(false);
       setAllMessages([...allMessages, fakeMessages[currentFakeIndex]]);
-    }, 2000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
@@ -53,21 +47,8 @@ const ChatDesktop = () => {
         })}
       </div>
 
-      {isFakeTyping && (
-        <div className={style.typing__wrapper}>
-          <div className={style.typing__avatar}>
-            <Image alt="avatar" src={avatar} layout="fill" />
-          </div>
-          <>
-            <div className={style.loading__bar}></div>
-            <div className={style.loading__bar}></div>
-            <div className={style.loading__bar}></div>
-          </>
-        </div>
-      )}
-
       <div>
-        <ChatForm handleSubmit={saveAnswer} disabled={isFakeTyping} />
+        <ChatForm handleSubmit={saveAnswer} />
       </div>
     </>
   );

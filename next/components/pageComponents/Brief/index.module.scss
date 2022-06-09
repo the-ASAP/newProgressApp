@@ -15,6 +15,16 @@
 }
 
 .heading {
+  position: relative;
+
+  &__close {
+    background-color: transparent;
+    border: 1px solid #000;
+    position: absolute;
+    top: 1.875rem;
+    right: -6.875rem;
+  }
+
   &__title {
     font-size: 6rem;
     line-height: 6rem;
@@ -124,14 +134,6 @@
   }
 }
 
-.error {
-  display: flex;
-  align-items: center;
-  color: red;
-  height: 1.25rem;
-  padding-left: 0.625rem;
-}
-
 .contacts {
   border-bottom: none;
 
@@ -148,6 +150,10 @@
     &::placeholder {
       font-size: 1rem;
     }
+  }
+
+  &__input.error {
+    border: 1px solid red;
   }
 
   &__input__file {
@@ -202,6 +208,12 @@
     padding: 1.8125rem 1.5rem 1.625rem 1.5rem;
   }
   .heading {
+    &__close {
+      right: 1.5rem;
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+
     &__title {
       font-size: 3.375rem;
     }

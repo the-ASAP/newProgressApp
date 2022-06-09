@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextAreaField from 'components/common/Form/TextArea';
 import {
@@ -13,16 +14,18 @@ import TagList from './TagList';
 import Collapsible from 'react-collapsible';
 import FormikTextField from 'components/common/Form/Input';
 import { FileSvg } from 'constants/svg';
-import { PrimaryButton } from 'components/common/Buttons';
+import { CloseButton, PrimaryButton } from 'components/common/Buttons';
 import style from './index.module.scss';
 
 const Brief = () => {
+  const router = useRouter();
+
   const initialValues = {
-    services: ['mobile_app', 'mvp', 'erp-system'],
+    services: [],
     title: '',
     functional: '',
-    deadline: ['three_months'],
-    budget: ['500_thousand'],
+    deadline: [],
+    budget: [],
     userName: '',
     phone: '',
     email: '',
@@ -41,6 +44,7 @@ const Brief = () => {
     <div className={style.container}>
       <div className={style.wrapper}>
         <div className={style.heading}>
+          <CloseButton onClick={() => router.push('/')} customClassName={style.heading__close} />
           <h1 className={style.heading__title}>Бриф</h1>
           <div className={style.heading__desc}>
             <p className={style.heading__desc__left}>
@@ -66,7 +70,7 @@ const Brief = () => {
                 <div className={style.section}>
                   <h3 className={style.section__title}>Интересующая услуга</h3>
                   <TagList name="services" tags={servicesCollection} values={values} />
-                  <span className={style.error}>{errors?.services && errors.services}</span>
+                  {/* <span className={style.error}>{errors?.services && errors.services}</span> */}
                 </div>
 
                 <div className={style.section}>
@@ -76,7 +80,6 @@ const Brief = () => {
                     name="title"
                     placeholder="Описание"
                   />
-                  <span className={style.error}>{errors?.title && errors.title}</span>
                 </div>
 
                 <div className={clsx(style.section, style.functional__section)}>
@@ -90,7 +93,6 @@ const Brief = () => {
                         name="functional"
                         placeholder="Описание"
                       />
-                      <span className={style.error}>{errors?.functional && errors.functional}</span>
                     </div>
                     <div className={style.functional__accordions}>
                       {!!functionalDesc.length &&
@@ -135,7 +137,7 @@ const Brief = () => {
                   <h3 className={style.section__title}>Контакты</h3>
                   <div className={style.contacts__input__wrapper}>
                     <FormikTextField
-                      customClassName={style.contacts__input}
+                      customClassName={clsx(style.contacts__input, errors?.userName && style.error)}
                       type="text"
                       name="userName"
                       placeholder="Иван"
@@ -144,7 +146,7 @@ const Brief = () => {
                   </div>
                   <div className={style.contacts__input__wrapper}>
                     <FormikTextField
-                      customClassName={style.contacts__input}
+                      customClassName={clsx(style.contacts__input, errors?.phone && style.error)}
                       type="phone"
                       name="phone"
                       placeholder="8 (903) 370-55-77"
@@ -153,8 +155,8 @@ const Brief = () => {
                   </div>
                   <div className={style.contacts__input__wrapper}>
                     <FormikTextField
-                      customClassName={style.contacts__input}
-                      type="email"
+                      customClassName={clsx(style.contacts__input, errors?.email && style.error)}
+                      type="text"
                       name="email"
                       placeholder="E-mail"
                       label="E-mail"
