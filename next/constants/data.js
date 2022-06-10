@@ -79,7 +79,7 @@ export const projects = [
   {
     id: 2,
     photo: '/project2.jpg',
-    text: 'CRM-система и сайт Live boosts по продаже услуг в онлайн-играх',
+    text: 'CRM-система и сайт Live boosts по\u00A0продаже услуг в онлайн-играх',
     tags: ['Игры', 'Стартапы']
   },
   {

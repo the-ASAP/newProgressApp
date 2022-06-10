@@ -30,7 +30,14 @@ const TalentsSection = () => {
           Все вакансии
         </button>
         <div className={style.talents__talent1}>
-          <Image alt="talent" layout="fill" src={talentImg1} />
+          {/* <Image
+            alt="talent"
+            src={talentImg1}
+            layout="responsive"
+            objectFit="contain"
+            unoptimized={true}
+          /> */}
+          <img src="/talent_1.svg" alt="" />
         </div>
         <div className={style.talents__talent2}>
           <Image alt="talent" layout="fill" src={talentImg2} />

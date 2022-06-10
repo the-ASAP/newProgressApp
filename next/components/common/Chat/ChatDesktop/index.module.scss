@@ -1,6 +1,9 @@
+@import '/styles/root/mixins.scss';
+
 .messages {
   max-height: 85%;
   overflow-y: auto;
+  @extend %scrollbar;
 }
 
 // .typing {

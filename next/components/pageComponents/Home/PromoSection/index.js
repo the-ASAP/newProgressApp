@@ -16,7 +16,7 @@ import styles from './index.module.scss';
 
 const PromoSection = () => {
   const { showModal, hideModal } = useModal();
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYBottom } = useScroll();
 
   const showChat = () => {
     showModal(ModalChat, { showModal, hideModal });
@@ -42,7 +42,11 @@ const PromoSection = () => {
 
             <PrimaryButton
               onClick={showChat}
-              customClassName={clsx(styles.button__top, scrollY > 35 && styles.button__bottom)}
+              customClassName={clsx(
+                styles.button__top,
+                scrollY > 35 && styles.button__bottom,
+                scrollYBottom < 1450 && styles.button__none
+              )}
             >
               <ChatSVG />
             </PrimaryButton>
@@ -53,7 +57,7 @@ const PromoSection = () => {
           </div>
           <div className={styles.middle}>
             <h3 className={styles.middle__title}>
-              программного обеспечения и мобильных приложений
+              программного обеспечения и&nbsp;мобильных приложений
             </h3>
             <div className={styles.middle__frame}>
               <Image layout="fill" src={reactImg} alt="framework" />
@@ -85,6 +89,7 @@ const PromoSection = () => {
       <div className={styles.activities}>
         {activity.map((activity) => (
           <div className={styles.activity} key={activity.title}>
+            <span className={styles.activity__cover}></span>
             <div>
               <h3 className={styles.activity__title}>{activity.title}</h3>
               <div className={styles.activity__categories}>

@@ -7,6 +7,7 @@ export function useScroll() {
   );
   const [scrollY, setScrollY] = useState(bodyOffset.top);
   const [scrollX, setScrollX] = useState(bodyOffset.left);
+  const [scrollYBottom, setScrollYBottom] = useState(bodyOffset.top);
   const [scrollDirection, setScrollDirection] = useState();
 
   const listener = (e) => {
@@ -15,10 +16,12 @@ export function useScroll() {
     );
     // setScrollY(-bodyOffset.top);
     setScrollY(window.pageYOffset);
-
     setScrollX(bodyOffset.left);
     setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up');
     setLastScrollTop(-bodyOffset.top);
+
+    const bodyHeight = document.querySelector('body').clientHeight;
+    setScrollYBottom(bodyHeight - scrollY);
   };
 
   useEffect(() => {
@@ -31,6 +34,7 @@ export function useScroll() {
   return {
     scrollY,
     scrollX,
-    scrollDirection
+    scrollDirection,
+    scrollYBottom
   };
 }
