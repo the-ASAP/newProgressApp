@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import talentImg1 from 'public/talent_1.png';
+import talentImg1 from 'public/svg/talent_1.svg';
 import talentImg2 from 'public/talent_2.png';
 import talentImg3 from 'public/talent_3.png';
 import talentImg4 from 'public/talent_4.png';
@@ -30,14 +30,7 @@ const TalentsSection = () => {
           Все вакансии
         </button>
         <div className={style.talents__talent1}>
-          {/* <Image
-            alt="talent"
-            src={talentImg1}
-            layout="responsive"
-            objectFit="contain"
-            unoptimized={true}
-          /> */}
-          <img src="/talent_1.svg" alt="" />
+          <Image alt="talent" src={talentImg1} layout="fill" />
         </div>
         <div className={style.talents__talent2}>
           <Image alt="talent" layout="fill" src={talentImg2} />

@@ -10,6 +10,7 @@ import mainImg from 'public/main.png';
 import svelteImg from 'public/svelte.png';
 import reactImg from 'public/react.png';
 import ModalChat from 'components/common/Chat/ModalChat';
+import ModalForm from 'components/common/ModalForm';
 import { useScroll } from 'hooks/useScroll';
 import { useModal } from 'hooks/useModal';
 import styles from './index.module.scss';
@@ -20,6 +21,10 @@ const PromoSection = () => {
 
   const showChat = () => {
     showModal(ModalChat, { showModal, hideModal });
+  };
+
+  const showVacancyForm = () => {
+    showModal(ModalForm, { showModal, hideModal });
   };
 
   return (
@@ -78,7 +83,7 @@ const PromoSection = () => {
                   <Image layout="fill" src={person} alt="photo" />
                 </div>
               ))}
-              <PrimaryButton customClassName={styles.person_plus}>
+              <PrimaryButton onClick={showVacancyForm} customClassName={styles.person_plus}>
                 <PlusSVG />
               </PrimaryButton>
             </div>
