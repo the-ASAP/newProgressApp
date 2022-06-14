@@ -9,6 +9,7 @@ import Switch from 'components/common/Switch';
 
 import directorBackImg from 'public/director__back2.png';
 import ChatMobile from 'components/common/Chat/ChatMobile';
+import ChatDirector from 'components/common/Chat/ChatDirector';
 const DirectorSection = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -101,7 +102,7 @@ const DirectorSection = () => {
               </div>
               <div className={style.director__chat}>
                 <div className={style.director__chat__cover}></div>
-                <ChatMobile director={true} />
+                <ChatDirector />
               </div>
             </div>
           </div>

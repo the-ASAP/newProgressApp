@@ -14,3 +14,10 @@ export const VacancyValidationSchema = Yup.object().shape({
   userName: Yup.string().required('Поле обязательно *'),
   email: Yup.string().required('Поле обязательно *').email()
 });
+
+export const ChatContactValidationSchema = Yup.object().shape({
+  companyName: Yup.string().required('Поле обязательно *'),
+  userName: Yup.string().required('Поле обязательно *'),
+  email: Yup.string().required('Поле обязательно *').email(),
+  phone: Yup.string().required('Поле обязательно *').min(10, 'to short').matches(phoneRegExp)
+});

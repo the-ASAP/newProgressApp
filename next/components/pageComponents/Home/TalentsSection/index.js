@@ -10,8 +10,15 @@ import talentImg5 from 'public/talent_5.png';
 import talentImg6 from 'public/talent_6.png';
 import circleImg from 'public/circle.png';
 import style from './index.module.scss';
+import { useModal } from 'hooks/useModal';
+import ModalForm from 'components/common/ModalForm';
 
 const TalentsSection = () => {
+  const { showModal, hideModal } = useModal();
+
+  const showVacancyForm = () => {
+    showModal(ModalForm, { showModal, hideModal });
+  };
   return (
     <div className={clsx(style.container, 'wrapper')}>
       <div className={style.back}>
@@ -26,7 +33,7 @@ const TalentsSection = () => {
           Всегда находимся в поиске крутых специалистов. Все актуальные вакансии в нашем HH. Если
           нет подходящих, то пиши на почту
         </span>
-        <button type="button" className={style.talents__vacancy}>
+        <button onClick={showVacancyForm} type="button" className={style.talents__vacancy}>
           Все вакансии
         </button>
         <div className={style.talents__talent1}>
