@@ -7,3 +7,10 @@ export const BriefValidationSchema = Yup.object().shape({
   phone: Yup.string().required('Поле обязательно *').min(10, 'to short').matches(phoneRegExp),
   email: Yup.string().required('Поле обязательно *').email()
 });
+
+export const VacancyValidationSchema = Yup.object().shape({
+  vacancy: Yup.string().required('Поле обязательно *'),
+  resumeUrl: Yup.string().required('Поле обязательно *'),
+  userName: Yup.string().required('Поле обязательно *'),
+  email: Yup.string().required('Поле обязательно *').email()
+});

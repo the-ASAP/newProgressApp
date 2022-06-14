@@ -8,7 +8,7 @@ const MarqueeSection = ({ children, ...props }) => {
   const router = useRouter();
   return (
     <div className={style.marquee}>
-      <Marquee gradient={false} {...props}>
+      <Marquee gradient={false} {...props} style={{ overflowY: 'hidden' }}>
         <PrimaryButton
           customClassName={style.marquee__button}
           onClick={() => router.push('/brief')}
