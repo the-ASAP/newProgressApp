@@ -1,4 +1,6 @@
-.chat_mobile__container {
+@import '/styles/root/mixins.scss';
+
+.chat__container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -6,6 +8,15 @@
   justify-content: flex-end;
   position: relative;
   z-index: 3;
+}
+
+.chat__inner {
+  padding-right: 15px;
+  overflow-y: auto;
+  @extend %scrollbar;
+  &::-webkit-scrollbar-thumb {
+    background: gray;
+  }
 }
 
 .manager {
@@ -27,6 +38,11 @@
 
   &__triangle {
     display: none;
+  }
+
+  &__link {
+    color: $fontColor;
+    border-bottom: 1px solid $mainColor;
   }
 }
 
@@ -56,29 +72,20 @@
   margin-top: 1.875rem;
 }
 
-.manager__dir {
-  flex-direction: row;
-}
+.conversation {
+  margin-bottom: 1.875rem;
 
-.message__wrapper__dir {
-  margin-left: 0.625rem;
-}
-.message__dir {
-  margin-top: 0;
-}
-
-.message__triangle__dir {
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 0;
-  left: -0.9375rem;
-}
-
-.tag__dir {
-  background-color: #fcfdff;
-}
-
-.tag__dir.active {
-  background-color: #4aee87;
+  &__answer {
+    max-width: 22.25rem;
+    margin-top: 0.9375rem;
+    font-size: 1.125rem;
+    background-color: #4aee87;
+    border-radius: 3.125rem;
+    min-height: 2.5rem;
+    padding: 0.625rem 0.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
 }
