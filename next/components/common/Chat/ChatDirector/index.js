@@ -9,6 +9,7 @@ import style from './index.module.scss';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import ContactForm from '../ContactForm';
+import Link from 'next/link';
 
 const ChatDirector = () => {
   const containerRef = useRef(null);
@@ -213,7 +214,14 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[4].question}</div>
+                    <div className={style.message}>
+                      {chatQuestions[4].question}{' '}
+                      {chatQuestions[4].link && (
+                        <Link href={chatQuestions[4].link.url}>
+                          <a className={style.message__link}>{chatQuestions[4].link.text}</a>
+                        </Link>
+                      )}
+                    </div>
                     <div className={style.message__triangle}>
                       <TriangleSVG color={'#FCFDFF'} />
                     </div>
