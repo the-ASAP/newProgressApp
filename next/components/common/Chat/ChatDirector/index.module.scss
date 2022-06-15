@@ -41,6 +41,11 @@
   border-radius: 1rem;
   padding: 1.125rem 1.25rem;
 
+  &__dark {
+    background-color: #3f4644;
+    color: #eef1f6;
+  }
+
   &__triangle {
     display: flex;
     align-items: flex-end;
@@ -52,6 +57,10 @@
   &__link {
     color: $fontColor;
     border-bottom: 1px solid $mainColor;
+  }
+
+  &__link__dark {
+    color: #eef1f6;
   }
 }
 
@@ -72,8 +81,15 @@
   justify-content: center;
   margin-right: 0.625rem;
   margin-bottom: 0.625rem;
+  // transition: color 0.3s ease-in, background-color 0.3s ease-in;
+
+  &__dark {
+    background-color: #3f4644;
+    color: #eef1f6;
+  }
 }
 .tag.active {
+  color: $fontColor;
   background-color: #4aee87;
 }
 

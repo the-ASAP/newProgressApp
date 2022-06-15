@@ -10,7 +10,13 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 1.625rem 2.5rem;
-  z-index: 3;
+  z-index: 11;
+
+  &__logo {
+    position: relative;
+    width: 13.75rem;
+    height: 2.3125rem;
+  }
 }
 
 .menu {
@@ -88,6 +94,14 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 1.625rem 1.5625rem;
+    &__logo {
+      width: 10.8125rem;
+      height: 1.8125rem;
+    }
+  }
+
   .mail,
   .menu {
     display: none;

@@ -14,7 +14,7 @@ const ConsulSection = () => {
   return (
     <div className={clsx(style.consul, 'wrapper')}>
       <span className={style.consul__mainText}>
-        <span className={style.consul__mainText_mainColor}>Консультируем</span>по техническим
+        <span className={style.consul__mainText_mainColor}>Консультируем</span>по&nbsp;техническим
         вопросам
       </span>
       <div className={style.consul__accordions}>

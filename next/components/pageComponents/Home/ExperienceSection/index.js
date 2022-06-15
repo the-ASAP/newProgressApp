@@ -10,7 +10,7 @@ const ExperienceSection = () => {
         <span className={clsx(style.experience__title, style.experience__title_green)}>
           Наш опыт{' '}
         </span>
-        в разработке для разных отраслей
+        в&nbsp;разработке для&nbsp;разных отраслей
       </span>
       <div className={style.experience__categories}>
         {!!experience?.length &&

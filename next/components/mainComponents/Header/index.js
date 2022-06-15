@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { LogoSVG } from 'constants/svg';
+import imageMainLogo from 'public/svg/main_logo_light.svg';
 import { menu } from 'constants/data';
 import { mail } from 'constants/contacts';
 import MobileMenu from 'components/common/MobileMenu';
 import { PrimaryButton } from 'components/common/Buttons';
 
 import styles from './index.module.scss';
+import Image from 'next/image';
 
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
@@ -25,7 +27,9 @@ const Header = () => {
     <header className={styles.header}>
       <Link href="/">
         <a>
-          <LogoSVG />
+          <div className={styles.header__logo}>
+            <Image alt="logo" layout="fill" src={imageMainLogo} />
+          </div>
         </a>
       </Link>
       <menu className={styles.menu}>

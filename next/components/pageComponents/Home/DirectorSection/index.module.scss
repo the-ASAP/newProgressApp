@@ -55,6 +55,10 @@
     padding: 2.5rem 2.8125rem;
     position: relative;
 
+    &__dark {
+      border: 1px solid rgba(86, 86, 86, 0.4);
+    }
+
     &__cover {
       top: 0;
       left: 0;

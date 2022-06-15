@@ -28,16 +28,16 @@ const TalentsSection = () => {
       </div>
 
       <div className={style.talents}>
-        <span className={style.talents__title}>Ищем таланты в команду</span>
+        <span className={style.talents__title}>Ищем таланты в&nbsp;команду</span>
         <span className={style.talents__text}>
-          Всегда находимся в поиске крутых специалистов. Все актуальные вакансии в нашем HH. Если
-          нет подходящих, то пиши на почту
+          Всегда находимся в&nbsp;поиске крутых специалистов. Все актуальные вакансии в&nbsp;нашем
+          HH. Если нет подходящих, то&nbsp;пиши на&nbsp;почту
         </span>
         <button onClick={showVacancyForm} type="button" className={style.talents__vacancy}>
           Все вакансии
         </button>
         <div className={style.talents__talent1}>
-          <Image alt="talent" src={talentImg1} layout="fill" />
+          <Image alt="talent" src={talentImg1} layout="fill" objectFit="cover" />
         </div>
         <div className={style.talents__talent2}>
           <Image alt="talent" layout="fill" src={talentImg2} />

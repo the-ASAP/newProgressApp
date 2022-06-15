@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
-
-import style from './index.module.scss';
 import directorImg from 'public/director.png';
 import { address, directorMail, facebook, instagram, mail, phone } from 'constants/contacts';
 import Switch from 'components/common/Switch';
-
 import directorBackImg from 'public/director__back2.png';
-import ChatMobile from 'components/common/Chat/ChatMobile';
 import ChatDirector from 'components/common/Chat/ChatDirector';
+import style from './index.module.scss';
+
 const DirectorSection = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -27,7 +25,7 @@ const DirectorSection = () => {
           <div className={style.director}>
             <span className={clsx(style.director__title, darkMode && style.director__title__dark)}>
               <span className={clsx(style.director__title, style.director__title_green)}>
-                Всегда на связи,{' '}
+                Всегда на&nbsp;связи,{' '}
               </span>
               готовы обсудить ваш проект уже сегодня
               <span className={style.director__switch_wrap}>
@@ -54,7 +52,7 @@ const DirectorSection = () => {
                     darkMode && style.director__position__dark
                   )}
                 >
-                  директор и менеджер проектов
+                  директор и&nbsp;менеджер проектов
                 </span>
                 <a href={`mailTo:${directorMail}`} className={style.director__directorMail}>
                   Написать директору
@@ -100,9 +98,9 @@ const DirectorSection = () => {
                   {address}
                 </span>
               </div>
-              <div className={style.director__chat}>
+              <div className={clsx(style.director__chat, darkMode && style.director__chat__dark)}>
                 <div className={style.director__chat__cover}></div>
-                <ChatDirector />
+                <ChatDirector darkMode={darkMode} />
               </div>
             </div>
           </div>

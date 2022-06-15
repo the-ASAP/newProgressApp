@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import ContactForm from '../ContactForm';
 import Link from 'next/link';
 
-const ChatDirector = () => {
+const ChatDirector = ({ darkMode }) => {
   const containerRef = useRef(null);
   const [step, setStep] = useState(0);
   const [currentTag, setCurrentTag] = useState(null);
@@ -58,9 +58,11 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{item.question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {item.question}
+                    </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -82,9 +84,11 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[0].question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {chatQuestions[0].question}
+                    </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -95,7 +99,11 @@ const ChatDirector = () => {
                       <button
                         onClick={() => selectTag(tag.title)}
                         key={ind}
-                        className={clsx(style.tag, currentTag === tag.title && style.active)}
+                        className={clsx(
+                          style.tag,
+                          darkMode && style.tag__dark,
+                          currentTag === tag.title && style.active
+                        )}
                       >
                         {tag.title}
                       </button>
@@ -115,9 +123,11 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[1].question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {chatQuestions[1].question}
+                    </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -128,7 +138,11 @@ const ChatDirector = () => {
                       <button
                         onClick={() => selectTag(tag.title)}
                         key={ind}
-                        className={clsx(style.tag, currentTag === tag.title && style.active)}
+                        className={clsx(
+                          style.tag,
+                          darkMode && style.tag__dark,
+                          currentTag === tag.title && style.active
+                        )}
                       >
                         {tag.title}
                       </button>
@@ -148,9 +162,11 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[2].question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {chatQuestions[2].question}
+                    </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -161,7 +177,11 @@ const ChatDirector = () => {
                       <button
                         onClick={() => selectTag(tag.title)}
                         key={ind}
-                        className={clsx(style.tag, currentTag === tag.title && style.active)}
+                        className={clsx(
+                          style.tag,
+                          darkMode && style.tag__dark,
+                          currentTag === tag.title && style.active
+                        )}
                       >
                         {tag.title}
                       </button>
@@ -181,9 +201,11 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[3].question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {chatQuestions[3].question}
+                    </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -194,7 +216,11 @@ const ChatDirector = () => {
                       <button
                         onClick={() => selectTag(tag.title)}
                         key={ind}
-                        className={clsx(style.tag, currentTag === tag.title && style.active)}
+                        className={clsx(
+                          style.tag,
+                          darkMode && style.tag__dark,
+                          currentTag === tag.title && style.active
+                        )}
                       >
                         {tag.title}
                       </button>
@@ -214,16 +240,23 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
                       {chatQuestions[4].question}{' '}
                       {chatQuestions[4].link && (
                         <Link href={chatQuestions[4].link.url}>
-                          <a className={style.message__link}>{chatQuestions[4].link.text}</a>
+                          <a
+                            className={clsx(
+                              style.message__link,
+                              darkMode && style.message__link__dark
+                            )}
+                          >
+                            {chatQuestions[4].link.text}
+                          </a>
                         </Link>
                       )}
                     </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>
@@ -241,7 +274,9 @@ const ChatDirector = () => {
                     <Image alt="avatar" src={avatar} layout="fill" />
                   </div>
                   <div className={style.message__wrapper}>
-                    <div className={style.message}>{chatQuestions[5].question}</div>
+                    <div className={clsx(style.message, darkMode && style.message__dark)}>
+                      {chatQuestions[5].question}
+                    </div>
                     <div className={style.message__triangle}>
                       <TriangleSVG color={'#FCFDFF'} />
                     </div>
@@ -253,7 +288,7 @@ const ChatDirector = () => {
         </div>
         {step < 4 && (
           <div className={style.form}>
-            <ChatForm value={currentTag} handleSubmit={doNextStep} />
+            <ChatForm value={currentTag} handleSubmit={doNextStep} darkMode={darkMode} />
           </div>
         )}
       </div>

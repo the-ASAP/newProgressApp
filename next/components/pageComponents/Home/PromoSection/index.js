@@ -43,7 +43,7 @@ const PromoSection = () => {
 
         <div className="wrapper">
           <div className={styles.intro}>
-            <h1 className={styles.intro__title}>Проектирование и разработка</h1>
+            <h1 className={styles.intro__title}>Проектирование и&nbsp;разработка</h1>
 
             <PrimaryButton
               onClick={showChat}
@@ -73,9 +73,9 @@ const PromoSection = () => {
               <Image layout="fill" src={svelteImg} alt="framework" />
             </div>
             <span className={styles.outro__text}>
-              Программирование, дизайн и аналитика — дело нашей жизни. Наши клиенты — лучшие
-              эксперты в своих отраслях. Мы - единая команда с общей целью. Мы делаем проекты,
-              которыми гордимся. Вместе.
+              Программирование, дизайн и&nbsp;аналитика — дело нашей жизни. Наши клиенты — лучшие
+              эксперты в&nbsp;своих отраслях. Мы - единая команда с&nbsp;общей целью. Мы&nbsp;делаем
+              проекты, которыми гордимся. Вместе.
             </span>
             <div className={styles.outro__team}>
               {promoTeam?.map((person) => (

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Collapsible from 'react-collapsible';
-import imageMainLogo from 'public/main_logo.png';
+import imageMainLogo from 'public/svg/main_logo_light.svg';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';

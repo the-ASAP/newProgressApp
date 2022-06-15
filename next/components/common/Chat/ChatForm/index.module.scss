@@ -11,9 +11,17 @@
     padding: 0px 8px;
   }
 
+  &__wrapper__dark {
+    background-color: #3f4644;
+  }
+
   &__input {
     flex: 1 1 auto;
     color: #000;
+  }
+
+  &__input__dark {
+    color: #eef1f6;
   }
 }
 

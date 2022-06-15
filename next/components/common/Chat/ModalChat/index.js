@@ -12,9 +12,13 @@ const ModalChat = ({ hideModal }) => {
   return (
     <ModalBackdrop hideModal={hideModal} customClassName={'backdrop__green'}>
       <div className={style.chat}>
-        <CloseButton onClick={hideModal} customClassName={style.close__chat__btn} />
+        <div className={style.chat__cover_green}>
+          <div className={style.chat__cover_gradient}>
+            <CloseButton onClick={hideModal} customClassName={style.close__chat__btn} />
 
-        {windowWidth > 738 ? <ChatDesktop /> : <ChatMobile />}
+            {windowWidth > 768 ? <ChatDesktop /> : <ChatMobile />}
+          </div>
+        </div>
       </div>
     </ModalBackdrop>
   );
