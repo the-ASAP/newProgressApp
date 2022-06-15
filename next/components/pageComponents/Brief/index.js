@@ -32,10 +32,6 @@ const Brief = () => {
     file: ''
   };
 
-  useEffect(() => {
-    document.body.style.overflowY = 'inherit';
-  }, []);
-
   const onSubmit = (values) => {
     console.log(values);
   };

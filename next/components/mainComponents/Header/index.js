@@ -15,13 +15,17 @@ const Header = () => {
 
   const toggleMobileMenu = (isVisible) => {
     setMobileMenuVisible(isVisible);
+  };
 
-    if (isVisible) {
+  useEffect(() => {
+    if (mobileMenuVisible) {
       document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style.overflowY = 'inherit';
+      document.body.style.overflowY = 'auto';
     }
-  };
+
+    return () => (document.body.style.overflowY = 'auto');
+  }, [mobileMenuVisible]);
 
   return (
     <header className={styles.header}>
