@@ -12,12 +12,11 @@ import ContactForm from '../ContactForm';
 
 const ChatDirector = () => {
   const containerRef = useRef(null);
-  const [contactData, setContactData] = useState([]);
   const [step, setStep] = useState(0);
   const [currentTag, setCurrentTag] = useState(null);
   const [answers, setAnswers] = useState([]);
 
-  //   console.log(answers);
+  // console.log(answers);
   useEffect(() => {
     containerRef.current.scrollTop = containerRef.current.scrollHeight;
   });
@@ -35,7 +34,12 @@ const ChatDirector = () => {
   };
 
   const sendData = (contactData) => {
-    setContactData(Object.values(contactData));
+    const curQuestion = chatQuestions[step].question;
+    setAnswers([
+      ...answers,
+      { question: [curQuestion], answer: [Object.values(contactData).join(', ')] }
+    ]);
+
     // отправка на сервер в нужном формате answers + contactData
     // console.log(answers, contactData);
     setStep((prev) => prev + 1);
@@ -216,6 +220,25 @@ const ChatDirector = () => {
                   </div>
                 </div>
                 <ContactForm handleSubmit={sendData} />
+              </>
+            )}
+          </div>
+
+          <div className={style.step__five}>
+            {step === 5 && (
+              // финальный месседж
+              <>
+                <div className={style.manager}>
+                  <div className={style.manager__img}>
+                    <Image alt="avatar" src={avatar} layout="fill" />
+                  </div>
+                  <div className={style.message__wrapper}>
+                    <div className={style.message}>{chatQuestions[5].question}</div>
+                    <div className={style.message__triangle}>
+                      <TriangleSVG color={'#FCFDFF'} />
+                    </div>
+                  </div>
+                </div>
               </>
             )}
           </div>
