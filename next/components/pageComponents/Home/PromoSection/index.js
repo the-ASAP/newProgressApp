@@ -80,7 +80,7 @@ const PromoSection = () => {
             <div className={styles.outro__team}>
               {promoTeam?.map((person) => (
                 <div className={styles.person} key={person}>
-                  <Image layout="fill" src={person} alt="photo" />
+                  <Image layout="fill" src={person} alt="photo" objectFit="cover" />
                 </div>
               ))}
               <PrimaryButton onClick={showVacancyForm} customClassName={styles.person_plus}>

@@ -31,7 +31,8 @@ export const menu = [
   }
 ];
 
-export const promoTeam = ['/photo_1.png', '/photo_2.png', '/photo_3.png'];
+// export const promoTeam = ['/photo_1.png', '/photo_2.png', '/photo_3.png'];
+export const promoTeam = ['/skill_photo_1.png', '/skill_photo_2.png', '/skill_photo_3.png'];
 
 export const skillTeam = [
   '/skill_photo_1.png',
