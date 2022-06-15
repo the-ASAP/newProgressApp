@@ -11,7 +11,7 @@
 }
 
 .chat__inner {
-  padding-right: 15px;
+  padding-right: 0.9375rem;
   overflow-y: auto;
   @extend %scrollbar;
   &::-webkit-scrollbar-thumb {
@@ -87,5 +87,11 @@
     align-items: center;
     justify-content: center;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .chat__inner {
+    padding: 0 0.9375rem;
   }
 }
