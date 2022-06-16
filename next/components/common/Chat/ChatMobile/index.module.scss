@@ -15,7 +15,7 @@
   overflow-y: auto;
   @extend %scrollbar;
   &::-webkit-scrollbar-thumb {
-    background: gray;
+    background: rgba(128, 128, 128, 0.7);
   }
 }
 
@@ -55,6 +55,7 @@
 .tag {
   font-size: 1.125rem;
   background-color: rgba(252, 253, 255, 0.6);
+  color: $fontColor;
   border-radius: 3.125rem;
   min-height: 2.5rem;
   padding: 0.625rem 0.8125rem;
@@ -74,18 +75,17 @@
 
 .conversation {
   margin-bottom: 1.875rem;
+  display: flex;
+  flex-direction: column;
 
   &__answer {
     max-width: 22.25rem;
     margin-top: 0.9375rem;
-    font-size: 1.125rem;
-    background-color: #4aee87;
-    border-radius: 3.125rem;
+    font-size: 1rem;
+    background-color: #eef1f6;
+    border-radius: 1.875rem;
     min-height: 2.5rem;
     padding: 0.625rem 0.8125rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: auto;
   }
 }

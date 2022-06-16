@@ -15,7 +15,7 @@ const Message = ({ data }) => {
         <Image alt="avatar" src={avatar} layout="fill" />
       </div>
       <div className={style.text}>
-        <div>
+        <div className={style.text__inner}>
           {messageText}{' '}
           {link && (
             <Link href={link.url}>

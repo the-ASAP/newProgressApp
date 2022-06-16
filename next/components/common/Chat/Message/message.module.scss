@@ -37,6 +37,11 @@
   font-size: 1.125rem;
   line-height: 1.6875rem;
   position: relative;
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
 }
 
 .triangle {

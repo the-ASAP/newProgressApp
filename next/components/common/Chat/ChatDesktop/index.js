@@ -8,6 +8,7 @@ const ChatDesktop = () => {
   const [answers, setAnswers] = useState([]);
   const [currentFakeIndex, setCurrentFakeIndex] = useState(0);
   const [allMessages, setAllMessages] = useState([]);
+  const isLastMessage = currentFakeIndex === fakeMessages.length - 1;
 
   const saveAnswer = (customerMsgText) => {
     setAllMessages([
@@ -15,7 +16,7 @@ const ChatDesktop = () => {
       { messageText: customerMsgText, avatar: '/no_avatar.png', isCustomer: true }
     ]);
 
-    if (currentFakeIndex !== fakeMessages.length - 1) {
+    if (!isLastMessage) {
       setCurrentFakeIndex((prev) => prev + 1);
       const curQuestion = fakeMessages[currentFakeIndex].messageText;
       setAnswers([...answers, { [curQuestion]: customerMsgText }]);
@@ -40,17 +41,15 @@ const ChatDesktop = () => {
   }, [currentFakeIndex]);
 
   return (
-    <>
+    <div className={style.container}>
       <div className={style.messages}>
         {allMessages.map((msg, index) => {
           return <Message key={index} data={msg} />;
         })}
       </div>
 
-      <div>
-        <ChatForm handleSubmit={saveAnswer} />
-      </div>
-    </>
+      <>{!isLastMessage && <ChatForm handleSubmit={saveAnswer} />}</>
+    </div>
   );
 };
 

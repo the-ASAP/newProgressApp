@@ -1,9 +1,19 @@
 @import '/styles/root/mixins.scss';
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 .messages {
   max-height: 85%;
   overflow-y: auto;
   @extend %scrollbar;
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.7);
+  }
+  padding-right: 0.9375rem;
 }
 
 // .typing {

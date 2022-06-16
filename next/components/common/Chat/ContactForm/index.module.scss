@@ -35,6 +35,19 @@
   }
 }
 
+.btn__submit.white {
+  background-color: #fcfdff;
+}
+
+.btn__submit.green {
+  background-color: $mainColor;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $hoverMainColor;
+  }
+}
+
 input.error {
   border: 1px solid red;
 }

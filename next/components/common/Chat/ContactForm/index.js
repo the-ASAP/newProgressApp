@@ -6,7 +6,7 @@ import React from 'react';
 import style from './index.module.scss';
 import { ChatContactValidationSchema } from 'utils/validations';
 
-const ContactForm = ({ handleSubmit }) => {
+const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
   const initialValues = {
     userName: '',
     companyName: '',
@@ -69,7 +69,14 @@ const ContactForm = ({ handleSubmit }) => {
                 />
               </div>
 
-              <PrimaryButton customClassName={style.btn__submit} type="submit">
+              <PrimaryButton
+                customClassName={clsx(
+                  style.btn__submit,
+                  isMobileMode && style.white,
+                  isDirectorMode && style.green
+                )}
+                type="submit"
+              >
                 Oтправить
               </PrimaryButton>
             </div>

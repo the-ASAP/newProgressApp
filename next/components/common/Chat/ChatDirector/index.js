@@ -67,9 +67,7 @@ const ChatDirector = ({ darkMode }) => {
                   </div>
                 </div>
 
-                <button type="button" className={style.conversation__answer}>
-                  {item.answer}
-                </button>
+                <div className={style.conversation__answer}>{item.answer}</div>
               </div>
             );
           })}
@@ -260,7 +258,7 @@ const ChatDirector = ({ darkMode }) => {
                     </div>
                   </div>
                 </div>
-                <ContactForm handleSubmit={sendData} />
+                <ContactForm handleSubmit={sendData} isDirectorMode={true} />
               </>
             )}
           </div>

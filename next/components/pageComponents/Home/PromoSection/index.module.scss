@@ -95,16 +95,23 @@
   &_plus {
     width: 5.5rem;
     height: 5.5rem;
+
+    &:hover {
+      z-index: 5;
+    }
   }
 
-  @for $i from 1 to 4 {
-    $left: 80 - (20 * $i);
-    $zIndex: 3 - $i;
-
-    &:nth-child(#{$i}) {
-      z-index: #{$zIndex};
-      left: #{$left}px;
-    }
+  &:nth-child(1) {
+    z-index: 4;
+    left: 3.75rem;
+  }
+  &:nth-child(2) {
+    z-index: 3;
+    left: 2.5rem;
+  }
+  &:nth-child(3) {
+    z-index: 2;
+    left: 1.25rem;
   }
 }
 
@@ -232,7 +239,8 @@
 
   .intro {
     &__title {
-      font-size: 2.25rem;
+      font-size: 2.375rem;
+      line-height: 2.5625rem;
       font-weight: 700;
       max-width: 26.875rem;
     }
@@ -315,6 +323,31 @@
 
     &__customTab {
       margin-bottom: 0.625rem;
+    }
+  }
+
+  .outro__team {
+    margin-left: auto;
+    margin-right: 0.9375rem;
+  }
+
+  .person {
+    width: 4.25rem;
+    height: 4.25rem;
+
+    &:nth-child(1) {
+      left: 2.25rem;
+    }
+    &:nth-child(2) {
+      left: 1.5rem;
+    }
+    &:nth-child(3) {
+      left: 0.75rem;
+    }
+
+    &_plus {
+      width: 4.25rem;
+      height: 4.25rem;
     }
   }
 }

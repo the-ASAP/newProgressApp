@@ -44,11 +44,11 @@ const Brief = () => {
           <h1 className={style.heading__title}>Бриф</h1>
           <div className={style.heading__desc}>
             <p className={style.heading__desc__left}>
-              Перед началом работы просим ответить на вопросы, которые детально сформируют предмет
-              первой встречи.
+              Перед началом работы просим ответить на&nbsp;вопросы, которые детально сформируют
+              предмет первой встречи.
             </p>
             <p className={style.heading__desc__right}>
-              Это поможет собрать информацию для подготовки решения вашей конкретной задачи
+              Это поможет собрать информацию для&nbsp;подготовки решения вашей конкретной задачи
             </p>
           </div>
         </div>
@@ -70,7 +70,9 @@ const Brief = () => {
                 </div>
 
                 <div className={style.section}>
-                  <h3 className={style.section__title}>Название и сфера деятельности компании</h3>
+                  <h3 className={style.section__title}>
+                    Название и&nbsp;сфера деятельности компании
+                  </h3>
                   <FormikTextAreaField
                     customClassName={style.form__input__textarea}
                     name="title"
@@ -80,7 +82,7 @@ const Brief = () => {
 
                 <div className={clsx(style.section, style.functional__section)}>
                   <h3 className={style.section__title}>
-                    Краткое описание задач и функционала проекта
+                    Краткое описание задач и&nbsp;функционала проекта
                   </h3>
                   <div className={style.functional}>
                     <div className={style.functional__input}>
@@ -177,8 +179,8 @@ const Brief = () => {
                   </PrimaryButton>
                 </div>
                 <div className={style.politics}>
-                  Нажимая на кнопку, вы даете согласие на обработку персональных данных и
-                  соглашаетесь с политикой конфиденциальности.
+                  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку персональных
+                  данных и&nbsp;соглашаетесь&nbsp;с политикой конфиденциальности.
                 </div>
               </div>
             );

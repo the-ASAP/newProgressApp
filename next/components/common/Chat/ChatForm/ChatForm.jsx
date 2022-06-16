@@ -27,7 +27,7 @@ const ChatForm = ({ handleSubmit, disabled, value, darkMode }) => {
             <FormikTextField
               customClassName={clsx(style.form__input, darkMode && style.form__input__dark)}
               name="message"
-              placeholder="Напишите ответ"
+              placeholder="Напишите комментарий"
             />
 
             <PrimaryButton
