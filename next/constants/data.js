@@ -47,7 +47,7 @@ export const activity = [
     categories: [
       'Мобильные приложения',
       'Web-cервисы',
-      'MVP стартапов',
+      'MVP стартапы',
       'ERP-системы',
       'Desktop приложения'
     ],
@@ -55,7 +55,7 @@ export const activity = [
   },
   {
     title: 'Аутстафф',
-    categories: ['Front end', 'Back end', 'UI/UX Дизайнер'],
+    categories: ['Frontend', 'Backend', 'UI/UX Дизайнер'],
     tabs: ['Middle', 'Senior']
   },
   {
@@ -105,17 +105,17 @@ export const accordios = [
   },
   {
     id: 2,
-    title: 'Что нужно, чтобы начать разработку проекта?',
+    title: 'Сможем ли мы самостоятельно поддерживать ПО своим штатом сотрудников?',
     text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
   },
   {
     id: 3,
-    title: 'Что нужно, чтобы начать разработку проекта?',
+    title: 'Что делать, если после запуска будут появляться ошибки?',
     text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
   },
   {
     id: 4,
-    title: 'Что нужно, чтобы начать разработку проекта?',
+    title: 'Как понять сроки на создание проекта?',
     text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
   }
 ];
@@ -312,7 +312,8 @@ export const chatQuestions = [
       { title: 'web-сервис' },
       { title: 'mvp стартап' },
       { title: 'erp-система' },
-      { title: 'аутсорс/аутстафф' },
+      { title: 'аутсорс' },
+      { title: 'аутстафф' },
       { title: 'интеграции' },
       { title: 'техподдержка' }
     ]
@@ -404,4 +405,16 @@ export const functionalDesc = [
     title: 'Пример базового функционала',
     desc: `Пример базового функционала: авторизация/регистрация, бонусные программы, работа с\u00A0QR-кодами, комментирование, push-уведомления, новостная лента, GPS-навигация, привязка к\u00A0социальным сетям, бронирование, онлайн-чат.`
   }
+];
+
+export const profession = [
+  'Frontend Developer',
+  'Backend Developer',
+  'Fullstack Developer',
+  'QA-engineer',
+  'PHP Developer',
+  'UI/UX Designer',
+  'Android-разработчик',
+  'iOS-разработчик',
+  'Программист 1С-Битрикс'
 ];

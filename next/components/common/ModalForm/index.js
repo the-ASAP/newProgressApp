@@ -6,12 +6,13 @@ import clsx from 'clsx';
 import FormikTextField from '../Form/Input';
 import { VacancyValidationSchema } from 'utils/validations';
 import { FileSvg } from 'constants/svg';
-
+import FormikSelect from '../Form/Select';
+import { profession } from 'constants/data';
 import style from './index.module.scss';
 
 const ModalForm = ({ hideModal }) => {
   const initialValues = {
-    vacancy: '',
+    vacancy: profession[0],
     resumeUrl: '',
     userName: '',
     email: '',
@@ -38,12 +39,15 @@ const ModalForm = ({ hideModal }) => {
             return (
               <div className={style.input__list}>
                 <div className={style.input__wrapper}>
-                  <FormikTextField
-                    customClassName={clsx(style.input, errors?.vacancy && style.error)}
-                    type="text"
+                  <FormikSelect
+                    customClassName={clsx(
+                      style.input,
+                      style.input__select,
+                      errors?.resumeUrl && style.error
+                    )}
                     name="vacancy"
-                    placeholder="Дизайнер"
                     label="Какая вакансия вас интересует?"
+                    optionList={profession}
                   />
                 </div>
 

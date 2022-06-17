@@ -9,7 +9,7 @@ export const BriefValidationSchema = Yup.object().shape({
 });
 
 export const VacancyValidationSchema = Yup.object().shape({
-  vacancy: Yup.string().required('Поле обязательно *'),
+  // vacancy: Yup.string().required('Поле обязательно *'),
   resumeUrl: Yup.string().required('Поле обязательно *'),
   userName: Yup.string().required('Поле обязательно *'),
   email: Yup.string().required('Поле обязательно *').email()

@@ -84,8 +84,8 @@ const Footer = () => {
             </span>
             <div className={style.license__content}>
               <a className={style.license__politics}>Политика конфиденциальности</a>
-              <Link href={'/'}>
-                <a>
+              <Link href={'https://asap-ag.ru/'}>
+                <a target="blank">
                   <AsapSVG />
                 </a>
               </Link>
