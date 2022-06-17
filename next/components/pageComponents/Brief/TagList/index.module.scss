@@ -26,6 +26,11 @@
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
   }
 
+  &__input {
+    margin: 0;
+    display: none;
+  }
+
   &__input:checked + .tag__view {
     color: $hoverMainColor;
     background-color: $fontColor;
