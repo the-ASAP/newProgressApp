@@ -258,7 +258,7 @@ const ChatDirector = ({ darkMode }) => {
                     </div>
                   </div>
                 </div>
-                <ContactForm handleSubmit={sendData} isDirectorMode={true} />
+                <ContactForm handleSubmit={sendData} isDirectorMode={true} darkMode={darkMode} />
               </>
             )}
           </div>
@@ -276,7 +276,7 @@ const ChatDirector = ({ darkMode }) => {
                       {chatQuestions[5].question}
                     </div>
                     <div className={style.message__triangle}>
-                      <TriangleSVG color={'#FCFDFF'} />
+                      <TriangleSVG color={darkMode ? '#3f4644' : '#FCFDFF'} />
                     </div>
                   </div>
                 </div>

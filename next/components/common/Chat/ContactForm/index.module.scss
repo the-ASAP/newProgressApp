@@ -20,6 +20,15 @@
   }
 }
 
+.input.dark {
+  background-color: #3f4644;
+  border: 1px solid #eef1f6;
+  color: #eef1f6;
+}
+.label__dark {
+  color: #eef1f6;
+}
+
 .btn__submit {
   padding: 0.75rem 1.875rem;
   margin: 1.125rem 0 0 0;
@@ -48,6 +57,7 @@
   }
 }
 
-input.error {
+input.error,
+.input.dark.error {
   border: 1px solid red;
 }

@@ -6,7 +6,7 @@ import React from 'react';
 import style from './index.module.scss';
 import { ChatContactValidationSchema } from 'utils/validations';
 
-const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
+const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode, darkMode }) => {
   const initialValues = {
     userName: '',
     companyName: '',
@@ -31,7 +31,12 @@ const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
             <div className={style.input__list}>
               <div className={style.input__wrapper}>
                 <FormikTextField
-                  customClassName={clsx(style.input, errors?.companyName && style.error)}
+                  customLabelStyle={darkMode && style.label__dark}
+                  customClassName={clsx(
+                    style.input,
+                    darkMode && style.dark,
+                    errors?.companyName && style.error
+                  )}
                   type="text"
                   name="companyName"
                   placeholder="Название компании"
@@ -41,7 +46,12 @@ const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
 
               <div className={style.input__wrapper}>
                 <FormikTextField
-                  customClassName={clsx(style.input, errors?.userName && style.error)}
+                  customLabelStyle={darkMode && style.label__dark}
+                  customClassName={clsx(
+                    style.input,
+                    darkMode && style.dark,
+                    errors?.userName && style.error
+                  )}
                   type="text"
                   name="userName"
                   placeholder="Иван"
@@ -51,7 +61,12 @@ const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
 
               <div className={style.input__wrapper}>
                 <FormikTextField
-                  customClassName={clsx(style.input, errors?.phone && style.error)}
+                  customLabelStyle={darkMode && style.label__dark}
+                  customClassName={clsx(
+                    style.input,
+                    darkMode && style.dark,
+                    errors?.phone && style.error
+                  )}
                   type="text"
                   name="phone"
                   placeholder="+7 950 450-95-22"
@@ -61,7 +76,12 @@ const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode }) => {
 
               <div className={style.input__wrapper}>
                 <FormikTextField
-                  customClassName={clsx(style.input, errors?.email && style.error)}
+                  customLabelStyle={darkMode && style.label__dark}
+                  customClassName={clsx(
+                    style.input,
+                    darkMode && style.dark,
+                    errors?.email && style.error
+                  )}
                   type="text"
                   name="email"
                   placeholder="Иван@mail.ru"

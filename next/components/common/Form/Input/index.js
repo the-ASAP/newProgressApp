@@ -11,6 +11,7 @@ const FormikTextField = (props) => {
     disabled = false,
     onChange,
     customClassName,
+    customLabelStyle,
     ...other
   } = props;
   const [field] = useField(name);
@@ -36,7 +37,7 @@ const FormikTextField = (props) => {
   return (
     <>
       {label && (
-        <label htmlFor={name} className={style.label}>
+        <label htmlFor={name} className={clsx(style.label, customLabelStyle)}>
           {label}
         </label>
       )}

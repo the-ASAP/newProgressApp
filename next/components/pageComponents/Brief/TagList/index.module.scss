@@ -4,11 +4,14 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .tag {
   min-height: 2.8125rem;
   margin: 0rem 0.625rem 1.25rem 0rem;
+  margin-left: 0;
   padding: 0.625rem 0;
   border-radius: 30px;
   cursor: pointer;
