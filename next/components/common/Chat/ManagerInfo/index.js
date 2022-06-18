@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import avatar from 'public/msg_avatar3.png';
+import avatar from 'public/msg_avatar.png';
 import style from './index.module.scss';
 
 const ManagerInfo = () => {
   return (
     <div className={style.manager__box}>
       <div className={style.manager__img}>
-        <Image alt="avatar" src={avatar} layout="fill" />
+        <Image alt="avatar" src={avatar} layout="fill" objectFit="cover" />
       </div>
       <div className={style.manager__info}>
         <p className={style.manager__info__name}>Яна Никитина</p>
