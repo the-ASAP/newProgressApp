@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import avatar from 'public/msg_avatar.png';
+import avatar from 'public/msg_avatar3.png';
 import style from './index.module.scss';
 
 const ManagerInfo = () => {

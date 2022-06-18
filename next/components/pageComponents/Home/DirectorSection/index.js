@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import directorImg from 'public/director.png';
-import { address, directorMail, facebook, instagram, mail, phone } from 'constants/contacts';
+import { address, directorMail, vk, telegram, mail, phone } from 'constants/contacts';
 import Switch from 'components/common/Switch';
 import directorBackImg from 'public/director__back2.png';
 import ChatDirector from 'components/common/Chat/ChatDirector';
@@ -71,22 +71,24 @@ const DirectorSection = () => {
                 </a>
                 <div className={style.director__socials}>
                   <a
-                    href={facebook}
+                    href={vk}
+                    target="blank"
                     className={clsx(
                       style.director__social,
                       darkMode && style.director__social__dark
                     )}
                   >
-                    Facebook
+                    Вконтакте
                   </a>
                   <a
-                    href={instagram}
+                    href={telegram}
+                    target="blank"
                     className={clsx(
                       style.director__social,
                       darkMode && style.director__social__dark
                     )}
                   >
-                    Instagram
+                    Telegram
                   </a>
                 </div>
                 <span

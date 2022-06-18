@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CloseButton } from '../Buttons';
 import { menuList } from 'constants/data';
-import { facebook, instagram, mail, phone } from 'constants/contacts';
+import { vk, telegram, mail, phone } from 'constants/contacts';
 import styles from './index.module.scss';
 
 const MobileMenu = ({ toggleMobileMenu, visible }) => {
@@ -54,11 +54,11 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
           <a href={`tel:${phone}`}>{phone}</a>
         </div>
         <div className={styles.contacts__socials}>
-          <a className={styles.contacts__social} href={facebook}>
-            Facebook
+          <a className={styles.contacts__social} href={vk} target="blank">
+            Вконтакте
           </a>
-          <a className={styles.contacts__social} href={instagram}>
-            Instagram
+          <a className={styles.contacts__social} href={telegram} target="blank">
+            Telegram
           </a>
         </div>
       </div>
