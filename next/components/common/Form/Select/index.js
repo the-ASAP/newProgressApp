@@ -10,11 +10,9 @@ const FormikSelect = (props) => {
     type = 'select',
     disabled = false,
     onChange,
-    customClassName,
     optionList,
     ...other
   } = props;
-  // const [field] = useField(name);
   const form = useFormikContext();
 
   const handleChange = (e) => {
@@ -26,6 +24,15 @@ const FormikSelect = (props) => {
     return { value: el, label: el };
   });
 
+  const customStyles = {
+    control: () => ({
+      height: '3.125rem',
+      display: 'flex',
+      borderRadius: '0.625rem',
+      border: '1px solid #e4e4e4'
+    })
+  };
+
   return (
     <>
       {label && (
@@ -35,11 +42,11 @@ const FormikSelect = (props) => {
       )}
 
       <Select
+        styles={customStyles}
         components={{ IndicatorSeparator: () => null }}
         options={options}
         onChange={handleChange}
         placeholder={optionList[0]}
-        className={style.input__select}
       />
     </>
   );
