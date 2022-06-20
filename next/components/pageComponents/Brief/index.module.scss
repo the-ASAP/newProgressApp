@@ -170,13 +170,20 @@
     bottom: 0;
     border-radius: 0.625rem;
     border: 1px solid $fontColor;
-    padding-left: 1rem;
+    padding: 0 1rem;
     color: rgba(99, 105, 105, 1);
 
     p {
       margin-left: 0.625rem;
     }
   }
+}
+
+.file__name {
+  color: $fontColor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn__submit {

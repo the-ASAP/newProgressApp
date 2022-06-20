@@ -9,8 +9,14 @@ import { FileSvg } from 'constants/svg';
 import FormikSelect from '../Form/Select';
 import { profession } from 'constants/data';
 import style from './index.module.scss';
+import { useState } from 'react';
 
 const ModalForm = ({ hideModal }) => {
+  const [fileName, setFileName] = useState('');
+  const selectFileName = (path) => {
+    setFileName(path);
+  };
+
   const initialValues = {
     vacancy: profession[0],
     resumeUrl: '',
@@ -40,11 +46,6 @@ const ModalForm = ({ hideModal }) => {
               <div className={style.input__list}>
                 <div className={style.input__wrapper}>
                   <FormikSelect
-                    customClassName={clsx(
-                      style.input,
-                      style.input__select,
-                      errors?.resumeUrl && style.error
-                    )}
                     name="vacancy"
                     label="Какая вакансия вас интересует?"
                     optionList={profession}
@@ -83,6 +84,7 @@ const ModalForm = ({ hideModal }) => {
 
                 <div className={style.input__wrapper}>
                   <FormikTextField
+                    selectFileName={selectFileName}
                     customClassName={style.input__file}
                     type="file"
                     name="file"
@@ -90,7 +92,13 @@ const ModalForm = ({ hideModal }) => {
                     label="Прикрепите файлы"
                   />
                   <label className={style.input__file__fake} htmlFor="file">
-                    <FileSvg /> <p>Загрузить</p>
+                    {fileName ? (
+                      <p className={style.input__file__name}>{fileName}</p>
+                    ) : (
+                      <>
+                        <FileSvg /> <p>Загрузить</p>
+                      </>
+                    )}
                   </label>
                 </div>
 

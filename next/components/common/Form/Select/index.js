@@ -1,6 +1,6 @@
 import React from 'react';
+import Select from 'react-select';
 import { useFormikContext, useField } from 'formik';
-import clsx from 'clsx';
 import style from './index.module.scss';
 
 const FormikSelect = (props) => {
@@ -14,25 +14,17 @@ const FormikSelect = (props) => {
     optionList,
     ...other
   } = props;
-  const [field] = useField(name);
+  // const [field] = useField(name);
   const form = useFormikContext();
 
   const handleChange = (e) => {
-    form.setFieldValue(name, e.target.value);
+    form.setFieldValue(name, e.value);
     if (onChange) onChange(e);
   };
 
-  const inputValue = field.value || '';
-
-  const evalProps = {
-    ...field,
-    ...other,
-    value: inputValue,
-    id: name,
-    disabled,
-    type,
-    onChange: handleChange
-  };
+  const options = optionList.map((el) => {
+    return { value: el, label: el };
+  });
 
   return (
     <>
@@ -41,11 +33,14 @@ const FormikSelect = (props) => {
           {label}
         </label>
       )}
-      <select {...evalProps} className={clsx(style.input, customClassName)}>
-        {optionList?.map((item) => (
-          <option value={item} label={item} />
-        ))}
-      </select>
+
+      <Select
+        components={{ IndicatorSeparator: () => null }}
+        options={options}
+        onChange={handleChange}
+        placeholder={optionList[0]}
+        className={style.input__select}
+      />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextAreaField from 'components/common/Form/TextArea';
@@ -19,6 +19,10 @@ import style from './index.module.scss';
 
 const Brief = () => {
   const router = useRouter();
+  const [fileName, setFileName] = useState('');
+  const selectFileName = (path) => {
+    setFileName(path);
+  };
 
   const initialValues = {
     services: [],
@@ -163,6 +167,7 @@ const Brief = () => {
 
                   <div className={style.contacts__input__wrapper}>
                     <FormikTextField
+                      selectFileName={selectFileName}
                       customClassName={style.contacts__input__file}
                       type="file"
                       name="file"
@@ -170,7 +175,13 @@ const Brief = () => {
                       label="Прикрепите файлы"
                     />
                     <label className={style.contacts__fake} htmlFor="file">
-                      <FileSvg /> <p>Загрузить</p>
+                      {fileName ? (
+                        <p className={style.file__name}>{fileName}</p>
+                      ) : (
+                        <>
+                          <FileSvg /> <p>Загрузить</p>
+                        </>
+                      )}
                     </label>
                   </div>
 
