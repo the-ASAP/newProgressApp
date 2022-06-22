@@ -13,6 +13,14 @@
   padding: 2.9375rem 0px 2.25rem 0rem;
   border-radius: 3rem;
 
+  .wrapper {
+    margin: 0 auto;
+    padding: 0px 1.5625rem;
+    max-width: 80rem;
+    position: relative;
+    height: 100%;
+  }
+
   &__logo {
     margin-bottom: 3.375rem;
   }

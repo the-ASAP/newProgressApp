@@ -31,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  height: 100%;
 
   &__title {
     @extend %textDisplay;
@@ -48,9 +49,11 @@
 
   &__vacancy {
     background-color: rgba(252, 253, 255, 0.6);
-    margin-top: 6.25rem;
-    // width: 13.8125rem;
-    // height: 3.75rem;
+    width: 17.5rem;
+    position: absolute;
+    bottom: 7.4375rem;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 1rem 2rem;
     border: 1px solid $cardBackground;
     border-radius: 2rem;
@@ -126,7 +129,7 @@
   }
 
   .talents {
-    padding: 1.875rem 0.625rem;
+    padding: 2.1875rem 0.625rem 0.625rem 0.625rem;
     height: 100%;
 
     &__title {
@@ -139,6 +142,10 @@
       font-size: 1rem;
       max-width: 506px;
       flex: 1 1 auto;
+    }
+
+    &__vacancy {
+      bottom: 2.3125rem;
     }
 
     &__talent1 {

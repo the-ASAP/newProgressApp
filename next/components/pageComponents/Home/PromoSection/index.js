@@ -40,7 +40,7 @@ const PromoSection = () => {
           />
         </div>
 
-        <div className="wrapper">
+        <div className={styles.wrapper}>
           <div className={styles.intro}>
             <h1 className={styles.intro__title}>Проектирование и&nbsp;разработка</h1>
 

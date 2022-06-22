@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className={style.container}>
       <div className={style.footer}>
-        <div className={'wrapper'}>
+        <div className={style.wrapper}>
           <div className={style.footer__logo}>
             <Link href="/">
               <a>

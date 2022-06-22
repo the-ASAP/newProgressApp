@@ -240,7 +240,7 @@ export const menuList = [
 export const experience = [
   {
     id: '1',
-    title: 'Инженерные технологии'
+    title: 'Инженерные\u00A0технологии'
   },
   {
     id: '2',
@@ -276,7 +276,7 @@ export const experience = [
   },
   {
     id: '10',
-    title: 'E-commerce'
+    title: 'E-\u00A0commerce'
   }
 ];
 
