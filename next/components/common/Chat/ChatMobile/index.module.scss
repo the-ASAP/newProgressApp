@@ -43,7 +43,9 @@
 
   &__link {
     color: $fontColor;
-    border-bottom: 1px solid $mainColor;
+    text-decoration: underline;
+    text-decoration-color: $mainColor;
+    -webkit-text-decoration-color: $mainColor;
   }
 }
 

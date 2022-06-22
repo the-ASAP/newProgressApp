@@ -98,6 +98,7 @@
 
     &__mainText {
       font-size: 1.9375rem;
+      font-weight: 700;
     }
   }
 
@@ -108,7 +109,7 @@
   .accordion {
     border-radius: 0.75rem;
     font-size: 18px;
-    padding: 0 3.125rem 0 1.25rem;
+    padding: 0 1.5rem 0 1.25rem;
     & + & {
       margin-top: 1.25rem;
     }
@@ -122,6 +123,10 @@
         height: 1.25rem;
         top: calc(50% - 0.625rem);
       }
+    }
+
+    &__content {
+      padding-right: 1.25rem;
     }
   }
 }

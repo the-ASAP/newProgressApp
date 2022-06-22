@@ -51,16 +51,6 @@
   position: relative;
   margin-top: 1.875rem;
 
-  // @for $i from 1 to 4 {
-  //   $left: 85 - (18 * $i);
-  //   $zIndex: 5 - $i;
-
-  //   &:nth-child(#{$i}) {
-  //     z-index: #{$zIndex};
-  //     left: #{$left}px;
-  //   }
-  // }
-
   &:nth-child(1) {
     z-index: 4;
     left: 6.875rem;
@@ -102,6 +92,19 @@
   .person {
     width: 6.875rem;
     height: 6.875rem;
+
+    &:nth-child(1) {
+      z-index: 4;
+      left: 5.625rem;
+    }
+    &:nth-child(2) {
+      z-index: 3;
+      left: 3.75rem;
+    }
+    &:nth-child(3) {
+      z-index: 2;
+      left: 1.875rem;
+    }
   }
 }
 
@@ -114,6 +117,10 @@
     &__imageLogo {
       height: 12.5rem;
     }
+
+    &__team {
+      left: -1.5625rem;
+    }
   }
 
   .person {
@@ -121,13 +128,13 @@
     height: 5.1875rem;
 
     &:nth-child(1) {
-      left: 5.625rem;
+      left: 2.9375rem;
     }
     &:nth-child(2) {
-      left: 3.75rem;
+      left: 1.875rem;
     }
     &:nth-child(3) {
-      left: 1.875rem;
+      left: 0.875rem;
     }
   }
 }

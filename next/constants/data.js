@@ -101,22 +101,22 @@ export const accordios = [
   {
     id: 1,
     title: 'Что нужно, чтобы начать разработку проекта?',
-    text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
+    text: 'От вас нужно личное понимание целей и задач своего продукта. Подготовьте либо техническое задание, либо первичное описание. В зависимости от этого по-разному работаем. Опишите с помощью технических специалистов или своими словами максимум функциональных задач создаваемого продукта. Это может быть: назначение, сценарий работы, платформы, интерфейс, обмен данными, технические требования. А также первым этапом, мы можем совместно с заказчиком начать составление техзадания.'
   },
   {
     id: 2,
     title: 'Сможем ли мы самостоятельно поддерживать ПО своим штатом сотрудников?',
-    text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
+    text: 'В разработке мы придерживаемся стандартов программного кода, его архитектуры и комментирования. Поэтому, вы сможете поддерживать самостоятельно при наличии квалифицированных специалистов соответствующего технологического стека на вашей сторон'
   },
   {
     id: 3,
     title: 'Что делать, если после запуска будут появляться ошибки?',
-    text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
+    text: 'Если это программные недостатки, которые были заложены в техзадании, но изначально не выявлены в процессе тестирования — то гарантия на разработку распространяется. Устраняем без дополнительной платы. Негарантийные случаи — это доработки, серверные ошибки, изменения программы сторонними лицами. Например, если функционал не был заложен в техзадании и выяснилось что он нужен. Если ошибки вызваны внесением изменений в программный продукт других специалистов. Или если сервер, на котором заказчик разместил программный продукт, по характеристикам не вытягивает то количество пользователей, которое посещает веб-сервис. Ошибка не программная, а вызвана серверной инфраструктурой.'
   },
   {
     id: 4,
     title: 'Как понять сроки на создание проекта?',
-    text: 'Duis laborum ipsum magna enim est voluptate eu aliqua mollit magna mollit id aute. Dolor nostrud quis labore pariatur exercitation anim commodo incididunt laboris aliqua Lorem dolor aliquip. Laborum aliqua elit esse aliqua mollit ipsum tempor sint excepteur.'
+    text: 'Если в создании сайта можно говорить о средних сроках, то в заказной разработке нет. Сроки зависят от требований к функционалу, сформированного технического задания, оценки проекта и затраченных человеко-часов. Минимальный срок на разработку MVP стартапа, мобильного приложения — 6 месяцев.'
   }
 ];
 

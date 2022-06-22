@@ -33,7 +33,7 @@ const ChatDesktop = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAllMessages([...allMessages, fakeMessages[currentFakeIndex]]);
-    }, 500);
+    }, 0);
 
     return () => {
       clearTimeout(timer);

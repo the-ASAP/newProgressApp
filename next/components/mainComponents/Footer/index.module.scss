@@ -3,7 +3,7 @@
 .container {
   max-width: 120rem;
   padding: 0px 1.25rem;
-  margin: 1.875rem auto 0rem auto;
+  margin: 0 auto 0rem auto;
 }
 
 .footer {
@@ -175,7 +175,6 @@
   .footer {
     border-radius: 0;
     padding: 1.875rem 0 1.25rem;
-    min-height: 53.125rem;
 
     &__mail {
       font-size: 1.9375rem;

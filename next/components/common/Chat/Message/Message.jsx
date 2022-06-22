@@ -12,7 +12,7 @@ const Message = ({ data }) => {
   return (
     <div className={style.message__wrapper}>
       <div className={clsx(style.avatar, isCustomer ? style.avatar__right : style.avatar__left)}>
-        <Image alt="avatar" src={avatar} layout="fill" />
+        <Image alt="avatar" src={avatar} layout="fill" objectFit="cover" />
       </div>
       <div className={style.text}>
         <div className={style.text__inner}>
