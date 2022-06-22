@@ -7,11 +7,14 @@ const ModalRoot = () => {
 
   useEffect(() => {
     if (Modal) {
+      console.log(document.querySelector('#__next'));
       document.body.style.overflowY = 'hidden';
       document.querySelector('html').style.overflowY = 'hidden';
+      document.querySelector('#__next').style.overflowY = 'hidden';
     } else {
       document.body.style.overflowY = 'auto';
       document.querySelector('html').style.overflowY = 'auto';
+      document.querySelector('#__next').style.overflowY = 'auto';
     }
   }, [Modal]);
 
