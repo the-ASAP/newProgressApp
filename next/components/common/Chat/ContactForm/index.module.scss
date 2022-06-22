@@ -21,10 +21,12 @@
 }
 
 .input.dark {
-  // background-color: #3f4644;
-  background-color: rgba(252, 253, 255, 0.7);
   border: 1px solid #eef1f6;
   color: #eef1f6;
+
+  &::placeholder {
+    color: rgba(238, 241, 246, 0.4);
+  }
 }
 .label__dark {
   color: #eef1f6;

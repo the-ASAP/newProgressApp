@@ -8,8 +8,10 @@ const ModalRoot = () => {
   useEffect(() => {
     if (Modal) {
       document.body.style.overflowY = 'hidden';
+      document.querySelector('html').style.overflowY = 'hidden';
     } else {
       document.body.style.overflowY = 'auto';
+      document.querySelector('html').style.overflowY = 'auto';
     }
   }, [Modal]);
 

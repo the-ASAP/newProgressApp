@@ -151,7 +151,7 @@ const Brief = () => {
                       customClassName={clsx(style.contacts__input, errors?.phone && style.error)}
                       type="phone"
                       name="phone"
-                      placeholder="8 (903) 370-55-77"
+                      placeholder="+7 (903) 370-55-77"
                       label="Номер телефона"
                     />
                   </div>

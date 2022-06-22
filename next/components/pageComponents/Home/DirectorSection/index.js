@@ -67,7 +67,7 @@ const DirectorSection = () => {
                   href={`tel:${phone}`}
                   className={clsx(style.director__phone, darkMode && style.director__phone__dark)}
                 >
-                  8 (8452) 531-888
+                  +7 (8452) 531-888
                 </a>
                 <div className={style.director__socials}>
                   <a

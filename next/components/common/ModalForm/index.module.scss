@@ -24,8 +24,12 @@
   right: -6.5625rem;
 }
 
+.modal__label {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+
 .input {
-  margin-top: 3px;
   border: 1px solid #e4e4e4;
   border-radius: 0.625rem;
   color: $fontColor;

@@ -18,7 +18,6 @@ import styles from './index.module.scss';
 const PromoSection = () => {
   const { showModal, hideModal } = useModal();
   const { scrollY, scrollYBottom } = useScroll();
-
   const showChat = () => {
     showModal(ModalChat, { showModal, hideModal });
   };
@@ -50,7 +49,7 @@ const PromoSection = () => {
               customClassName={clsx(
                 styles.button__top,
                 scrollY > 35 && styles.button__bottom,
-                scrollYBottom < 1450 && styles.button__none
+                scrollYBottom && scrollYBottom < 1450 && scrollYBottom > 0 && styles.button__none
               )}
             >
               <ChatSVG />

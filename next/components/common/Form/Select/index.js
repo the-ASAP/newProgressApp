@@ -2,6 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import { useFormikContext, useField } from 'formik';
 import style from './index.module.scss';
+import clsx from 'clsx';
 
 const FormikSelect = (props) => {
   const {
@@ -10,6 +11,7 @@ const FormikSelect = (props) => {
     type = 'select',
     disabled = false,
     onChange,
+    customLabelStyle,
     optionList,
     ...other
   } = props;
@@ -36,7 +38,7 @@ const FormikSelect = (props) => {
   return (
     <>
       {label && (
-        <label htmlFor={name} className={style.label}>
+        <label htmlFor={name} className={clsx(style.label, customLabelStyle)}>
           {label}
         </label>
       )}

@@ -46,6 +46,7 @@ const ModalForm = ({ hideModal }) => {
               <div className={style.input__list}>
                 <div className={style.input__wrapper}>
                   <FormikSelect
+                    customLabelStyle={style.modal__label}
                     name="vacancy"
                     label="Какая вакансия вас интересует?"
                     optionList={profession}
@@ -54,6 +55,7 @@ const ModalForm = ({ hideModal }) => {
 
                 <div className={style.input__wrapper}>
                   <FormikTextField
+                    customLabelStyle={style.modal__label}
                     customClassName={clsx(style.input, errors?.resumeUrl && style.error)}
                     type="text"
                     name="resumeUrl"
@@ -64,6 +66,7 @@ const ModalForm = ({ hideModal }) => {
 
                 <div className={style.input__wrapper}>
                   <FormikTextField
+                    customLabelStyle={style.modal__label}
                     customClassName={clsx(style.input, errors?.userName && style.error)}
                     type="text"
                     name="userName"
@@ -74,6 +77,7 @@ const ModalForm = ({ hideModal }) => {
 
                 <div className={style.input__wrapper}>
                   <FormikTextField
+                    customLabelStyle={style.modal__label}
                     customClassName={clsx(style.input, errors?.email && style.error)}
                     type="text"
                     name="email"
@@ -84,6 +88,7 @@ const ModalForm = ({ hideModal }) => {
 
                 <div className={style.input__wrapper}>
                   <FormikTextField
+                    customLabelStyle={style.modal__label}
                     selectFileName={selectFileName}
                     customClassName={style.input__file}
                     type="file"

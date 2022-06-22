@@ -11,6 +11,7 @@
 //Базовые стили body
 body {
   //   background-color: $mainBack;
+  height: 100%;
   font-family: $mainFont;
   color: $fontColor;
   cursor: default;
@@ -27,14 +28,6 @@ section {
   position: relative;
 }
 //Создание базовых стилей для основных тегов
-h1 {
-}
-
-h2 {
-}
-
-h3 {
-}
 
 a {
   display: inline-block;
@@ -77,7 +70,6 @@ input {
 
 button {
   cursor: pointer;
-  //   color: $grayMain;
   font-family: $mainFont;
 }
 
