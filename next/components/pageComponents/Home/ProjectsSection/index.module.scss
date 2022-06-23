@@ -9,5 +9,10 @@
   .projects {
     margin-top: 4rem;
     font-display: column;
+
+    &__button {
+      margin-left: 0.8125rem;
+      margin-right: 0.8125rem;
+    }
   }
 }

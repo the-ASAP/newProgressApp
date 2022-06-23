@@ -278,7 +278,7 @@
   }
 
   .director {
-    padding: 1.25rem;
+    padding: 1.25rem 0.875rem 1.25rem 0.875rem;
 
     &__chat {
       display: none;
@@ -342,6 +342,10 @@
   .director {
     &__mail {
       font-size: 1.5625rem;
+    }
+
+    &__title {
+      text-indent: 3.3rem;
     }
   }
 }

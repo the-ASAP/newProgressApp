@@ -74,6 +74,7 @@
       font-size: 1.9375rem;
       font-weight: 700;
       line-height: 2.375rem;
+      padding: 0 0.875rem;
 
       &_mainColor {
         display: block;
@@ -119,16 +120,16 @@
     }
 
     &__team {
-      left: -1.5625rem;
+      left: -1.4375rem;
     }
   }
 
   .person {
-    width: 5.1875rem;
-    height: 5.1875rem;
+    width: 5.75rem;
+    height: 5.75rem;
 
     &:nth-child(1) {
-      left: 2.9375rem;
+      left: 2.8125rem;
     }
     &:nth-child(2) {
       left: 1.875rem;

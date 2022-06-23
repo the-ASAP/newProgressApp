@@ -1,10 +1,13 @@
-import React from 'react'
-import style from './index.module.scss'
+import React from 'react';
+import clsx from 'clsx';
+import style from './index.module.scss';
 
-const AllWidthButton = ({ children, ...props }) => {
+const AllWidthButton = ({ customClassName, children, ...props }) => {
   return (
-    <button type="button" className={style.allWidthButton} {...props}>{children}</button>
-  )
-}
+    <button type="button" className={clsx(style.allWidthButton, customClassName)} {...props}>
+      {children}
+    </button>
+  );
+};
 
-export default AllWidthButton
+export default AllWidthButton;

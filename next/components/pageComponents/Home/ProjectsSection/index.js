@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         projects.map((project, index) => (
           <Project key={project.id} {...project} isSmall={imgMini.includes(index)} />
         ))}
-      <AllWidthButton>Все проекты</AllWidthButton>
+      <AllWidthButton customClassName={style.projects__button}>Все проекты</AllWidthButton>
     </div>
   );
 };

@@ -7,8 +7,9 @@ import Tab from 'components/common/Tab';
 import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
 import mainImg from 'public/main.png';
-import svelteImg from 'public/svelte.png';
-import reactImg from 'public/react.png';
+// import svelteImg from 'public/svelte.png';
+import svelteImg from 'public/svg/svelteImg.svg';
+import reactImg from 'public/svg/reactImg.svg';
 import ModalChat from 'components/common/Chat/ModalChat';
 import ModalForm from 'components/common/ModalForm';
 import { useScroll } from 'hooks/useScroll';
@@ -64,12 +65,16 @@ const PromoSection = () => {
               программного обеспечения и&nbsp;мобильных приложений
             </h3>
             <div className={styles.middle__frame}>
-              <Image layout="fill" src={reactImg} alt="framework" />
+              <div className={styles.middle__frame__img}>
+                <Image layout="fill" src={reactImg} alt="framework" />
+              </div>
             </div>
           </div>
           <div className={styles.outro}>
             <div className={styles.outro__frame}>
-              <Image layout="fill" src={svelteImg} alt="framework" />
+              <div className={styles.outro__frame__img}>
+                <Image layout="fill" src={svelteImg} alt="framework" />
+              </div>
             </div>
             <span className={styles.outro__text}>
               Программирование, дизайн и&nbsp;аналитика — дело нашей жизни. Наши клиенты — лучшие
