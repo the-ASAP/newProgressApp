@@ -20,6 +20,12 @@ body {
   overflow-x: hidden;
 }
 
+body.lock {
+  overflow-y: hidden;
+  width: 100%;
+  position: fixed;
+}
+
 // html {
 //   scroll-behavior: smooth;
 // }
