@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import talentImg1 from 'public/svg/talent_1.svg';
+import talentImg1 from 'public/talent_1.png';
 import talentImg2 from 'public/talent_2.png';
 import talentImg3 from 'public/talent_3.png';
 import talentImg4 from 'public/talent_4.png';
