@@ -23,7 +23,7 @@ const SkillsSection = () => {
           text={`Независимые приложения с\u00A0высокой скоростью отклика\u00A0или разработка под\u00A0любую операционную систему с\u00A0единой кодовой базой`}
         >
           <div className={style.skills__imageIphone}>
-            <Image alt="skill" layout="fill" src={skillImg1} objectFit="cover" />
+            <Image alt="skill" layout="fill" src={skillImg1} />
           </div>
         </Skill>
         <Skill

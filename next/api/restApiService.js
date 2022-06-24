@@ -1,29 +1,30 @@
-import axios from 'axios'
-import { apiUrl, apiToken } from 'constants/data'
+import axios from 'axios';
+import { apiUrl, apiToken } from 'constants/data';
 
 class API {
   constructor() {
     this.url = apiUrl || '';
   }
 
-  handleSuccess = (response) => response
+  handleSuccess = (response) => response;
 
-  handleError = (error) => Promise.reject(error)
+  handleError = (error) => Promise.reject(error);
 
   create = (headers) => {
-    const token = apiToken || ''
-    const headerAuth = token && { Authorization: `Bearer ${token}` }
-    console.log(headerAuth)
+    // const token = apiToken || '';
+    const token = '';
+    const headerAuth = token && { Authorization: `Bearer ${token}` };
+    console.log(headerAuth);
     const service = axios.create({
       headers: {
         ...headers,
         ...headerAuth,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       }
-    })
-    service.interceptors.response.use(this.handleSuccess, this.handleError)
-    return service
-  }
+    });
+    service.interceptors.response.use(this.handleSuccess, this.handleError);
+    return service;
+  };
 
   get = (path = '', data = {}, headers) => {
     const service = this.create(headers);
@@ -62,4 +63,4 @@ class API {
   };
 }
 
-export default new API()
+export default new API();

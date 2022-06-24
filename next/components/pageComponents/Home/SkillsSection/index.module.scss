@@ -111,6 +111,11 @@
 
 @media (max-width: 500px) {
   .skills {
+    &__imageIphone {
+      width: 10.125rem;
+      height: 14.625rem;
+    }
+
     &__spiderweb {
       height: 12.375rem;
     }
