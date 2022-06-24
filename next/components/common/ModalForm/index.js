@@ -10,6 +10,7 @@ import FormikSelect from '../Form/Select';
 import { profession } from 'constants/data';
 import style from './index.module.scss';
 import { useState } from 'react';
+import axios from 'axios';
 
 const ModalForm = ({ hideModal }) => {
   const [fileName, setFileName] = useState('');
@@ -25,8 +26,15 @@ const ModalForm = ({ hideModal }) => {
     file: ''
   };
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     console.log(values);
+
+    try {
+      const res = await axios.post('http://localhost:1337/api/job-applications', { data: values });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
