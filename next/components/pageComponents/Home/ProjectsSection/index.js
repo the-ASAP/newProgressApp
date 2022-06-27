@@ -5,7 +5,7 @@ import { AllWidthButton } from 'components/common/Buttons';
 import { projects } from 'constants/data';
 import style from './index.module.scss';
 
-const imgMini = [1, 2, 5, 6];
+const imgMini = [1, 2, 5, 6, 9, 10];
 
 const ProjectsSection = () => {
   return (

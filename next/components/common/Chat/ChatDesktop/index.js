@@ -3,6 +3,7 @@ import Message from '../Message/Message';
 import { fakeMessages } from 'constants/data';
 import style from './index.module.scss';
 import ChatForm from '../ChatForm/ChatForm';
+import SERVICE_API from 'api';
 
 const ChatDesktop = () => {
   const [answers, setAnswers] = useState([]);
@@ -23,21 +24,23 @@ const ChatDesktop = () => {
     }
   };
 
+  const handleSubmit = async () => {
+    const allAnswers = {};
+    allAnswers.serviceName = Object.values(answers[0])[0];
+    allAnswers.phoneNumber = Object.values(answers[1])[0];
+    const res = await SERVICE_API.EntitiesApi.addSmallChatApplication(allAnswers);
+    // console.log(res);
+  };
+
   useEffect(() => {
-    if (answers.length === 2) {
+    if (answers.length === fakeMessages.length - 1) {
       //  отправка на сервер
-      console.log(answers);
+      handleSubmit();
     }
   }, [answers]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setAllMessages([...allMessages, fakeMessages[currentFakeIndex]]);
-    }, 0);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    setAllMessages([...allMessages, fakeMessages[currentFakeIndex]]);
   }, [currentFakeIndex]);
 
   return (

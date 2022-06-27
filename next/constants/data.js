@@ -95,6 +95,18 @@ export const projects = [
     photo: '/project4.jpg',
     text: 'Браузерная игра и\u00A0web-сервис Место Встречи для\u00A0обучения студентов',
     tags: ['Игры', 'Образование']
+  },
+  {
+    id: 5,
+    photo: '/project5.png',
+    text: 'Web-сервис и\u00A0мобильное приложение автоматизации маркировки Shoes Mark',
+    tags: ['Промышленность']
+  },
+  {
+    id: 6,
+    photo: '/project6.png',
+    text: 'Web-сервис недвижимости для\u00A0застройщика CITIMIX',
+    tags: ['Недвижимость']
   }
 ];
 

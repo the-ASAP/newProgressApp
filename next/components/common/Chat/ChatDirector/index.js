@@ -10,6 +10,8 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import ContactForm from '../ContactForm';
 import Link from 'next/link';
+import { changeFormatLargeChat } from 'utils/format';
+import SERVICE_API from 'api';
 
 const ChatDirector = ({ darkMode }) => {
   const containerRef = useRef(null);
@@ -34,7 +36,7 @@ const ChatDirector = ({ darkMode }) => {
     setCurrentTag(null);
   };
 
-  const sendData = (contactData) => {
+  const sendData = async (contactData) => {
     const curQuestion = chatQuestions[step].question;
     setAnswers([
       ...answers,
@@ -42,7 +44,9 @@ const ChatDirector = ({ darkMode }) => {
     ]);
 
     // отправка на сервер в нужном формате answers + contactData
-    // console.log(answers, contactData);
+    const allAnswers = changeFormatLargeChat(answers, contactData);
+    const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
+    // console.log(res);
     setStep((prev) => prev + 1);
   };
 

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "small_chats",
+  "info": {
+    "singularName": "small-chat",
+    "pluralName": "small-chats",
+    "displayName": "small chat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serviceName": {
+      "type": "text"
+    },
+    "phoneNumber": {
+      "type": "text"
+    }
+  }
+}

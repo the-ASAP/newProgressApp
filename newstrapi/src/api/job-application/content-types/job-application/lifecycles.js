@@ -7,7 +7,7 @@ module.exports = {
       await strapi.plugins["email"].services.email.send({
         to: "tatyana.solovva@bk.ru",
         from: "strapi91@gmail.com",
-        subject: "Use  successfully",
+        subject: "Заявка на вакансию",
         text: `имя: ${result.userName}, вакансия: ${result.vacancy}, ссылка на резюме: ${result.resumeUrl}, email: ${result.email}`,
       });
     } catch (error) {

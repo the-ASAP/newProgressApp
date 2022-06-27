@@ -7,3 +7,6 @@ next/.next
 
 newstrapi/.cache
 newstrapi/node_modules
+
+
+.env

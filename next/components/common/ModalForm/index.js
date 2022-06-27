@@ -11,6 +11,7 @@ import { profession } from 'constants/data';
 import style from './index.module.scss';
 import { useState } from 'react';
 import SERVICE_API from 'api';
+import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 
 const ModalForm = ({ hideModal }) => {
   const [fileName, setFileName] = useState('');
@@ -27,9 +28,13 @@ const ModalForm = ({ hideModal }) => {
   };
 
   const onSubmit = async (values) => {
-    console.log(values);
+    // console.log(values);
     const res = await SERVICE_API.EntitiesApi.addJobApplication(values);
-    console.log(res);
+    // console.log(res);
+
+    if (res.status === 200) {
+      hideModal();
+    }
   };
 
   return (
