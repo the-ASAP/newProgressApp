@@ -1,18 +1,33 @@
-// module.exports = {
-//   async afterCreate(event) {
-//     const { result } = event;
+module.exports = {
+  async afterCreate(event) {
+    const { result } = event;
 
-//     try {
-//       console.log("result SEND!!!!!! ", result);
-//       await strapi.plugins["email"].services.email.send({
-//         to: "tatyana.solovva@bk.ru",
-//         from: "strapi91@gmail.com",
-//         subject: "Заявка",
-//         text: `Услуга: ${result.serviceName}, номер тел: ${result.phoneNumber},
-//        `,
-//       });
-//     } catch (error) {
-//       console.log('strapi.plugins["email"] ERROR ', error);
-//     }
-//   },
-// };
+    try {
+      await strapi.plugins["email"].services.email.send({
+        to: "tatyana.solovva@bk.ru",
+        from: "strapi91@gmail.com",
+        subject: "Заявка на услугу",
+        text: `Услуга: ${result.serviceName}, номер тел: ${result.phoneNumber},
+       `,
+
+        html: `
+        <table>
+        <tr>
+          <td style="border: 1px solid #000000; padding: 20px; background-color: #30d96e">
+            <strong style="font-size: 20px; display: block">Интересующая услуга:</strong><br />${result.serviceName}
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #000000; padding: 20px; background-color: #30d96e">
+            <strong style="font-size: 20px; display: block">Номер телефона:</strong><br />
+            <a href="tel:${result.phoneNumber}">${result.phoneNumber}</a>
+          </td>
+        </tr>
+      </table>
+        `,
+      });
+    } catch (error) {
+      console.log('strapi.plugins["email"] ERROR ', error);
+    }
+  },
+};

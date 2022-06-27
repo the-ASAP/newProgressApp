@@ -16,6 +16,7 @@ import FormikTextField from 'components/common/Form/Input';
 import { FileSvg } from 'constants/svg';
 import { CloseButton, PrimaryButton } from 'components/common/Buttons';
 import style from './index.module.scss';
+import SERVICE_API from 'api';
 
 const Brief = () => {
   const router = useRouter();
@@ -36,8 +37,16 @@ const Brief = () => {
     file: ''
   };
 
-  const onSubmit = (values) => {
-    console.log(values);
+  const onSubmit = async (values) => {
+    const allAnswers = { ...values };
+    allAnswers.budget = allAnswers.budget.join(', ');
+    allAnswers.deadline = allAnswers.deadline.join(', ');
+    allAnswers.services = allAnswers.services.join(', ');
+
+    const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
+    // console.log(res);
+
+    // console.log(allAnswers);
   };
 
   return (
