@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_applications",
+  "info": {
+    "singularName": "job-application",
+    "pluralName": "job-applications",
+    "displayName": "job application"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vacancy": {
+      "type": "string"
+    },
+    "resumeUrl": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    }
+  }
+}
