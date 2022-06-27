@@ -10,7 +10,6 @@ import FormikSelect from '../Form/Select';
 import { profession } from 'constants/data';
 import style from './index.module.scss';
 import { useState } from 'react';
-import axios from 'axios';
 import SERVICE_API from 'api';
 
 const ModalForm = ({ hideModal }) => {
