@@ -10,18 +10,18 @@ services:
       - "1337:1337"
     restart: always
 
-  db:
-    container_name: progressapp__postgres
-    image: postgres
-    volumes:
-      - ./db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: strapi
-      POSTGRES_PASSWORD: strapi
-      POSTGRES_DB: strapi
-    networks:
-      - strapi-postgres
-    restart: always
+  # db:
+  #   container_name: progressapp__postgres
+  #   image: postgres
+  #   volumes:
+  #     - ./db:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_USER: strapi
+  #     POSTGRES_PASSWORD: strapi
+  #     POSTGRES_DB: strapi
+  #   networks:
+  #     - strapi-postgres
+  #   restart: always
 
   next:
     build:
