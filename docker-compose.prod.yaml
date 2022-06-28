@@ -1,23 +1,13 @@
-version: '3'
+version: "3"
 services:
   newstrapi:
     environment:
-      - DATABASE_CLIENT=postgres
-      - DATABASE_HOST=db
-      - DATABASE_PORT=5432
-      - DATABASE_NAME=strapi
-      - DATABASE_USERNAME=strapi
-      - DATABASE_PASSWORD=strapi
       - NODE_ENV=production
     build:
-      context: './newstrapi'
+      context: "./newstrapi"
       dockerfile: Dockerfile.prod
     ports:
       - "1337:1337"
-    depends_on:
-      - db
-    networks:
-      - strapi-postgres
     restart: always
 
   db:
@@ -36,11 +26,7 @@ services:
   next:
     build:
       dockerfile: Dockerfile.prod
-      context: './next'
+      context: "./next"
     ports:
       - "3000:3000"
     restart: always
-
-networks:
-  strapi-postgres:
-    driver: bridge

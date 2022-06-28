@@ -16,15 +16,15 @@ const TagList = ({ tags, values, name, onlyOne }) => {
                   name={name}
                   type="checkbox"
                   value={tag}
-                  checked={values[name].includes(tag.value)}
+                  checked={values[name].includes(tag.label)}
                   onChange={(e) => {
                     if (onlyOne && e.target.checked) {
                       arrayHelpers.remove(0);
-                      arrayHelpers.push(tag.value);
+                      arrayHelpers.push(tag.label);
                     } else if (!onlyOne && e.target.checked) {
-                      arrayHelpers.push(tag.value);
+                      arrayHelpers.push(tag.label);
                     } else if (!onlyOne && !e.target.checked) {
-                      const idx = values[name].indexOf(tag.value);
+                      const idx = values[name].indexOf(tag.label);
                       arrayHelpers.remove(idx);
                     }
                   }}

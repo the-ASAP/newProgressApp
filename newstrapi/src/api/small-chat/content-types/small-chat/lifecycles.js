@@ -4,11 +4,10 @@ module.exports = {
 
     try {
       await strapi.plugins["email"].services.email.send({
-        to: "tatyana.solovva@bk.ru",
+        to: "hello@progressapp.ru",
         from: "strapi91@gmail.com",
         subject: "Заявка на услугу",
-        text: `Услуга: ${result.serviceName}, номер тел: ${result.phoneNumber},
-       `,
+        text: ``,
 
         html: `
         <table>

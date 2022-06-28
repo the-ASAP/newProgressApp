@@ -45,8 +45,6 @@ const Brief = () => {
 
     const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
     // console.log(res);
-
-    // console.log(allAnswers);
   };
 
   return (
