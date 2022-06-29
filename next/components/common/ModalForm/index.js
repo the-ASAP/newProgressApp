@@ -11,12 +11,11 @@ import { profession } from 'constants/data';
 import style from './index.module.scss';
 import { useState } from 'react';
 import SERVICE_API from 'api';
-import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 
 const ModalForm = ({ hideModal }) => {
-  const [fileName, setFileName] = useState('');
-  const selectFileName = (path) => {
-    setFileName(path);
+  const [file, setFile] = useState('');
+  const selectFile = (path) => {
+    setFile(path);
   };
 
   const initialValues = {
@@ -27,11 +26,30 @@ const ModalForm = ({ hideModal }) => {
     file: ''
   };
 
-  const onSubmit = async (values) => {
-    // console.log(values);
-    const res = await SERVICE_API.EntitiesApi.addJobApplication(values);
-    // console.log(res);
+  const uploadFile = async () => {
+    const formData = new FormData();
+    formData.append('files', file);
+    const res = await SERVICE_API.EntitiesApi.uploadFile(formData);
+    const fileUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${res.data[0].url}`;
+    return fileUrl;
+  };
 
+  const onSubmit = async (values) => {
+    let fileUrl = '';
+    let data = {};
+
+    if (file) {
+      fileUrl = await uploadFile();
+    }
+
+    if (fileUrl) {
+      data = { ...values, file: fileUrl };
+    } else {
+      data = { ...values };
+    }
+
+    const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
+    // console.log(res);
     if (res.status === 200) {
       hideModal();
     }
@@ -97,7 +115,7 @@ const ModalForm = ({ hideModal }) => {
                 <div className={style.input__wrapper}>
                   <FormikTextField
                     customLabelStyle={style.modal__label}
-                    selectFileName={selectFileName}
+                    selectFile={selectFile}
                     customClassName={style.input__file}
                     type="file"
                     name="file"
@@ -105,8 +123,8 @@ const ModalForm = ({ hideModal }) => {
                     label="Прикрепите файлы"
                   />
                   <label className={style.input__file__fake} htmlFor="file">
-                    {fileName ? (
-                      <p className={style.input__file__name}>{fileName}</p>
+                    {file ? (
+                      <p className={style.input__file__name}>{file.name}</p>
                     ) : (
                       <>
                         <FileSvg /> <p>Загрузить</p>

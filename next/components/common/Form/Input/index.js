@@ -12,7 +12,7 @@ const FormikTextField = (props) => {
     onChange,
     customClassName,
     customLabelStyle,
-    selectFileName,
+    selectFile,
     ...other
   } = props;
   const [field] = useField(name);
@@ -23,9 +23,7 @@ const FormikTextField = (props) => {
     if (onChange) onChange(e);
 
     if (type === 'file') {
-      const lastSlashIndex = e.target.value.split('').lastIndexOf('\\');
-      const fileString = e.target.value.slice(lastSlashIndex + 1);
-      selectFileName(fileString);
+      selectFile(e.currentTarget.files[0]);
     }
   };
 

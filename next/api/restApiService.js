@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiUrl, apiToken } from 'constants/data';
+const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
 class API {
   constructor() {
@@ -14,7 +14,6 @@ class API {
     // const token = apiToken || '';
     const token = '';
     const headerAuth = token && { Authorization: `Bearer ${token}` };
-    console.log(headerAuth);
     const service = axios.create({
       headers: {
         ...headers,

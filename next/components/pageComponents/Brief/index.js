@@ -20,9 +20,9 @@ import SERVICE_API from 'api';
 
 const Brief = () => {
   const router = useRouter();
-  const [fileName, setFileName] = useState('');
-  const selectFileName = (path) => {
-    setFileName(path);
+  const [file, setFile] = useState('');
+  const selectFile = (path) => {
+    setFile(path);
   };
 
   const initialValues = {
@@ -174,7 +174,7 @@ const Brief = () => {
 
                   <div className={style.contacts__input__wrapper}>
                     <FormikTextField
-                      selectFileName={selectFileName}
+                      selectFile={selectFile}
                       customClassName={style.contacts__input__file}
                       type="file"
                       name="file"
@@ -182,8 +182,8 @@ const Brief = () => {
                       label="Прикрепите файлы"
                     />
                     <label className={style.contacts__fake} htmlFor="file">
-                      {fileName ? (
-                        <p className={style.file__name}>{fileName}</p>
+                      {file ? (
+                        <p className={style.file__name}>{file.name}</p>
                       ) : (
                         <>
                           <FileSvg /> <p>Загрузить</p>
