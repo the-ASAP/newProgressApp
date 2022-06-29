@@ -17,6 +17,7 @@ import { FileSvg } from 'constants/svg';
 import { CloseButton, PrimaryButton } from 'components/common/Buttons';
 import style from './index.module.scss';
 import SERVICE_API from 'api';
+import Link from 'next/link';
 
 const Brief = () => {
   const router = useRouter();
@@ -198,7 +199,12 @@ const Brief = () => {
                 </div>
                 <div className={style.politics}>
                   Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку персональных
-                  данных и&nbsp;соглашаетесь&nbsp;с политикой конфиденциальности.
+                  данных и&nbsp;соглашаетесь&nbsp;
+                  <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+                    <a className={style.politics__link} target="blank">
+                      с политикой конфиденциальности.
+                    </a>
+                  </Link>
                 </div>
               </div>
             );

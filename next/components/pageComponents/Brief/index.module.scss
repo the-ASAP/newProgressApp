@@ -208,6 +208,11 @@
 
 .politics {
   max-width: 35rem;
+
+  &__link {
+    cursor: pointer;
+    color: $fontColor;
+  }
 }
 
 @media (max-width: 768px) {

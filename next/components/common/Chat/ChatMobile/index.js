@@ -186,8 +186,10 @@ const ChatMobile = () => {
                     <div className={style.message}>
                       {chatQuestions[4].question}{' '}
                       {chatQuestions[4].link && (
-                        <Link href={chatQuestions[4].link.url}>
-                          <a className={style.message__link}>{chatQuestions[4].link.text}</a>
+                        <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+                          <a className={style.message__link} target="blank">
+                            {chatQuestions[4].link.text}
+                          </a>
                         </Link>
                       )}
                     </div>

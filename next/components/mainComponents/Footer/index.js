@@ -83,7 +83,11 @@ const Footer = () => {
               <span>Progress app 2022. </span>Все права защищены&nbsp;©
             </span>
             <div className={style.license__content}>
-              <a className={style.license__politics}>Политика конфиденциальности</a>
+              <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+                <a className={style.license__politics} target="blank">
+                  Политика конфиденциальности
+                </a>
+              </Link>
               <Link href={'https://asap-ag.ru/'}>
                 <a target="blank">
                   <AsapSVG />

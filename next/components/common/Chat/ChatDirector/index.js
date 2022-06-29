@@ -45,7 +45,8 @@ const ChatDirector = ({ darkMode }) => {
 
     // отправка на сервер в нужном формате answers + contactData
     const allAnswers = changeFormatLargeChat(answers, contactData);
-    const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
+    console.log(allAnswers);
+    // const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
     // console.log(res);
     setStep((prev) => prev + 1);
   };
@@ -245,8 +246,9 @@ const ChatDirector = ({ darkMode }) => {
                     <div className={clsx(style.message, darkMode && style.message__dark)}>
                       {chatQuestions[4].question}{' '}
                       {chatQuestions[4].link && (
-                        <Link href={chatQuestions[4].link.url}>
+                        <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
                           <a
+                            target="blank"
                             className={clsx(
                               style.message__link,
                               darkMode && style.message__link__dark

@@ -18,8 +18,10 @@ const Message = ({ data }) => {
         <div className={style.text__inner}>
           {messageText}{' '}
           {link && (
-            <Link href={link.url}>
-              <a className={style.message__link}>{link.text}</a>
+            <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+              <a className={style.message__link} target="blank">
+                {link.text}{' '}
+              </a>
             </Link>
           )}
         </div>

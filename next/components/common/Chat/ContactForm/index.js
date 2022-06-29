@@ -3,8 +3,9 @@ import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextField from 'components/common/Form/Input';
 import clsx from 'clsx';
 import React from 'react';
-import style from './index.module.scss';
 import { ChatContactValidationSchema } from 'utils/validations';
+import FormikPhoneField from 'components/common/Form/InputPhone';
+import style from './index.module.scss';
 
 const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode, darkMode }) => {
   const initialValues = {
@@ -60,14 +61,14 @@ const ContactForm = ({ handleSubmit, isMobileMode, isDirectorMode, darkMode }) =
               </div>
 
               <div className={style.input__wrapper}>
-                <FormikTextField
+                <FormikPhoneField
                   customLabelStyle={darkMode && style.label__dark}
                   customClassName={clsx(
                     style.input,
                     darkMode && style.dark,
                     errors?.phone && style.error
                   )}
-                  type="text"
+                  type="tel"
                   name="phone"
                   placeholder="+7 950 450-95-22"
                   label="Номер телефона "
