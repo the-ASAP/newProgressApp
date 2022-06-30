@@ -26,7 +26,13 @@ const Footer = () => {
             {mail}
           </a>
 
-          <div className={style.footer__content}>
+          <div className={style.fake_menu}>
+            <div className={style.fake_menu__item}>Разработка</div>
+            <div className={style.fake_menu__item}>Аутстафф</div>
+            <div className={style.fake_menu__item}>Аналитика и&nbsp;поддержка</div>
+          </div>
+
+          {/* <div className={style.footer__content}>
             <div className={style.footer__menu}>
               {menuList?.map((menuItem) => (
                 <button
@@ -48,9 +54,9 @@ const Footer = () => {
                   </Link>
                 ))}
             </div>
-          </div>
+          </div> */}
 
-          <div className={style.menu__accordions}>
+          {/* <div className={style.menu__accordions}>
             {!!menuList.length &&
               menuList?.map((item) => (
                 <Collapsible
@@ -75,7 +81,7 @@ const Footer = () => {
                   </ul>
                 </Collapsible>
               ))}
-          </div>
+          </div> */}
 
           <div className={style.license}>
             <span className={style.license__law}>

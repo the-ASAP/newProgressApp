@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { LogoSVG } from 'constants/svg';
 import imageMainLogo from 'public/svg/main_logo_light.svg';
 import { menu } from 'constants/data';
 import { mail } from 'constants/contacts';
 import MobileMenu from 'components/common/MobileMenu';
 import { PrimaryButton } from 'components/common/Buttons';
-
-import styles from './index.module.scss';
 import Image from 'next/image';
+import styles from './index.module.scss';
 
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
@@ -35,16 +33,16 @@ const Header = () => {
           </div>
         </a>
       </Link>
-      <menu className={styles.menu}>
+      {/* <menu className={styles.menu}>
         {!!menu?.length &&
           menu?.map((menuItem) => (
             <Link href={menuItem.link} key={menuItem.title}>
               <a className={styles.menu__link}>{menuItem.title}</a>
             </Link>
           ))}
-      </menu>
+      </menu> */}
       <a href={`mailto:${mail}`} className={styles.mail}>
-        hello@progressapp.ru
+        {mail}
       </a>
       <PrimaryButton customClassName={styles.burger__button} onClick={() => toggleMobileMenu(true)}>
         <span></span>

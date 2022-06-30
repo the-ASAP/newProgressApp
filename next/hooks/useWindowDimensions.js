@@ -15,6 +15,12 @@ export default function useWindowDimensions() {
     setWindowDimensions(getWindowDimensions());
   }
 
+  const currentWindowDimensions = {
+    isDesktop: windowDimensions >= 1200,
+    isNotebook: windowDimensions >= 1024,
+    isTablet: windowDimensions >= 768
+  };
+
   useEffect(() => {
     if (hasWindow) {
       window.addEventListener('resize', handleResize);
@@ -22,5 +28,5 @@ export default function useWindowDimensions() {
     }
   }, [hasWindow]);
 
-  return windowDimensions;
+  return { ...currentWindowDimensions };
 }

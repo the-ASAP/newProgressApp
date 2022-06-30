@@ -61,13 +61,13 @@ const DirectorSection = () => {
                   href={`mailTo:${mail}`}
                   className={clsx(style.director__mail, darkMode && style.director__mail__dark)}
                 >
-                  hello@progressapp.ru
+                  {directorMail}
                 </a>
                 <a
                   href={`tel:${phone}`}
                   className={clsx(style.director__phone, darkMode && style.director__phone__dark)}
                 >
-                  +7 (8452) 531-888
+                  {phone}
                 </a>
                 <div className={style.director__socials}>
                   <a

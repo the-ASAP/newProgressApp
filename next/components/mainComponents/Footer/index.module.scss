@@ -169,6 +169,16 @@
   }
 }
 
+.fake_menu {
+  padding-top: 4.375rem;
+  &__item {
+    font-size: 1.9375rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+    padding: 0.625rem 0;
+  }
+}
+
 @media (min-width: 768px) {
   .accordion {
     display: none;
@@ -219,6 +229,16 @@
     &__politics {
       margin-bottom: 46px;
       cursor: pointer;
+    }
+  }
+
+  .fake_menu {
+    padding-top: 0;
+    &__item {
+      font-size: 1.3125rem;
+      line-height: 1.625rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(39, 47, 45, 1);
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextAreaField from 'components/common/Form/TextArea';
@@ -39,16 +39,30 @@ const Brief = () => {
     file: ''
   };
 
-  const onSubmit = async (values) => {
+  const uploadFile = async () => {
+    const formData = new FormData();
+    formData.append('files', file);
+    const res = await SERVICE_API.EntitiesApi.uploadFile(formData);
+    const fileUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${res.data[0].url}`;
+    return fileUrl;
+  };
+
+  const onSubmit = async (values, formik) => {
     const allAnswers = { ...values };
     allAnswers.budget = allAnswers.budget.join(', ');
     allAnswers.deadline = allAnswers.deadline.join(', ');
     allAnswers.services = allAnswers.services.join(', ');
+    let fileUrl = '';
+
+    if (file) {
+      fileUrl = await uploadFile();
+      allAnswers.file = fileUrl;
+    }
 
     // console.log(allAnswers);
-
+    // formik.resetForm();
     const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
-    // console.log(res);
+    console.log(res);
   };
 
   return (
@@ -81,7 +95,6 @@ const Brief = () => {
                 <div className={style.section}>
                   <h3 className={style.section__title}>Интересующая услуга</h3>
                   <TagList name="services" tags={servicesCollection} values={values} />
-                  {/* <span className={style.error}>{errors?.services && errors.services}</span> */}
                 </div>
 
                 <div className={style.section}>
@@ -205,7 +218,7 @@ const Brief = () => {
                   данных и&nbsp;соглашаетесь&nbsp;
                   <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
                     <a className={style.politics__link} target="blank">
-                      с политикой конфиденциальности.
+                      с&nbsp;политикой конфиденциальности.
                     </a>
                   </Link>
                 </div>

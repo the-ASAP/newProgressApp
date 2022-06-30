@@ -1,11 +1,12 @@
-import API from "api/restApiService"
-import { apiEmail, apiPassword } from "constants/data"
+import API from 'api/restApiService';
+import { apiEmail, apiPassword } from 'constants/data';
 
 class AuthApi {
-  getJwtToken = (apiEmail, apiPassword) => API.post('/projects', {
-    identifier: apiEmail,
-    password: apiPassword
-  })
+  getJwtToken = (apiEmail, apiPassword) =>
+    API.post('/projects', {
+      identifier: apiEmail,
+      password: apiPassword
+    });
 }
 
-export default new AuthApi()
+export default new AuthApi();

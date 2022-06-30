@@ -212,6 +212,16 @@
   &__link {
     cursor: pointer;
     color: $fontColor;
+    position: relative;
+  }
+  &__link:after {
+    position: absolute;
+    content: '';
+    background-color: $fontColor;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
   }
 }
 

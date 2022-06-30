@@ -9,14 +9,11 @@
   background-color: $cardBackground;
   top: 0;
   left: 0;
-  // transform: translateX(-200%);
   left: -200%;
   visibility: hidden;
-  // transition: transform 0.4s ease-in, visibility 0.3s ease-in;
   transition: all 0.4s ease-in;
 
   &__active {
-    // transform: translateX(0);
     left: 0;
     visibility: visible;
   }
@@ -139,6 +136,16 @@
     justify-content: center;
     align-items: center;
     min-height: 4rem;
+  }
+}
+
+.fake_menu {
+  &__item {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(39, 47, 45, 0.1);
   }
 }
 

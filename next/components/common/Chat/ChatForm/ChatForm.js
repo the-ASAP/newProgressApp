@@ -1,7 +1,7 @@
 import FormikTextField from 'components/common/Form/Input';
 import { PrimaryButton } from 'components/common/Buttons';
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { ArrowRight } from 'constants/svg';
 import { FormContainer } from 'components/common/Form/FormContainer';

@@ -7,7 +7,7 @@ import ChatDesktop from './../ChatDesktop';
 import style from './index.module.scss';
 
 const ModalChat = ({ hideModal }) => {
-  const windowWidth = useWindowDimensions();
+  const { isTablet } = useWindowDimensions();
 
   return (
     <ModalBackdrop hideModal={hideModal} customClassName={'backdrop__green'}>
@@ -16,7 +16,7 @@ const ModalChat = ({ hideModal }) => {
           <div className={style.chat__cover_gradient}>
             <CloseButton onClick={hideModal} customClassName={style.close__chat__btn} />
 
-            {windowWidth > 768 ? <ChatDesktop /> : <ChatMobile />}
+            {isTablet ? <ChatDesktop /> : <ChatMobile />}
           </div>
         </div>
       </div>

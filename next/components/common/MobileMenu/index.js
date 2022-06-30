@@ -19,7 +19,13 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
         <CloseButton onClick={() => toggleMobileMenu(false)} />
       </div>
 
-      <div className={styles.menu__accordions}>
+      <div className={styles.fake_menu}>
+        <div className={styles.fake_menu__item}>Разработка</div>
+        <div className={styles.fake_menu__item}>Аутстафф</div>
+        <div className={styles.fake_menu__item}>Аналитика и поддержка</div>
+      </div>
+
+      {/* <div className={styles.menu__accordions}>
         {!!menuList.length &&
           menuList?.map((item) => (
             <Collapsible
@@ -44,7 +50,7 @@ const MobileMenu = ({ toggleMobileMenu, visible }) => {
               </ul>
             </Collapsible>
           ))}
-      </div>
+      </div> */}
 
       <div className={styles.contacts}>
         <div className={styles.contacts__mail}>
