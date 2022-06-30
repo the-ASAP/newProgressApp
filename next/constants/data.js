@@ -1,7 +1,5 @@
-const apiFirstName = 'Pavel';
-export const apiUrl = 'http://localhost:1337/api';
-export const apiToken =
-  '0892be7339526582994da0f589885a8afcc370519cd50dbdcb54907121e90be737c643c0300dc2598d849a4c09fcdb8846dd9db73b2c26a85854e29ba6c786a08fae766efbc7101102aa026a753ff12cbfaf9c2f0482df0c8c1adb80d461e6a218439bebb751ed19593bdb87e478192e568b70c961f0f1e56c908bb615b655b2';
+// export const apiToken =
+//   '0892be7339526582994da0f589885a8afcc370519cd50dbdcb54907121e90be737c643c0300dc2598d849a4c09fcdb8846dd9db73b2c26a85854e29ba6c786a08fae766efbc7101102aa026a753ff12cbfaf9c2f0482df0c8c1adb80d461e6a218439bebb751ed19593bdb87e478192e568b70c961f0f1e56c908bb615b655b2';
 
 export const menu = [
   {
@@ -30,7 +28,6 @@ export const menu = [
   }
 ];
 
-// export const promoTeam = ['/photo_1.png', '/photo_2.png', '/photo_3.png'];
 export const promoTeam = ['/skill_photo_1.png', '/skill_photo_2.png', '/skill_photo_3.png'];
 
 export const skillTeam = [

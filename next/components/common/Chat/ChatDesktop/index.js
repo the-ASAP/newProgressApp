@@ -29,7 +29,7 @@ const ChatDesktop = () => {
     allAnswers.serviceName = Object.values(answers[0])[0];
     allAnswers.phoneNumber = Object.values(answers[1])[0];
     const res = await SERVICE_API.EntitiesApi.addSmallChatApplication(allAnswers);
-    // console.log(res);
+    console.log(res);
   };
 
   useEffect(() => {
@@ -51,7 +51,14 @@ const ChatDesktop = () => {
         })}
       </div>
 
-      <>{!isLastMessage && <ChatForm handleSubmit={saveAnswer} />}</>
+      <>
+        {!isLastMessage && (
+          <ChatForm
+            handleSubmit={saveAnswer}
+            isPhoneMask={currentFakeIndex === fakeMessages.length - 2}
+          />
+        )}
+      </>
     </div>
   );
 };
