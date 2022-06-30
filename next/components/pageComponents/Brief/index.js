@@ -15,9 +15,10 @@ import Collapsible from 'react-collapsible';
 import FormikTextField from 'components/common/Form/Input';
 import { FileSvg } from 'constants/svg';
 import { CloseButton, PrimaryButton } from 'components/common/Buttons';
-import style from './index.module.scss';
 import SERVICE_API from 'api';
 import Link from 'next/link';
+import FormikPhoneField from 'components/common/Form/InputPhone';
+import style from './index.module.scss';
 
 const Brief = () => {
   const router = useRouter();
@@ -43,6 +44,8 @@ const Brief = () => {
     allAnswers.budget = allAnswers.budget.join(', ');
     allAnswers.deadline = allAnswers.deadline.join(', ');
     allAnswers.services = allAnswers.services.join(', ');
+
+    // console.log(allAnswers);
 
     const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
     // console.log(res);
@@ -155,7 +158,7 @@ const Brief = () => {
                     />
                   </div>
                   <div className={style.contacts__input__wrapper}>
-                    <FormikTextField
+                    <FormikPhoneField
                       customClassName={clsx(style.contacts__input, errors?.phone && style.error)}
                       type="phone"
                       name="phone"
