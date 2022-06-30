@@ -41,7 +41,7 @@ const ChatMobile = () => {
     // отправка на сервер в нужном формате answers + contactData
     const allAnswers = changeFormatLargeChat(answers, contactData);
     const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
-    // console.log(res);
+    console.log(res);
     setStep((prev) => prev + 1);
   };
 

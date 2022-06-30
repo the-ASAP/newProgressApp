@@ -46,8 +46,8 @@ const ChatDirector = ({ darkMode }) => {
     // отправка на сервер в нужном формате answers + contactData
     const allAnswers = changeFormatLargeChat(answers, contactData);
     console.log(allAnswers);
-    // const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
-    // console.log(res);
+    const res = await SERVICE_API.EntitiesApi.addLargeChatApplication(allAnswers);
+    console.log(res);
     setStep((prev) => prev + 1);
   };
 

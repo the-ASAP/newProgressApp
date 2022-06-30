@@ -39,18 +39,6 @@ const ChatForm = ({ handleSubmit, disabled, value, darkMode, isPhoneMask }) => {
               />
             )}
 
-            {/* <FormikTextField
-              customClassName={clsx(style.form__input, darkMode && style.form__input__dark)}
-              name="message"
-              placeholder="Напишите комментарий"
-            /> */}
-
-            {/* <FormikPhoneField
-              customClassName={clsx(style.form__input, darkMode && style.form__input__dark)}
-              name="message"
-              placeholder="Напишите номер телефона"
-            /> */}
-
             <PrimaryButton
               customClassName={style.form__button}
               type="submit"

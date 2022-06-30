@@ -53,16 +53,14 @@ const Brief = () => {
     allAnswers.deadline = allAnswers.deadline.join(', ');
     allAnswers.services = allAnswers.services.join(', ');
     let fileUrl = '';
-
     if (file) {
       fileUrl = await uploadFile();
       allAnswers.file = fileUrl;
     }
-
-    // console.log(allAnswers);
+    console.log(allAnswers);
     // formik.resetForm();
     const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
-    // console.log(res);
+    console.log(res);
   };
 
   return (
