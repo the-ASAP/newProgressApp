@@ -20,8 +20,9 @@
     position: relative;
     border-radius: 3.5rem;
     overflow: hidden;
-    background-color: aliceblue;
-
+    // background-color: aliceblue;
+    background: no-repeat center center #f0f8ff;
+    background-size: 30%;
     span {
       transition: transform 0.3s ease-in;
 
