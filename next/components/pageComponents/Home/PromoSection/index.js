@@ -4,14 +4,14 @@ import clsx from 'clsx';
 
 import { PrimaryButton } from 'components/common/Buttons';
 import Tab from 'components/common/Tab';
-import { ChatSVG, ReactSVG, PlusSVG } from 'constants/svg';
+import { ChatSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
 import mainImg from 'public/main.png';
-// import svelteImg from 'public/svelte.png';
 import svelteImg from 'public/svg/svelteImg.svg';
 import reactImg from 'public/svg/reactImg.svg';
 import ModalChat from 'components/common/Chat/ModalChat';
 import ModalForm from 'components/common/ModalForm';
+import ModalSuccess from 'components/common/ModalSuccess';
 import { useScroll } from 'hooks/useScroll';
 import { useModal } from 'hooks/useModal';
 import styles from './index.module.scss';
@@ -23,8 +23,12 @@ const PromoSection = () => {
     showModal(ModalChat, { showModal, hideModal });
   };
 
+  const showSuccessModal = () => {
+    showModal(ModalSuccess, { showModal, hideModal });
+  };
+
   const showVacancyForm = () => {
-    showModal(ModalForm, { showModal, hideModal });
+    showModal(ModalForm, { showModal, hideModal, showSuccessModal });
   };
 
   return (

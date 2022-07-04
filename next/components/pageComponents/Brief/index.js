@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useModal } from 'hooks/useModal';
 import { FormContainer } from 'components/common/Form/FormContainer';
 import FormikTextAreaField from 'components/common/Form/TextArea';
 import {
@@ -18,11 +19,18 @@ import { CloseButton, PrimaryButton } from 'components/common/Buttons';
 import SERVICE_API from 'api';
 import Link from 'next/link';
 import FormikPhoneField from 'components/common/Form/InputPhone';
+import ModalSuccess from 'components/common/ModalSuccess';
 import style from './index.module.scss';
 
 const Brief = () => {
   const router = useRouter();
+  const { showModal, hideModal } = useModal();
   const [file, setFile] = useState('');
+
+  const showSuccessModal = () => {
+    showModal(ModalSuccess, { showModal, hideModal });
+  };
+
   const selectFile = (path) => {
     setFile(path);
   };
@@ -58,9 +66,10 @@ const Brief = () => {
       allAnswers.file = fileUrl;
     }
     console.log(allAnswers);
-    // formik.resetForm();
-    const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
-    console.log(res);
+    formik.resetForm();
+    // const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
+    // console.log(res);
+    showSuccessModal();
   };
 
   return (

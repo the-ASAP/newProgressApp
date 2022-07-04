@@ -7,16 +7,6 @@ class EntitiesApi {
   addLargeChatApplication = (payload) => API.post('/api/large-chats', { data: payload });
   addBrief = (payload) => API.post('/api/briefs', { data: payload });
   uploadFile = (formData) => API.post('/api/upload', formData);
-
-  // addBrief = async (payload) => {
-  //   try {
-  //     const res = await API.post('/api/briefs', { data: payload });
-  //     API.handleSuccess(res);
-  //     return res;
-  //   } catch (error) {
-  //     API.handleError(error);
-  //   }
-  // };
 }
 
 export default new EntitiesApi();

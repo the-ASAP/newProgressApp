@@ -12,7 +12,7 @@ import style from './index.module.scss';
 import { useState } from 'react';
 import SERVICE_API from 'api';
 
-const ModalForm = ({ hideModal }) => {
+const ModalForm = ({ hideModal, showSuccessModal }) => {
   const [file, setFile] = useState('');
   const selectFile = (path) => {
     setFile(path);
@@ -48,11 +48,15 @@ const ModalForm = ({ hideModal }) => {
       data = { ...values };
     }
 
-    const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
-    console.log(res);
-    if (res.status === 200) {
-      hideModal();
-    }
+    // const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
+    // console.log(res);
+
+    hideModal();
+    showSuccessModal();
+
+    // if (res.status === 200) {
+    //   hideModal();
+    // }
   };
 
   return (

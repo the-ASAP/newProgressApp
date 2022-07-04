@@ -87,9 +87,11 @@ input.error {
   min-height: 4rem;
   height: auto;
   width: 100%;
+  transition: background-color 0.3s ease-in;
 
   &:hover {
     transform: none;
+    background-color: $hoverMainColor;
   }
 }
 
