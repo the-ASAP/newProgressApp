@@ -1,32 +1,47 @@
-version: "3"
+version: '3'
 services:
   newstrapi:
     environment:
-      - NODE_ENV=production
+      - DATABASE_CLIENT=postgres
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=strapi
+      - DATABASE_PASSWORD=strapi
     build:
-      context: "./newstrapi"
+      context: './newstrapi'
       dockerfile: Dockerfile.prod
     ports:
       - "1337:1337"
+    depends_on:
+      - db
+    networks:
+      - strapi-postgres
     restart: always
 
-  # db:
-  #   container_name: progressapp__postgres
-  #   image: postgres
-  #   volumes:
-  #     - ./db:/var/lib/postgresql/data
-  #   environment:
-  #     POSTGRES_USER: strapi
-  #     POSTGRES_PASSWORD: strapi
-  #     POSTGRES_DB: strapi
-  #   networks:
-  #     - strapi-postgres
-  #   restart: always
+  db:
+    container_name: progressapp__postgres
+    image: postgres
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+      POSTGRES_DB: strapi
+    networks:
+      - strapi-postgres
 
   next:
     build:
+      context: './next'
       dockerfile: Dockerfile.prod
-      context: "./next"
     ports:
       - "3000:3000"
+    # volumes:
+    #   - ./next:/back
     restart: always
+
+
+networks:
+  strapi-postgres:
+    driver: bridge
