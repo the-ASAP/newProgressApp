@@ -48,9 +48,8 @@ const ModalForm = ({ hideModal, showSuccessModal }) => {
       data = { ...values };
     }
 
-    // const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
+    const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
     // console.log(res);
-
     hideModal();
     showSuccessModal();
 
