@@ -5,9 +5,9 @@ module.exports = ({ env }) => ({
       providerOptions: {
         sendinblue_api_key: env("SIB_API_KEY"),
 
-        sendinblue_default_replyto: env("SIB_DEFAULT_REPLY_TO"),
-        sendinblue_default_from: env("SIB_DEFAULT_FROM"),
-        sendinblue_default_from_name: env("SIB_DEFAULT_FROM_NAME"),
+        sendinblue_default_replyto: 'hello@progressapp.ru',
+        sendinblue_default_from: 'strapi91@gmail.com',
+        sendinblue_default_from_name: 'progressApp',
       },
     },
   },
