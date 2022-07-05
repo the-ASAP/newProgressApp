@@ -223,7 +223,7 @@ const Brief = () => {
                 <div className={style.politics}>
                   Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку персональных
                   данных и&nbsp;соглашаетесь&nbsp;
-                  <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+                  <Link href={`https://new.progressapp.ru/static/privacy.pdf`}>
                     <a className={style.politics__link} target="blank">
                       с&nbsp;политикой конфиденциальности.
                     </a>
