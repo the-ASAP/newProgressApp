@@ -23,9 +23,11 @@ const ModalSuccess = ({ hideModal }) => {
           <PrimaryButton onClick={goToMain} customClassName={style.success__button}>
             На главную
           </PrimaryButton>
-          <div onClick={hideModal}>
+          <div onClick={goToMain}>
             <Link href={telegram}>
-              <a className={style.success__link}>Подписывайтесь на телеграм-канал Progress app</a>
+              <a target="blank" className={style.success__link}>
+                Подписывайтесь на телеграм-канал Progress app
+              </a>
             </Link>
           </div>
         </div>

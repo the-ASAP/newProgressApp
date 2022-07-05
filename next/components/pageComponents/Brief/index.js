@@ -67,8 +67,8 @@ const Brief = () => {
     }
     console.log(allAnswers);
     formik.resetForm();
-    // const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
-    // console.log(res);
+    const res = await SERVICE_API.EntitiesApi.addBrief(allAnswers);
+    console.log(res);
     showSuccessModal();
   };
 
