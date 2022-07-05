@@ -49,7 +49,7 @@ const ModalForm = ({ hideModal, showSuccessModal }) => {
     }
 
     const res = await SERVICE_API.EntitiesApi.addJobApplication(data);
-    console.log(res);
+    // console.log(res);
     hideModal();
     showSuccessModal();
 

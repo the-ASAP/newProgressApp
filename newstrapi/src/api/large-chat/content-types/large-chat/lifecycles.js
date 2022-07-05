@@ -5,7 +5,7 @@
 //     try {
 //       console.log("result SEND!!!!!! ", result);
 //       await strapi.plugins["email"].services.email.send({
-//         to: "hello@progressapp.ru",
+//         to: "pavelgorazio91@gmail.com",
 //         from: "strapi91@gmail.com",
 //         subject: "Заявка с Чата 2",
 //         text: ``,
