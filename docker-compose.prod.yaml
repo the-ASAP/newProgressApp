@@ -37,8 +37,8 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "3000:3000"
-    volumes:
-      - ./next:/back
+    # volumes:
+    #   - ./next:/back
     restart: always
 
 
