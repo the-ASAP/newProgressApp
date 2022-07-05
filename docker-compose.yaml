@@ -10,6 +10,7 @@ services:
       - DATABASE_PASSWORD=strapi
     build:
       context: './newstrapi'
+      dockerfile: Dockerfile.prod
     ports:
       - "1337:1337"
     depends_on:
@@ -32,6 +33,7 @@ services:
   next:
     build:
       context: './next'
+      dockerfile: Dockerfile.prod
     ports:
       - "3000:3000"
     volumes:
