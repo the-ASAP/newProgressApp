@@ -12,7 +12,7 @@ const Project = ({ photo, text, tags, isSmall }) => {
           className={clsx(style.project__image, isSmall && style.project__image__small)}
           style={{ backgroundImage: `url('${loader.src}')` }}
         >
-          <Image alt="project" layout="fill" objectFit="cover" src={photo} />
+          <Image alt="project" layout="fill" objectFit="cover" src={photo} priority="true" />
         </div>
         <span className={style.project__text}>{text}</span>
         <div className={style.project__tags}>
