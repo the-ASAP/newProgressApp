@@ -18,7 +18,7 @@ const Message = ({ data }) => {
         <div className={style.text__inner}>
           {messageText}{' '}
           {link && (
-            <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+            <Link href={`https://new.progressapp.ru/static/privacy.pdf`}>
               <a className={style.message__link} target="blank">
                 {link.text}{' '}
               </a>

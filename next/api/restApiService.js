@@ -1,5 +1,6 @@
 import axios from 'axios';
-const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+// const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+const apiUrl = 'https://new.progressapp.ru/admin'
 
 class API {
   constructor() {

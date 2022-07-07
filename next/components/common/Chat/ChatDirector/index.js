@@ -246,7 +246,7 @@ const ChatDirector = ({ darkMode }) => {
                     <div className={clsx(style.message, darkMode && style.message__dark)}>
                       {chatQuestions[4].question}{' '}
                       {chatQuestions[4].link && (
-                        <Link href={`${process.env.NEXT_PUBLIC_CLIENT_URL}/static/privacy.pdf`}>
+                        <Link href={`https://new.progressapp.ru/static/privacy.pdf`}>
                           <a
                             target="blank"
                             className={clsx(
