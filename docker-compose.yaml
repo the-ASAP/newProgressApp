@@ -2,12 +2,15 @@ version: '3'
 services:
   newstrapi:
     environment:
+      - APP_NAME=strapi-app
       - DATABASE_CLIENT=postgres
       - DATABASE_HOST=db
       - DATABASE_PORT=5432
       - DATABASE_NAME=strapi
       - DATABASE_USERNAME=strapi
       - DATABASE_PASSWORD=strapi
+      - DATABASE_SSL=false
+      - HOST=0.0.0.0
     build:
       context: './newstrapi'
       dockerfile: Dockerfile.prod
@@ -17,6 +20,7 @@ services:
       - db
     networks:
       - strapi-postgres
+    # restart: always
 
   db:
     container_name: progressapp__postgres
@@ -27,6 +31,8 @@ services:
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: strapi
       POSTGRES_DB: strapi
+    ports:
+      - "5432:5432"
     networks:
       - strapi-postgres
 
@@ -36,8 +42,9 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "3000:3000"
-    volumes:
-      - ./next:/back
+    # volumes:
+    #   - ./next:/back
+    # restart: always
 
 
 networks:
