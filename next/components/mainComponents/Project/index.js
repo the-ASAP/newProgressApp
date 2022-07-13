@@ -8,12 +8,27 @@ const Project = ({ photo, text, tags, isSmall }) => {
   return (
     <div className={clsx(style.project, isSmall && style.project__small)}>
       <div className={style.project__content}>
-        <div
+        {/* <div
           className={clsx(style.project__image, isSmall && style.project__image__small)}
           style={{ backgroundImage: `url('${loader.src}')` }}
         >
-          <Image alt="project" layout="fill" objectFit="cover" src={photo} priority="true" />
+          <Image
+            alt="project"
+            layout="fill"
+            objectFit="cover"
+            // objectFit="contain"
+            src={photo}
+            priority="true"
+            quality={100}
+          />
+        </div> */}
+
+        {/* ----------------------------- */}
+        <div className={clsx(style.project__image, isSmall && style.project__image__small)}>
+          <img src={photo} alt="" />
         </div>
+        {/* ----------------------------- */}
+
         <span className={style.project__text}>{text}</span>
         <div className={style.project__tags}>
           {!!tags.length &&
