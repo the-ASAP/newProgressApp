@@ -39,7 +39,14 @@ const DirectorSection = () => {
             <div className={style.director__content}>
               <div className={style.director__block}>
                 <div className={style.director__image}>
-                  <Image alt="director" layout="fill" src={directorImg} objectFit="cover" />
+                  <Image
+                    alt="director"
+                    layout="fill"
+                    src={directorImg}
+                    objectFit="cover"
+                    priority={true}
+                    quality={100}
+                  />
                 </div>
                 <span
                   className={clsx(style.director__name, darkMode && style.director__name__dark)}
