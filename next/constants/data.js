@@ -93,13 +93,13 @@ export const projects = [
   },
   {
     id: 5,
-    photo: '/project5.jpg',
+    photo: '/project5x1.jpg',
     text: 'Web-сервис и\u00A0мобильное приложение автоматизации маркировки Shoes Mark',
-    tags: ['Промышленность']
+    tags: ['Оптовая торговля']
   },
   {
     id: 6,
-    photo: '/project6.jpg',
+    photo: '/project6x1.jpg',
     text: 'Web-сервис недвижимости для\u00A0застройщика CITIMIX',
     tags: ['Недвижимость']
   }

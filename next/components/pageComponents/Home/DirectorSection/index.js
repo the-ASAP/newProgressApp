@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import directorImg from 'public/director1.png';
+import directorImg from 'public/directorNew.png';
 import { address, directorMail, vk, telegram, mail, phone } from 'constants/contacts';
 import Switch from 'components/common/Switch';
 import directorBackImg from 'public/director__back2.png';
