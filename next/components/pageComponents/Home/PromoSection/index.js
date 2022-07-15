@@ -6,7 +6,7 @@ import { PrimaryButton } from 'components/common/Buttons';
 import Tab from 'components/common/Tab';
 import { ChatSVG, PlusSVG } from 'constants/svg';
 import { promoTeam, activity } from 'constants/data';
-import mainImg from 'public/mainNew.png';
+import mainImg from 'public/mainNew2.jpg';
 import svelteImg from 'public/svg/svelteImg.svg';
 import reactImg from 'public/svg/reactImg.svg';
 import ModalChat from 'components/common/Chat/ModalChat';
@@ -44,6 +44,7 @@ const PromoSection = () => {
             objectPosition="center"
             quality={100}
           />
+          {/* <img src="/mainNew.png" alt="" /> */}
         </div>
 
         <div className={styles.wrapper}>

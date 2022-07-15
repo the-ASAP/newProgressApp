@@ -19,7 +19,14 @@ const DirectorSection = () => {
     <div className={style.container}>
       <div className={style.inner}>
         <div className={clsx(style.inner__back, darkMode && style.inner__back__dark)}>
-          <Image layout="fill" src={directorBackImg} objectFit="contain" objectPosition="bottom" />
+          {/* <Image
+            layout="fill"
+            src={directorBackImg}
+            objectFit="contain"
+            objectPosition="bottom"
+            quality={100}
+          /> */}
+          <img src="/director__back2.png" alt="" />
         </div>
         <div className={'wrapper'}>
           <div className={style.director}>
@@ -59,10 +66,10 @@ const DirectorSection = () => {
                     darkMode && style.director__position__dark
                   )}
                 >
-                  директор и&nbsp;менеджер проектов
+                  Руководитель
                 </span>
                 <a href={`mailTo:${directorMail}`} className={style.director__directorMail}>
-                  Написать директору
+                  Написать руководителю
                 </a>
                 <a
                   href={`mailTo:${mail}`}

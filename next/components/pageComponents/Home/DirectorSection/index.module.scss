@@ -31,6 +31,13 @@
     &__dark::after {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
+    img {
+      object-fit: contain;
+      // object-position: bottom;
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 

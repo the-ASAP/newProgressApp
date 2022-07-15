@@ -100,7 +100,7 @@ export const projects = [
   {
     id: 6,
     photo: '/project6x1.jpg',
-    text: 'Web-сервис недвижимости для\u00A0застройщика CITIMIX',
+    text: 'Личный кабинет автоматизации сделок с\u00A0недвижимостью\u00A0для застройщика CITIMIX',
     tags: ['Недвижимость']
   }
 ];
@@ -284,7 +284,7 @@ export const experience = [
   },
   {
     id: '10',
-    title: 'E-\u00A0commerce'
+    title: 'E-commerce'
   }
 ];
 
@@ -318,7 +318,7 @@ export const chatQuestions = [
     tags: [
       { title: 'мобильное приложение' },
       { title: 'web-сервис' },
-      { title: 'mvp стартап' },
+      { title: 'mvp стартапа' },
       { title: 'erp-система' },
       { title: 'аутсорс' },
       { title: 'аутстафф' },
