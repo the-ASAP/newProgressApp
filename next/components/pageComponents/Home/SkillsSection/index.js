@@ -29,7 +29,7 @@ const SkillsSection = () => {
         <Skill
           title={'Широкий технологический стек'}
           text={
-            'Оптимальный подход к\u00A0решению задачи. От\u00A0JavaScript, PHP, С# для\u00A0создания сервиса или\u00A0CRM-системы. До\u00A0нативной и\u00A0кроссплатформенной разработки на \u00A0Swift, Java, Kotlin, React Native, Flutter'
+            'Разрабатываем приложения в\u00A0виде Single Page Application на\u00A0связке React + MobX + MobX State Tree, с\u00A0бэкендом в\u00A0режиме API и\u00A0с\u00A0Server Side Render.'
           }
           reverseOrientation={true}
         >
@@ -46,7 +46,7 @@ const SkillsSection = () => {
         />
         <Skill
           title={'Внешние и\u00A0внутренние интеграции'}
-          text={`Интеграции продуктов с\u00A0любыми внешними сервисами по\u00A0API. Возможности интеграции с\u00A0оборудованием по\u00A0SDK`}
+          text={`Опыт в\u00A0реализации нестандартных интеграций продуктов с\u00A0любыми внешними сервисами по\u00A0API, платежными системами, CRM. Возможность интеграции с\u00A0оборудованием по\u00A0SDK.`}
         >
           <div className={style.skills__spiderweb}>
             <Image
