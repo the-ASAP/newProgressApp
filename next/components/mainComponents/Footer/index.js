@@ -89,7 +89,7 @@ const Footer = () => {
               <span>Progress app 2022. </span>Все права защищены&nbsp;©
             </span>
             <div className={style.license__content}>
-              <Link href={`https://new.progressapp.ru/static/privacy.pdf`}>
+              <Link href={`https://progressapp.ru/static/privacy.pdf`}>
                 <a className={style.license__politics} target="blank">
                   Политика конфиденциальности
                 </a>
