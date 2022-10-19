@@ -18,7 +18,7 @@ const Message = ({ data }) => {
         <div className={style.text__inner}>
           {messageText}{' '}
           {link && (
-            <Link href={`https://new.progressapp.ru/static/privacy.pdf`}>
+            <Link href={`https://progressapp.ru/static/privacy.pdf`}>
               <a className={style.message__link} target="blank">
                 {link.text}{' '}
               </a>
