@@ -1,8 +1,8 @@
-.projects {
-  margin-top: 4rem;
+.products {
+  margin-top: 8.75rem;
 }
 
-.projects__title {
+.products__title {
   font-family: Aeroport;
   color: #272f2d;
   font-size: 6rem;
@@ -10,7 +10,7 @@
   margin-bottom: 3.75rem;
 }
 
-.project__list {
+.product__list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -18,24 +18,23 @@
 }
 
 @media (max-width: 768px) {
-  .projects {
-    margin-top: 1rem;
-
-    &__button {
-      margin-left: 0.8125rem;
-      margin-right: 0.8125rem;
-    }
+  .products {
+    margin-top: 70px;
   }
 
-  .projects__title {
+  .products__title {
     font-size: 1.9375rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
     margin-left: 0.875rem;
     line-height: 2.375rem;
+
+    span {
+      display: block;
+    }
   }
 
-  .project__list {
+  .product__list {
     font-display: column;
   }
 }

@@ -10,6 +10,7 @@ import ExperienceSection from 'components/pageComponents/Home/ExperienceSection'
 import DirectorSection from 'components/pageComponents/Home/DirectorSection';
 import SERVICE_API from 'api';
 import Layout from 'components/layout';
+import OwnProductsSection from 'components/pageComponents/Home/OwnProductsSection';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       </Head>
       <PromoSection />
       <MarqueeSection />
+      <OwnProductsSection />
       <ProjectsSection />
       <SkillsSection />
       <ConsulSection />

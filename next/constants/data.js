@@ -67,6 +67,21 @@ export const activity = [
   }
 ];
 
+export const ownProducts = [
+  {
+    id: 1,
+    photo: '/ownProduct1.png',
+    text: 'Vitrina bot — продукт для\u00A0создания локального маркетплейса внутри тематических сообществ на\u00A0базе telegram',
+    tags: ['Мессенджер', 'Сообщества']
+  },
+  {
+    id: 2,
+    photo: '/ownProduct2.png',
+    text: 'Total cash — мобильное приложение для\u00A0управления финансами в\u00A0совместном/долевом имуществе',
+    tags: ['Финансы', 'Управление']
+  }
+];
+
 export const projects = [
   {
     id: 1,
