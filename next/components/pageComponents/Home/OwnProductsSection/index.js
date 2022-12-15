@@ -16,7 +16,7 @@ const OwnProductsSection = () => {
       <div className={style.product__list}>
         {!!ownProducts?.length &&
           ownProducts.map((product, index) => (
-            <Project key={product.id} {...product} isSmall={imgMini.includes(index)} />
+            <Project key={product.id} {...product} isSmall={imgMini.includes(index)} isLink />
           ))}
       </div>
     </div>
