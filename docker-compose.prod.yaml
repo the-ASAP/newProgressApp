@@ -15,7 +15,7 @@ services:
       context: './newstrapi'
       dockerfile: Dockerfile.prod
     ports:
-      - "1337:1337"
+      - "127.0.0.1:1337:1337"
     depends_on:
       - db
     networks:
@@ -32,7 +32,7 @@ services:
       POSTGRES_PASSWORD: strapi
       POSTGRES_DB: strapi
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     networks:
       - strapi-postgres
 
@@ -41,7 +41,7 @@ services:
       context: './next'
       dockerfile: Dockerfile.prod
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     # volumes:
     #   - ./next:/back
     restart: always
